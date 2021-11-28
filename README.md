@@ -1,0 +1,2 @@
+# SamO
+The Sampling Ontology
