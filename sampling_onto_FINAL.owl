@@ -1,0 +1,587 @@
+@prefix : <http://purl.org/ontology/samo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix samo: <http://purl.org/ontology/samo/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@base <http://purl.org/ontology/samo/> .
+
+<http://purl.org/ontology/samo/> rdf:type owl:Ontology ;
+                                  dc:title "The Sampling Ontology" ;
+                                  vann:preferredNamespacePrefix "samo" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#agent
+event:agent rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/NET/c4dm/event.owl#factor
+event:factor rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/ontology/mo/collaborated_with
+mo:collaborated_with rdf:type owl:ObjectProperty ,
+                              owl:SymmetricProperty ;
+                     rdfs:domain foaf:Agent ;
+                     rdfs:range foaf:Agent .
+
+
+###  http://purl.org/ontology/mo/compilation_of
+mo:compilation_of rdf:type owl:ObjectProperty ;
+                  rdfs:domain mo:MusicalManifestation ;
+                  rdfs:range mo:Signal .
+
+
+###  http://purl.org/ontology/mo/compiled
+mo:compiled rdf:type owl:ObjectProperty ;
+            owl:inverseOf mo:compiler ;
+            rdfs:domain mo:MusicArtist ;
+            rdfs:range mo:MusicalManifestation .
+
+
+###  http://purl.org/ontology/mo/compiler
+mo:compiler rdf:type owl:ObjectProperty ;
+            rdfs:domain mo:MusicalManifestation ;
+            rdfs:range mo:MusicArtist .
+
+
+###  http://purl.org/ontology/mo/genre
+mo:genre rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( mo:MusicalExpression
+                                     mo:MusicalManifestation
+                                     mo:Performance
+                                   )
+                     ] ;
+         rdfs:range mo:Genre .
+
+
+###  http://purl.org/ontology/mo/instrument
+mo:instrument rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf event:factor ;
+              rdfs:domain mo:Performance ;
+              rdfs:range mo:Instrument .
+
+
+###  http://purl.org/ontology/mo/performer
+mo:performer rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf event:agent ;
+             rdfs:domain mo:Performance ;
+             rdfs:range foaf:Agent .
+
+
+###  http://purl.org/ontology/mo/publication_of
+mo:publication_of rdf:type owl:ObjectProperty ;
+                  owl:inverseOf mo:published_as ;
+                  rdfs:domain mo:MusicalManifestation ;
+                  rdfs:range mo:MusicalExpression .
+
+
+###  http://purl.org/ontology/mo/published_as
+mo:published_as rdf:type owl:ObjectProperty ;
+                rdfs:domain mo:MusicalExpression ;
+                rdfs:range mo:MusicalManifestation .
+
+
+###  http://purl.org/ontology/mo/recorded_as
+mo:recorded_as rdf:type owl:ObjectProperty ;
+               owl:inverseOf mo:records ;
+               rdfs:domain mo:Performance ;
+               rdfs:range mo:Signal .
+
+
+###  http://purl.org/ontology/mo/records
+mo:records rdf:type owl:ObjectProperty ;
+           rdfs:domain mo:Signal ;
+           rdfs:range mo:Performance .
+
+
+###  http://purl.org/ontology/samo/EQed
+samo:EQed rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf samo:manipulation_of ;
+          owl:inverseOf samo:EQed_into ;
+          rdfs:comment "Indicates a process of manipulation using the EQing technique." ;
+          rdfs:label "EQed" .
+
+
+###  http://purl.org/ontology/samo/EQed_into
+samo:EQed_into rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf samo:manipulated_into ;
+               rdfs:comment "Indicates a process of manipulation using the EQing technique." ;
+               rdfs:label "EQed_into" .
+
+
+###  http://purl.org/ontology/samo/chop_of
+samo:chop_of rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf samo:manipulation_of ;
+             owl:inverseOf samo:chopped_into ;
+             rdfs:comment "Indicates a process of manipulation using the chopping technique." ;
+             rdfs:label "chop_of" .
+
+
+###  http://purl.org/ontology/samo/chopped_into
+samo:chopped_into rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf samo:manipulated_into ;
+                  rdfs:comment "Indicates a process of manipulation using the chopping technique." ;
+                  rdfs:label "chopped_into" .
+
+
+###  http://purl.org/ontology/samo/clip_of
+samo:clip_of rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf samo:manipulation_of ;
+             owl:inverseOf samo:clipped_into ;
+             rdfs:comment "Indicates a process of manipulation using the clipping technique." ;
+             rdfs:label "clip_of" .
+
+
+###  http://purl.org/ontology/samo/clipped_into
+samo:clipped_into rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf samo:manipulated_into ;
+                  rdfs:comment "Indicates a process of manipulation using the clipping technique." ;
+                  rdfs:label "clipped_into" .
+
+
+###  http://purl.org/ontology/samo/detuned
+samo:detuned rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf samo:manipulation_of ;
+             owl:inverseOf samo:detuned_into ;
+             rdfs:comment "Indicates a process of manipulation using the detuning technique." ;
+             rdfs:label "detuned" .
+
+
+###  http://purl.org/ontology/samo/detuned_into
+samo:detuned_into rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf samo:manipulated_into ;
+                  rdfs:comment "Indicates a process of manipulation using the detuning technique." ;
+                  rdfs:label "detuned_into" .
+
+
+###  http://purl.org/ontology/samo/filtered
+samo:filtered rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf samo:manipulation_of ;
+              owl:inverseOf samo:filtered_into ;
+              rdfs:comment "Indicates a process of manipulation using the filtering technique." ;
+              rdfs:label "filtered" .
+
+
+###  http://purl.org/ontology/samo/filtered_into
+samo:filtered_into rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf samo:manipulated_into ;
+                   rdfs:comment "Indicates a process of manipulation using the filtering technique." ;
+                   rdfs:label "filtered_into" .
+
+
+###  http://purl.org/ontology/samo/has_elements
+samo:has_elements rdf:type owl:ObjectProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:domain mo:Track ;
+                  rdfs:range samo:Elements ;
+                  rdfs:comment "Relates a Track to any number of Elements, with a minimum of 1." ;
+                  rdfs:label "has_elements" .
+
+
+###  http://purl.org/ontology/samo/has_sample
+samo:has_sample rdf:type owl:ObjectProperty ;
+                owl:inverseOf samo:used_in ;
+                rdf:type owl:TransitiveProperty ;
+                rdfs:domain mo:Track ;
+                rdfs:range samo:Sample ;
+                rdfs:comment "Relates a Track to an instance of a Sample." ;
+                rdfs:label "has_sample" .
+
+
+###  http://purl.org/ontology/samo/is_cover_of
+samo:is_cover_of rdf:type owl:ObjectProperty ,
+                          owl:InverseFunctionalProperty ;
+                 rdfs:domain mo:Track ;
+                 rdfs:range [ rdf:type owl:Restriction ;
+                              owl:onProperty samo:is_cover_of ;
+                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass mo:Track
+                            ] ;
+                 rdfs:comment "Shortcut property to relate a Track with the track that covers it." ;
+                 rdfs:label "is_cover_of" .
+
+
+###  http://purl.org/ontology/samo/is_sampled_in
+samo:is_sampled_in rdf:type owl:ObjectProperty ;
+                   owl:inverseOf samo:samples ;
+                   rdfs:domain mo:Track ;
+                   rdfs:range mo:Track ;
+                   rdfs:comment "Shortcut property to relate a Track with the track that samples it. For example: A Night In Tunisia is_sampled_in Manifest." ;
+                   rdfs:label "is_sampled_in" .
+
+
+###  http://purl.org/ontology/samo/loop_of
+samo:loop_of rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf samo:manipulation_of ;
+             owl:inverseOf samo:looped_into ;
+             rdfs:comment "Indicates a process of manipulation using the looping technique." ;
+             rdfs:label "loop_of" .
+
+
+###  http://purl.org/ontology/samo/looped_into
+samo:looped_into rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf samo:manipulated_into ;
+                 rdfs:comment "Indicates a process of manipulation using the looping technique." ;
+                 rdfs:label "looped_into" .
+
+
+###  http://purl.org/ontology/samo/manipulated
+samo:manipulated rdf:type owl:ObjectProperty ;
+                 owl:inverseOf samo:manipulated_with ;
+                 rdfs:domain samo:Sampler ;
+                 rdfs:range mo:Signal ;
+                 rdfs:comment "Relates a Sampler to the Signal it manipulated." ;
+                 rdfs:label "manipulated" .
+
+
+###  http://purl.org/ontology/samo/manipulated_into
+samo:manipulated_into rdf:type owl:ObjectProperty ;
+                      owl:inverseOf samo:manipulation_of ;
+                      rdf:type owl:TransitiveProperty ;
+                      rdfs:domain samo:Elements ;
+                      rdfs:range samo:Sample ;
+                      rdfs:comment "Relates an Element to a Sample, indicating a process of transformation from one class to the other through manipulation." ;
+                      rdfs:label "manipulated_into" .
+
+
+###  http://purl.org/ontology/samo/manipulated_with
+samo:manipulated_with rdf:type owl:ObjectProperty ;
+                      rdfs:domain mo:Signal ;
+                      rdfs:range samo:Sampler ;
+                      rdfs:comment "Relates a Signal to the Sampler used to manipulate it." .
+
+
+###  http://purl.org/ontology/samo/manipulation_of
+samo:manipulation_of rdf:type owl:ObjectProperty ,
+                              owl:TransitiveProperty ;
+                     rdfs:domain samo:Sample ;
+                     rdfs:range samo:Elements ;
+                     rdfs:comment "Relates a Sample to an Element, indicating a process of transformation from one class to the other through manipulation." ;
+                     rdfs:label "manipulation_of" .
+
+
+###  http://purl.org/ontology/samo/part_of
+samo:part_of rdf:type owl:ObjectProperty ;
+             rdfs:comment "Functional property to indicate class relationships." ;
+             rdfs:label "part_of" .
+
+
+###  http://purl.org/ontology/samo/producer
+samo:producer rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf mo:performer ;
+              rdfs:comment "Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent. This agent could just be the artist of the track (as we have done in our example) but it could also be the actual producer of the music who created the sample, as that is most often different to the artist." ;
+              rdfs:label "has producer" .
+
+
+###  http://purl.org/ontology/samo/samples
+samo:samples rdf:type owl:ObjectProperty ;
+             rdfs:domain mo:Track ;
+             rdfs:range mo:Track ;
+             rdfs:comment "Shortcut property to relate a Track with the track that it samples. For example: Manifest samples A Night In Tunisia." ;
+             rdfs:label "samples" .
+
+
+###  http://purl.org/ontology/samo/scratch_of
+samo:scratch_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf samo:manipulation_of ;
+                rdfs:comment "Indicates a process of manipulation using the scratching technique." ;
+                rdfs:label "scratch_of" .
+
+
+###  http://purl.org/ontology/samo/scratched_into
+samo:scratched_into rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf samo:manipulated_into ;
+                    rdfs:comment "Indicates a process of manipulation using the scratching technique." ;
+                    rdfs:label "scratched_into" .
+
+
+###  http://purl.org/ontology/samo/timestretched
+samo:timestretched rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf samo:manipulation_of ;
+                   owl:inverseOf samo:timestretched_into ;
+                   rdfs:comment "Indicates a process of manipulation using the timestretching technique." ;
+                   rdfs:label "timestretched" .
+
+
+###  http://purl.org/ontology/samo/timestretched_into
+samo:timestretched_into rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf samo:manipulated_into ;
+                        rdfs:comment "Indicates a process of manipulation using the timestretching technique." ;
+                        rdfs:label "timestretched_into" .
+
+
+###  http://purl.org/ontology/samo/tuned
+samo:tuned rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf samo:manipulation_of ;
+           owl:inverseOf samo:tuned_into ;
+           rdfs:comment "Indicates a process of manipulation using the tuning technique." ;
+           rdfs:label "tuned" .
+
+
+###  http://purl.org/ontology/samo/tuned_into
+samo:tuned_into rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf samo:manipulated_into ;
+                rdfs:comment "Indicates a process of manipulation using the tuning technique." ;
+                rdfs:label "tuned_into" .
+
+
+###  http://purl.org/ontology/samo/used_in
+samo:used_in rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:domain samo:Sample ;
+             rdfs:range mo:Track ;
+             rdfs:comment "Relates an instance of a Sample to a Track." ;
+             rdfs:label "used_in" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/ontology/mo/duration
+mo:duration rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( mo:Signal
+                                        mo:Track
+                                      )
+                        ] ;
+            rdfs:range xsd:float .
+
+
+###  http://purl.org/ontology/samo/release_year
+samo:release_year rdf:type owl:DatatypeProperty ;
+                  rdfs:domain mo:Track ;
+                  rdfs:range xsd:int ;
+                  rdfs:comment "Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology but could be extended to fully reflect the intricacies of music releases if needed or could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia." ;
+                  rdfs:label "release_year" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#Event
+event:Event rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/Genre
+mo:Genre rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/Instrument
+mo:Instrument rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/MusicArtist
+mo:MusicArtist rdf:type owl:Class ;
+               rdfs:subClassOf foaf:Agent .
+
+
+###  http://purl.org/ontology/mo/MusicalExpression
+mo:MusicalExpression rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/MusicalManifestation
+mo:MusicalManifestation rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/Performance
+mo:Performance rdf:type owl:Class ;
+               rdfs:subClassOf event:Event .
+
+
+###  http://purl.org/ontology/mo/Signal
+mo:Signal rdf:type owl:Class ;
+          rdfs:subClassOf mo:MusicalExpression .
+
+
+###  http://purl.org/ontology/mo/Track
+mo:Track rdf:type owl:Class ;
+         rdfs:subClassOf mo:MusicalManifestation ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty mo:genre ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass mo:Genre
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty samo:has_elements ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass samo:Elements
+                         ] .
+
+
+###  http://purl.org/ontology/samo/Analog_Sampler
+samo:Analog_Sampler rdf:type owl:Class ;
+                    rdfs:subClassOf samo:Sampler ;
+                    owl:disjointWith samo:Digital_Sampler ;
+                    rdfs:comment "Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers." ;
+                    rdfs:label "Analog Sampler" .
+
+
+###  http://purl.org/ontology/samo/Bass
+samo:Bass rdf:type owl:Class ;
+          rdfs:subClassOf samo:Elements ;
+          rdfs:comment "Constitutive element of a track relating to bass." ;
+          rdfs:label "Bass" .
+
+
+###  http://purl.org/ontology/samo/Digital_Sampler
+samo:Digital_Sampler rdf:type owl:Class ;
+                     rdfs:subClassOf samo:Sampler ;
+                     rdfs:comment "Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers." ;
+                     rdfs:label "Digital Sampler" .
+
+
+###  http://purl.org/ontology/samo/Direct_Sample
+samo:Direct_Sample rdf:type owl:Class ;
+                   rdfs:subClassOf samo:Sample ;
+                   owl:disjointWith samo:Interpolation ;
+                   rdfs:comment "Type of sample based on categorization by whosampled.com. Covers all samples created only by a sampler, not any other instrument." ;
+                   rdfs:label "Direct Sample" .
+
+
+###  http://purl.org/ontology/samo/Drums
+samo:Drums rdf:type owl:Class ;
+           rdfs:subClassOf samo:Elements ;
+           rdfs:comment "Constitutive element of a track relating to drums and other rhythmic elements." ;
+           rdfs:label "Drums" .
+
+
+###  http://purl.org/ontology/samo/Elements
+samo:Elements rdf:type owl:Class ;
+              rdfs:subClassOf mo:Signal ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty samo:part_of ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass mo:Track
+                              ] ;
+              rdfs:label "Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com." ,
+                         "Elements" .
+
+
+###  http://purl.org/ontology/samo/Interpolation
+samo:Interpolation rdf:type owl:Class ;
+                   rdfs:subClassOf samo:Sample ;
+                   rdfs:comment "Type of sample based on categorization by whosampled.com. Covers all samples created by instruments other than a sampler." ;
+                   rdfs:label "Interpolation" .
+
+
+###  http://purl.org/ontology/samo/Lyrics
+samo:Lyrics rdf:type owl:Class ;
+            rdfs:subClassOf samo:Elements ;
+            rdfs:comment "Constitutive element of a track relating to lyrics. EXPLAIN THE DIFFERENCE BTW VOICE AND LYRICS" ;
+            rdfs:label "Lyrics" .
+
+
+###  http://purl.org/ontology/samo/Riff
+samo:Riff rdf:type owl:Class ;
+          rdfs:subClassOf samo:Elements ;
+          rdfs:comment "Constitutive element of a track relating to melodic elements, such as motifs, keyboard lines, horn riffs etc..." ;
+          rdfs:label "Riff" .
+
+
+###  http://purl.org/ontology/samo/Sample
+samo:Sample rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                  owl:onProperty samo:manipulation_of ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass samo:Elements
+                                ] ;
+            rdfs:subClassOf mo:Signal ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty samo:part_of ;
+                              owl:someValuesFrom mo:Track
+                            ] ;
+            rdfs:comment "An instance of a sample, created through a performance (Sampling) by an agent using an instrument (Sampler)." ;
+            rdfs:label "Sample" .
+
+
+###  http://purl.org/ontology/samo/Sampler
+samo:Sampler rdf:type owl:Class ;
+             rdfs:subClassOf mo:Instrument ;
+             rdfs:comment "Top-level class for the machines used in the sampling event to create a sample." ;
+             rdfs:label "Sampler" .
+
+
+###  http://purl.org/ontology/samo/Sampling
+samo:Sampling rdf:type owl:Class ;
+              rdfs:subClassOf mo:Performance ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty mo:instrument ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass samo:Sampler
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty samo:producer ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass mo:MusicArtist
+                              ] ;
+              rdfs:label "Sampling" ,
+                         "Sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." .
+
+
+###  http://purl.org/ontology/samo/Sound_Effects
+samo:Sound_Effects rdf:type owl:Class ;
+                   rdfs:subClassOf samo:Elements ;
+                   rdfs:comment "Constitutive element of a track relating to sound effects." ;
+                   rdfs:label "Sound Effects" .
+
+
+###  http://purl.org/ontology/samo/Voice
+samo:Voice rdf:type owl:Class ;
+           rdfs:subClassOf samo:Elements ;
+           rdfs:comment "Constitutive element of a track relating to voices." ;
+           rdfs:label "Voice" .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( samo:Bass
+                samo:Drums
+                samo:Lyrics
+                samo:Riff
+                samo:Sound_Effects
+                samo:Voice
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
