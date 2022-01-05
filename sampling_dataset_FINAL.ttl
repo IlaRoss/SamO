@@ -12,7 +12,10 @@
 @base <http://www.w3.org/2002/07/owl#> .
 
 [ rdf:type owl:Ontology ;
-   owl:imports samo:
+   owl:imports samo: ;
+   <http://purl.org/dc/elements/1.1/created> "January 2022" ;
+   <http://purl.org/dc/elements/1.1/description> "Test dataset for the Sampling Ontology (samo) built from a selection of 20 songs and their information on whosampled.com." ;
+   <http://purl.org/dc/elements/1.1/title> "Sampling Ontology Test Dataset"
  ] .
 
 #################################################################
@@ -31,8 +34,56 @@ mo:collaborated_with rdf:type owl:AnnotationProperty .
 mo:compiled rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/ontology/mo/compiler
+mo:compiler rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/mo/duration
+mo:duration rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/ontology/mo/genre
 mo:genre rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/EQed
+samo:EQed rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/EQed_into
+samo:EQed_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/chop_of
+samo:chop_of rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/chopped_into
+samo:chopped_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/clip_of
+samo:clip_of rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/clipped_into
+samo:clipped_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/detuned
+samo:detuned rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/detuned_into
+samo:detuned_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/filtered
+samo:filtered rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/filtered_into
+samo:filtered_into rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/samo/has_elements
@@ -43,8 +94,16 @@ samo:has_elements rdf:type owl:AnnotationProperty .
 samo:has_sample rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/ontology/samo/is_cover_of
+samo:is_cover_of rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/ontology/samo/is_sampled_in
 samo:is_sampled_in rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/loop_of
+samo:loop_of rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/samo/looped_into
@@ -59,8 +118,52 @@ samo:manipulated_into rdf:type owl:AnnotationProperty .
 samo:manipulation_of rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/ontology/samo/part_of
+samo:part_of rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/pitch_shift_of
+samo:pitch_shift_of rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/pitch_shifted_into
+samo:pitch_shifted_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/producer
+samo:producer rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/release_year
+samo:release_year rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/ontology/samo/samples
 samo:samples rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/scratch_of
+samo:scratch_of rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/scratched_into
+samo:scratched_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/timestretched
+samo:timestretched rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/timestretched_into
+samo:timestretched_into rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/tuned
+samo:tuned rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/samo/tuned_into
+samo:tuned_into rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/samo/used_in
@@ -71,16 +174,16 @@ samo:used_in rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  http://purl.org/ontology/mo/Genre
+mo:Genre rdf:type owl:Class .
+
+
 ###  http://purl.org/ontology/mo/MusicArtist
 mo:MusicArtist rdf:type owl:Class .
 
 
 ###  http://purl.org/ontology/mo/Track
 mo:Track rdf:type owl:Class .
-
-
-###  http://purl.org/ontology/mo/Genre
-mo:Genre rdf:type owl:Class .
 
 
 ###  http://purl.org/ontology/samo/Bass
@@ -123,51 +226,13 @@ samo:Voice rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-
-### Genres 
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#HipHop
-:HipHop rdf:type owl:NamedIndividual ,
-                 mo:Genre ;
-        rdfs:label "Hip-Hop" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Jazz
-:Jazz rdf:type owl:NamedIndividual ,
-               mo:Genre ;
-      rdfs:label "Jazz" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Soul
-:Soul rdf:type owl:NamedIndividual ,
-                 mo:Genre ;
-        rdfs:label "Soul" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Funk
-:Funk rdf:type owl:NamedIndividual ,
-               mo:Genre ;
-      rdfs:label "Funk" .  
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#RnB
-:Funk rdf:type owl:NamedIndividual ,
-               mo:Genre ;
-      rdfs:label "R&B" .      
-
-
-### Tracks used as samples 
-
-### A Night In Tunisia 
-
 ###  http://www.semanticweb.org/samo-dataset-abox#A_Night_In_Tunisia
 :A_Night_In_Tunisia rdf:type owl:NamedIndividual ,
                              mo:Track ;
-                    mo:genre :Jazz ;
-                    mo:duration "186000"^^xsd:float ;
                     mo:compiler :Charlie_Parker ,
                                 :Miles_Davis ;
+                    mo:duration "186000.0"^^xsd:float ;
+                    mo:genre :Jazz ;
                     samo:has_elements :A_Night_In_Tunisia_Riff ;
                     samo:is_sampled_in :Manifest ;
                     samo:release_year "1961"^^xsd:int ;
@@ -177,514 +242,17 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#A_Night_In_Tunisia_Riff
 :A_Night_In_Tunisia_Riff rdf:type owl:NamedIndividual ,
                                   samo:Riff ;
-                         samo:part_of :A_Night_In_Tunisia ;         
-                         samo:looped_into :A_Night_In_Tunisia_Sample .
+                         samo:looped_into :A_Night_In_Tunisia_Sample ;
+                         samo:part_of :A_Night_In_Tunisia .
 
 
-###  http://www.semanticweb.org/samo-dataset-abox#A_Night_In_Tunisia_Manifest_Sample
+###  http://www.semanticweb.org/samo-dataset-abox#A_Night_In_Tunisia_Sample
 :A_Night_In_Tunisia_Sample rdf:type owl:NamedIndividual ,
                                     samo:Direct_Sample ;
-                           samo:part_of :Manifest ;
                            samo:loop_of :A_Night_In_Tunisia_Riff ;
-                           samo:producer :Gangstarr ;
+                           samo:producer :DJ_Premier ;
                            samo:used_in :Manifest .
 
-
-### Aguas de Marco 
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco
-:Aguas_De_Marco rdf:type owl:NamedIndividual ,
-                         mo:Track ;
-                mo:genre :Jazz ;
-                mo:duration "281000"^^xsd:float ;
-                mo:compiler :Stan_Getz ,
-                            :Joao_Gilberto ;
-                samo:has_elements :Aguas_De_Marco_Drums ,
-                                  :Aguas_De_Marco_Riff ,
-                                  :Aguas_De_Marco_Voice ,
-                                  :Aguas_De_Marco_Lyrics ;
-                samo:is_sampled_in :Girl_From_Alaska ;
-                samo:release_year "1976"^^xsd:int ;
-                rdfs:label "Aguas De Março" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Drums
-:Aguas_De_Marco_Drums rdf:type owl:NamedIndividual ,
-                               samo:Drums ;
-                      samo:part_of :Aguas_De_Marco ;
-                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Riff
-:Aguas_De_Marco_Riff rdf:type owl:NamedIndividual ,
-                              samo:Riff ;
-                     samo:part_of :Aguas_De_Marco ;
-                     samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Voice
-:Aguas_De_Marco_Voice rdf:type owl:NamedIndividual ,
-                               samo:Voice ;
-                      samo:part_of :Aguas_De_Marco ;
-                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Lyrics
-:Aguas_De_Marco_Lyrics rdf:type owl:NamedIndividual ,
-                               samo:Lyrics ;
-                      samo:part_of :Aguas_De_Marco ;
-                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Girl_From_Alaska_Sample
-:Aguas_De_Marco_Sample rdf:type owl:NamedIndividual ,
-                                samo:Direct_Sample ;
-                       samo:producer :Slo_Mo ;
-                       samo:loop_of :Aguas_De_Marco_Drums ,
-                                    :Aguas_De_Marco_Lyrics ,
-                                    :Aguas_De_Marco_Riff ,
-                                    :Aguas_De_Marco_Voice ;
-                       samo:part_of :Girl_From_Alaska ; 
-                       samo:used_in :Girl_From_Alaska .
-
-
-### Aint Got No, I Got Life
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life
-:Aint_Got_No_I_Got_Life rdf:type owl:NamedIndividual ,
-                                 mo:Track ;
-                        mo:genre :Soul ; 
-                        mo:duration "138000"^^xsd:float ;
-                        mo:compiler :Nina_Simone ;
-                        samo:has_elements :Aint_Got_No_I_Got_Life_Lyrics ,
-                                          :Aint_Got_No_I_Got_Life_Voice ;
-                        samo:is_sampled_in :Ive_Got_Life ;
-                        rdfs:label "Ain't Got No, I Got Life" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Lyrics
-:Aint_Got_No_I_Got_Life_Lyrics rdf:type owl:NamedIndividual ,
-                                        samo:Lyrics ;
-                               samo:part_of :Aint_Got_No_I_Got_Life ;
-                               samo:EQed_into :Aint_Got_No_I_Got_Life_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Voice
-:Aint_Got_No_I_Got_Life_Voice rdf:type owl:NamedIndividual ,
-                                        samo:Voice ;
-                               samo:part_of :Aint_Got_No_I_Got_Life ;
-                               samo:EQed_into :Aint_Got_No_I_Got_Life_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Sample
-:Aint_Got_No_I_Got_Life_Sample rdf:type owl:NamedIndividual ,
-                                        samo:Direct_Sample ;
-                               samo:part_of :Ive_Got_Life ;
-                               samo:producer :Lauryn_Hill ;
-                               samo:EQed :Aint_Got_No_I_Got_Life_Lyrics ,
-                                         :Aint_Got_No_I_Got_Life_Voice ;
-                               samo:used_in :Ive_Got_Life .
-
-
-### Aint That A Groove 
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove
-:Aint_That_A_Groove rdf:type owl:NamedIndividual ,
-                             mo:Track ;
-                    mo:genre :Funk ;
-                    mo:duration "178000"^^xsd:float ;
-                    mo:compiler :James_Brown ;
-                    samo:has_elements :Aint_That_A_Groove_Voice ;
-                    samo:is_sampled_in :Manifest ;
-                    samo:release_year "1966"^^xsd:int ;
-                    rdfs:label "Ain't That A Groove" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove_Voice
-:Aint_That_A_Groove_Voice rdf:type owl:NamedIndividual ,
-                                    samo:Voice ;
-                        samo:part_of :Aint_That_A_Groove ;
-                        samo:clipped_into :Aint_That_A_Groove_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove_Sample
-:Aint_That_A_Groove_Sample rdf:type owl:NamedIndividual ,
-                                    samo:Sample ;
-                        samo:part_of :Manifest ;
-                        samo:clip_of :Aint_That_A_Groove_Voice ;
-                        samo:producer :Gangstarr ;
-                        samo:used_in :Manifest .
-
-
-###Bitches Brew 
-
-###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew
-:Bitches_Brew rdf:type owl:NamedIndividual ,
-                       mo:Track ;
-              mo:genre :Jazz ;
-              mo:duration "1620000"^^xsd:float ;
-              mo:compiler :Miles_Davis ;
-              samo:has_elements :Bitches_Brew_Riff ;
-              samo:is_sampled_in :Fattanza_Blu ;
-              samo:release_year "1970"^^xsd:int ;
-              rdfs:label "Bitches Brew" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew_Riff
-:Bitches_Brew_Riff rdf:type owl:NamedIndividual ,
-                            samo:Riff ;
-                   samo:part_of :Bitches_Brew ;
-                   samo:scratched_into :Bitches_Brew_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew_Sample
-:Bitches_Brew_Sample rdf:type owl:NamedIndividual ,
-                              samo:Sample ;
-                     samo:part_of :Fattanza_Blu ;
-                     samo:scratch_of :Bitches_Brew_Riff ;
-                     samo:producer :Sangue_Misto ;
-                     samo:used_in :Fattanza_Blu .
-
-
-###Bring It Up
-
-###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up
-:Bring_It_Up rdf:type owl:NamedIndividual ,
-                      mo:Track ;
-             mo:genre :Funk ;
-             mo:duration "170000"^^xsd:float ;
-             mo:compiler :James_Brown ;
-             samo:has_elements :Bring_It_Up_Riff ;
-             samo:is_sampled_in :Manifest ;
-             samo:release_year "1967"^^xsd:int ;
-             rdfs:label "Bring It Up" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up_Riff
-:Bring_It_Up_Riff rdf:type owl:NamedIndividual ,
-                           samo:Riff ;
-                        samo:part_of :Bring_It_Up ;
-                        samo:looped_into :Bring_It_Up_Sample . 
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up_Sample
-:Bring_It_Up_Sample rdf:type owl:NamedIndividual ,
-                             samo:Sample ;
-                        samo:part_of :Manifest ;
-                        samo:loop_of :Bring_It_Up_Riff ;
-                        samo:producer :Gangstarr ;
-                        samo:used_in :Manifest .
-
-
-###Cantaloupe Island
-
-###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island
-:Cantaloupe_Island rdf:type owl:NamedIndividual ,
-                            mo:Track ;
-                   mo:genre :Jazz ;
-                   mo:duration "332000"^^xsd:float ;
-                   mo:compiler :Herbie_Hancock ;
-                   samo:has_elements :Cantaloupe_Island_Drums ,
-                                     :Cantaloupe_Island_Riff ;
-                   samo:is_sampled_in :Cantaloop_Flip_Fantasia ;
-                   samo:release_year "1964"^^xsd:int ;
-                   rdfs:label "Cantaloupe Island" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Drums
-:Cantaloupe_Island_Drums rdf:type owl:NamedIndividual ,
-                                  samo:Drums ;
-                         samo:part_of :Cantaloupe_Island ;
-                         samo:looped_into :Cantaloupe_Island_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Riff
-:Cantaloupe_Island_Riff rdf:type owl:NamedIndividual ,
-                                 samo:Riff ;
-                        samo:part_of :Cantaloupe_Island ;
-                        samo:looped_into :Cantaloupe_Island_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Sample
-:Cantaloupe_Island_Sample rdf:type owl:NamedIndividual ,
-                                   samo:Direct_Sample ;
-                          samo:part_of :Cantaloop_Flip_Fantasia ;
-                          samo:loop_of :Cantaloupe_Island_Drums ,
-                                       :Cantaloupe_Island_Riff ;
-                          samo:producer :Us3 ;
-                          samo:used_in :Cantaloop_Flip_Fantasia .
-
-
-###Caravan 
-
-###  http://www.semanticweb.org/samo-dataset-abox#Caravan
-:Caravan rdf:type owl:NamedIndividual ,
-                  mo:Track ;
-         mo:genre :Jazz ;
-         mo:duration "191000"^^xsd:float ;
-         mo:compiler :Barney_Bigard ;
-         samo:has_elements :Caravan_Riff ;
-         samo:is_sampled_in :Jazzy_Sensation_Jazzy_Mix ;
-         samo:release_year "1937"^^xsd:int ;
-         rdfs:label "Caravan" .
-
-###  http://www.semanticweb.org/samo-dataset-abox#Caravan_Riff
-:Caravan_Riff rdf:type owl:NamedIndividual ,
-                       samo:Riff ;
-              samo:part_of :Caravan ;
-              samo:looped_into :Caravan_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Caravan_Sample
-:Caravan_Sample rdf:type owl:NamedIndividual ,
-                         samo:Direct_Sample ;
-                samo:part_of :Jazzy_Sensation_Jazzy_Mix ;
-                samo:loop_of :Caravan_Riff ;
-                samo:producer :Afrika_Bambaataa ;
-                samo:used_in :Jazzy_Sensation_Jazzy_Mix .
-
-
-### Curtains
-
-###  http://www.semanticweb.org/samo-dataset-abox#Curtains
-:Curtains rdf:type owl:NamedIndividual ,
-                   mo:Track ;
-          mo:genre :Jazz ;
-          mo:duration "360000"^^xsd:float ;
-          mo:compiler :The_Jeff_Lorber_Fusion ;
-          samo:has_elements :Curtains_Bass ,
-                            :Curtains_Riff ;
-          samo:is_sampled_in :Peng_Black_Girls ;
-          samo:release_year "1978"^^xsd:int ;
-          rdfs:label "Curtains" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Bass
-:Curtains_Bass rdf:type owl:NamedIndividual ,
-                        samo:Bass ;
-               samo:part_of :Curtains ;
-               samo:looped_into :Curtains_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Riff
-:Curtains_Riff rdf:type owl:NamedIndividual ,
-                        samo:Riff ;
-               samo:part_of :Curtains ;
-               samo:looped_into :Curtains_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Sample
-:Curtains_Sample rdf:type owl:NamedIndividual ,
-                          samo:Interpolation ;
-                 samo:part_of :Peng_Black_Girls ;
-                 samo:loop_of :Curtains_Bass ,
-                              :Curtains_Riff ;
-                 samo:producer :ENNY ;
-                 samo:used_in :Peng_Black_Girls .
-
-
-#Django
-
-###  http://www.semanticweb.org/samo-dataset-abox#Django
-:Django rdf:type owl:NamedIndividual ,
-                 mo:Track ;
-        mo:genre :Jazz ;
-        mo:duration "270000"^^xsd:float ;
-        mo:compiler :Miles_Davis ,
-                    :Michel_Legrand ;
-        samo:has_elements :Django_Riff ,
-                          :Django_Sound_Effects ;
-        samo:is_sampled_in :The_Words ;
-        samo:release_year "1958"^^xsd:int ;
-        rdfs:label "Django" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Django_Riff
-:Django_Riff rdf:type owl:NamedIndividual ,
-                      samo:Riff ;
-             samo:part_of :Django ;
-             samo:chopped_into :Django_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Django_Sound_Effects
-:Django_Sound_Effects rdf:type owl:NamedIndividual ,
-                               samo:Sound_Effects ;
-                      samo:part_of :Django ;
-                      samo:chopped_into :Django_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Django_Sample
-:Django_Sample rdf:type owl:NamedIndividual ,
-                        samo:Interpolation ;
-               samo:part_of :The_Words ;
-               samo:chop_of :Django_Riff ,
-                            :Django_Sound_Effects ;
-               samo:producer :Emanon ;
-               samo:used_in :The_Words .
-
-
-###Fly Me To The Moon
-
-###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon
-:Fly_Me_To_The_Moon rdf:type owl:NamedIndividual ,
-                             mo:Track ;
-                    mo:genre :Jazz ;
-                    mo:duration "535000"^^xsd:float ;
-                    mo:compiler :Vince_Guaraldi_Trio ;
-                    samo:has_elements :Fly_Me_To_The_Moon_Bass ,
-                                      :Fly_Me_To_The_Moon_Riff ;
-                    samo:is_sampled_in :Splattitorium ;
-                    samo:release_year "1989"^^xsd:int ;
-                    rdfs:label "Fly Me To The Moon" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Bass
-:Fly_Me_To_The_Moon_Bass rdf:type owl:NamedIndividual ,
-                                  samo:Bass ;
-                         samo:part_of :Fly_Me_To_The_Moon ;
-                         samo:chopped_into :Fly_Me_To_The_Moon_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Riff
-:Fly_Me_To_The_Moon_Riff rdf:type owl:NamedIndividual ,
-                                  samo:Riff ;
-                         samo:part_of :Fly_Me_To_The_Moon ;
-                         samo:chopped_into :Fly_Me_To_The_Moon_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Sample
-:Fly_Me_To_The_Moon_Sample rdf:type owl:NamedIndividual ,
-                                    samo:Direct_Sample ;
-                           samo:part_of :Splattitorium ;
-                           samo:chop_of :Fly_Me_To_The_Moon_Bass ,
-                                        :Fly_Me_To_The_Moon_Riff ;
-                           samo:producer :The_Pharcyde ;
-                           samo:used_in :Splattitorium .
-
-
-
-### Covers 
-
-###  http://www.semanticweb.org/samo-dataset-abox#Autumn_Leaves
-:Autumn_Leaves rdf:type owl:NamedIndividual ,
-                        mo:Track ;
-               mo:genre :Jazz ;
-               mo:duration "154000"^^xsd:float ;
-               mo:compiler :Jo_Stafford ;
-               samo:release_year "1950"^^xsd:int ;
-               rdfs:label "Autumn Leaves" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Autumn_Leaves_Cover
-:Autumn_Leaves rdf:type owl:NamedIndividual ,
-                        mo:Track ;
-               mo:genre :HipHop ;
-               mo:duration "351000"^^xsd:float ;
-               mo:compiler :Coldcut ;
-               samo:is_cover_of :Autumn_Leaves ;
-               samo:release_year "1993"^^xsd:int ;
-               rdfs:label "Autumn Leaves" .
-
-### Tracks made from samples 
-
-###  http://www.semanticweb.org/samo-dataset-abox#Manifest
-:Manifest rdf:type owl:NamedIndividual ,
-                   mo:Track ;
-          mo:genre :HipHop ;
-          mo:compiler :Gangstarr ;
-          mo:duration "242000"^^xsd:float ;
-          mo:compilation_of :A_Night_In_Tunisia_Sample ,
-                            :Aint_That_A_Groove_Sample ,
-                            :Bring_It_Up_Sample ,
-                            :Papa_Was_Too_Sample ,
-                            :Word_To_The_Mother_Land_Sample ;
-          samo:has_sample :A_Night_In_Tunisia_Riff ,
-                          :Aint_That_A_Groove_Voice ,
-                          :Bring_It_Up_Riff ,
-                          :Papa_Was_Too_Drums ,
-                          :Word_To_The_Mother_Land_Lyrics ;
-          samo:samples :A_Night_In_Tunisia ,
-                       :Aint_That_A_Groove ,
-                       :Bring_It_Up ,
-                       :Papa_Was_Too ,
-                       :Word_To_The_Mother_Land ;
-          samo:release_year "1989"^^xsd:int ;
-          rdfs:label "Manifest" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Be_Happy
-:Be_Happy rdf:type owl:NamedIndividual ,
-                   mo:Track ;
-          mo:genre :RnB ;
-          mo:compiler :Mary_J_Blige ;
-          mo:duration "235000"^^xsd:float ;
-          mo:compilation_of :I_Want_You_Sample ;
-          samo:has_sample :I_Want_You_Sample ;
-          samo:samples :I_Want_You ;
-          samo:release_year "1994"^^xsd:int ;
-          rdfs:label "Be Happy" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Cantaloop_Flip_Fantasia
-:Cantaloop_Flip_Fantasia rdf:type owl:NamedIndividual ,
-                                  mo:Track ;
-                         mo:genre :HipHop ;
-                         mo:compiler :Us3 ;
-                         mo:duration "220000"^^xsd:float ;
-                         mo:compilation_of :Cantaloupe_Island_Sample ;
-                         samo:has_sample :Cantaloupe_Island_Sample ;
-                         samo:samples :Cantaloupe_Island ;
-                         samo:release_year "1992"^^xsd:int ;
-                         rdfs:label "Cantaloop (Flip Fantasia)" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Dopamina
-:Dopamina rdf:type owl:NamedIndividual ,
-                   mo:Track ;
-          mo:genre :HipHop ;
-          mo:compiler :Neffa ;
-          mo:duration "101000"^^xsd:float ;
-          mo:compilation_of :In_a_Silent_Way_Its_About_That_Time_Sample ;
-          samo:has_sample :In_a_Silent_Way_Its_About_That_Time_Sample ;
-          samo:samples :In_a_Silent_Way_Its_About_That_Time ;
-          samo:release_year "1996"^^xsd:int ;
-          rdfs:label "Dopamina" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Electric_Relaxation
-:Electric_Relaxation rdf:type owl:NamedIndividual ,
-                              mo:Track ;
-                     mo:genre :HipHop ;
-                     mo:compiler :A_Tribe_Called_Quest ;
-                     mo:duration "245000"^^xsd:float ;
-                     mo:compilation_of :Mystic_Brew_Sample ;
-                     samo:has_sample :Mystic_Brew_Sample ;
-                     samo:samples :Mystic_Brew ;
-                     samo:release_year "1993"^^xsd:int ;
-                     rdfs:label "Electric Relaxation" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Fattanza_Blu
-:Fattanza_Blu rdf:type owl:NamedIndividual ,
-                       mo:Track ;
-              mo:genre :HipHop ;
-              mo:compiler :Sangue_Misto ;
-              mo:duration "312000"^^xsd:float ;
-              mo:compilation_of :Bitches_Brew_Sample ;
-              samo:has_sample :Bitches_Brew_Sample ;
-              samo:samples :Bitches_Brew ;
-              samo:release_year "1994"^^xsd:int ;
-              rdfs:label "Fattanza Blu" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Girl_From_Alaska
-:Girl_From_Alaska rdf:type owl:NamedIndividual ,
-                           mo:Track ;
-                  samo:has_sample :Aguas_De_Marco_Sample ;
-                  samo:samples :Aguas_De_Marco ;
-                  rdfs:label "Girl From Alaska" .
-
-### Artists 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#A_Tribe_Called_Quest
 :A_Tribe_Called_Quest rdf:type owl:NamedIndividual ,
@@ -700,11 +268,121 @@ samo:Voice rdf:type owl:Class .
                   rdfs:label "Afrika Bambaataa" .
 
 
-###  http://www.semanticweb.org/samo-dataset-abox#James_Brown
-:James_Brown rdf:type owl:NamedIndividual ,
-                           mo:MusicArtist ;
-                  mo:compiled :Aint_That_A_Groove ;
-                  rdfs:label "James Brown" .
+###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco
+:Aguas_De_Marco rdf:type owl:NamedIndividual ,
+                         mo:Track ;
+                mo:compiler :Joao_Gilberto ,
+                            :Stan_Getz ;
+                mo:duration "281000.0"^^xsd:float ;
+                mo:genre :Jazz ;
+                samo:has_elements :Aguas_De_Marco_Drums ,
+                                  :Aguas_De_Marco_Lyrics ,
+                                  :Aguas_De_Marco_Riff ,
+                                  :Aguas_De_Marco_Voice ;
+                samo:is_sampled_in :Girl_From_Alaska ;
+                samo:release_year "1976"^^xsd:int ;
+                rdfs:label "Aguas De Março" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Drums
+:Aguas_De_Marco_Drums rdf:type owl:NamedIndividual ,
+                               samo:Drums ;
+                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
+                      samo:part_of :Aguas_De_Marco .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Girl_From_Alaska_Sample
+:Aguas_De_Marco_Girl_From_Alaska_Sample rdf:type owl:NamedIndividual ,
+                                                 samo:Direct_Sample ;
+                                        samo:clip_of :Aguas_De_Marco_Lyrics ;
+                                        samo:loop_of :Aguas_De_Marco_Drums ,
+                                                     :Aguas_De_Marco_Riff ,
+                                                     :Aguas_De_Marco_Voice ;
+                                        samo:producer :Slo_Mo ;
+                                        samo:used_in :Girl_From_Alaska .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Lyrics
+:Aguas_De_Marco_Lyrics rdf:type owl:NamedIndividual ,
+                                samo:Lyrics ;
+                       samo:clipped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
+                       samo:part_of :Aguas_De_Marco .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Riff
+:Aguas_De_Marco_Riff rdf:type owl:NamedIndividual ,
+                              samo:Riff ;
+                     samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
+                     samo:part_of :Aguas_De_Marco .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Voice
+:Aguas_De_Marco_Voice rdf:type owl:NamedIndividual ,
+                               samo:Voice ;
+                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
+                      samo:part_of :Aguas_De_Marco .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life
+:Aint_Got_No_I_Got_Life rdf:type owl:NamedIndividual ,
+                                 mo:Track ;
+                        mo:compiler :Nina_Simone ;
+                        mo:duration "138000.0"^^xsd:float ;
+                        mo:genre :Soul ;
+                        samo:has_elements :Aint_Got_No_I_Got_Life_Lyrics ,
+                                          :Aint_Got_No_I_Got_Life_Voice ;
+                        samo:is_sampled_in :Ive_Got_Life ;
+                        rdfs:label "Ain't Got No, I Got Life" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Lyrics
+:Aint_Got_No_I_Got_Life_Lyrics rdf:type owl:NamedIndividual ,
+                                        samo:Lyrics ;
+                               samo:clipped_into :Aint_Got_No_I_Got_Life_Sample ;
+                               samo:part_of :Aint_Got_No_I_Got_Life .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Sample
+:Aint_Got_No_I_Got_Life_Sample rdf:type owl:NamedIndividual ,
+                                        samo:Direct_Sample ;
+                               samo:EQed :Aint_Got_No_I_Got_Life_Voice ;
+                               samo:clipped_into :Aint_Got_No_I_Got_Life_Lyrics ;
+                               samo:producer :Lauryn_Hill ;
+                               samo:used_in :Ive_Got_Life .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Voice
+:Aint_Got_No_I_Got_Life_Voice rdf:type owl:NamedIndividual ,
+                                       samo:Voice ;
+                              samo:EQed_into :Aint_Got_No_I_Got_Life_Sample ;
+                              samo:part_of :Aint_Got_No_I_Got_Life .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove
+:Aint_That_A_Groove rdf:type owl:NamedIndividual ,
+                             mo:Track ;
+                    mo:compiler :James_Brown ;
+                    mo:duration "178000.0"^^xsd:float ;
+                    mo:genre :Funk ;
+                    samo:has_elements :Aint_That_A_Groove_Voice ;
+                    samo:is_sampled_in :Manifest ;
+                    samo:release_year "1966"^^xsd:int ;
+                    rdfs:label "Ain't That A Groove" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove_Sample
+:Aint_That_A_Groove_Sample rdf:type owl:NamedIndividual ,
+                                    samo:Direct_Sample ;
+                           samo:clip_of :Aint_That_A_Groove_Voice ;
+                           samo:producer :DJ_Premier ;
+                           samo:used_in :Manifest .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove_Voice
+:Aint_That_A_Groove_Voice rdf:type owl:NamedIndividual ,
+                                   samo:Voice ;
+                          samo:clipped_into :Aint_That_A_Groove_Sample ;
+                          samo:part_of :Aint_That_A_Groove .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Al_Cohn
@@ -714,11 +392,44 @@ samo:Voice rdf:type owl:Class .
          rdfs:label "Al Cohn" .
 
 
+###  http://www.semanticweb.org/samo-dataset-abox#Autumn_Leaves
+:Autumn_Leaves rdf:type owl:NamedIndividual ,
+                        mo:Track ;
+               mo:compiler :Jo_Stafford ;
+               mo:duration "154000.0"^^xsd:float ;
+               mo:genre :Jazz ;
+               samo:release_year "1950"^^xsd:int ;
+               rdfs:label "Autumn Leaves" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Autumn_Leaves_Cover
+:Autumn_Leaves_Cover rdf:type owl:NamedIndividual ,
+                              mo:Track ;
+                     mo:compiler :Coldcut ;
+                     mo:duration "351000.0"^^xsd:float ;
+                     mo:genre :HipHop ;
+                     samo:is_cover_of :Autumn_Leaves ;
+                     samo:release_year "1993"^^xsd:int ;
+                     rdfs:label "Autumn Leaves (Cover)" .
+
+
 ###  http://www.semanticweb.org/samo-dataset-abox#Barney_Bigard
 :Barney_Bigard rdf:type owl:NamedIndividual ,
                         mo:MusicArtist ;
                mo:compiled :Caravan ;
-               rdfs:label "Barney Bigard" . 
+               rdfs:label "Barney Bigard" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Be_Happy
+:Be_Happy rdf:type owl:NamedIndividual ,
+                   mo:Track ;
+          mo:compiler :Mary_J_Blige ;
+          mo:duration "235000.0"^^xsd:float ;
+          mo:genre :RnB ;
+          samo:has_sample :I_Want_You_Sample ;
+          samo:release_year "1994"^^xsd:int ;
+          samo:samples :I_Want_You ;
+          rdfs:label "Be Happy" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Bill_Withers
@@ -729,19 +440,143 @@ samo:Voice rdf:type owl:Class .
               rdfs:label "Bill Withers" .
 
 
+###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew
+:Bitches_Brew rdf:type owl:NamedIndividual ,
+                       mo:Track ;
+              mo:compiler :Miles_Davis ;
+              mo:duration "1620000.0"^^xsd:float ;
+              mo:genre :Jazz ;
+              samo:has_elements :Bitches_Brew_Riff ;
+              samo:is_sampled_in :Fattanza_Blu ;
+              samo:release_year "1970"^^xsd:int ;
+              rdfs:label "Bitches Brew" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew_Riff
+:Bitches_Brew_Riff rdf:type owl:NamedIndividual ,
+                            samo:Riff ;
+                   samo:part_of :Bitches_Brew ;
+                   samo:scratched_into :Bitches_Brew_Sample .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew_Sample
+:Bitches_Brew_Sample rdf:type owl:NamedIndividual ,
+                              samo:Direct_Sample ;
+                     samo:producer :DJ_Gruff ;
+                     samo:scratch_of :Bitches_Brew_Riff ;
+                     samo:used_in :Fattanza_Blu .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up
+:Bring_It_Up rdf:type owl:NamedIndividual ,
+                      mo:Track ;
+             mo:compiler :James_Brown ;
+             mo:duration "170000.0"^^xsd:float ;
+             mo:genre :Funk ;
+             samo:has_elements :Bring_It_Up_Riff ;
+             samo:is_sampled_in :Manifest ;
+             samo:release_year "1967"^^xsd:int ;
+             rdfs:label "Bring It Up" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up_Riff
+:Bring_It_Up_Riff rdf:type owl:NamedIndividual ,
+                           samo:Riff ;
+                  samo:looped_into :Bring_It_Up_Sample ;
+                  samo:part_of :Bring_It_Up .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up_Sample
+:Bring_It_Up_Sample rdf:type owl:NamedIndividual ,
+                             samo:Direct_Sample ;
+                    samo:loop_of :Bring_It_Up_Riff ;
+                    samo:producer :DJ_Premier ;
+                    samo:used_in :Manifest .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Cantaloop_Flip_Fantasia
+:Cantaloop_Flip_Fantasia rdf:type owl:NamedIndividual ,
+                                  mo:Track ;
+                         mo:compiler :Us3 ;
+                         mo:duration "220000.0"^^xsd:float ;
+                         mo:genre :HipHop ;
+                         samo:has_sample :Cantaloupe_Island_Sample ;
+                         samo:release_year "1992"^^xsd:int ;
+                         samo:samples :Cantaloupe_Island ;
+                         rdfs:label "Cantaloop (Flip Fantasia)" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island
+:Cantaloupe_Island rdf:type owl:NamedIndividual ,
+                            mo:Track ;
+                   mo:compiler :Herbie_Hancock ;
+                   mo:duration "332000.0"^^xsd:float ;
+                   mo:genre :Jazz ;
+                   samo:has_elements :Cantaloupe_Island_Drums ,
+                                     :Cantaloupe_Island_Riff ;
+                   samo:is_sampled_in :Cantaloop_Flip_Fantasia ;
+                   samo:release_year "1964"^^xsd:int ;
+                   rdfs:label "Cantaloupe Island" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Drums
+:Cantaloupe_Island_Drums rdf:type owl:NamedIndividual ,
+                                  samo:Drums ;
+                         samo:looped_into :Cantaloupe_Island_Sample ;
+                         samo:part_of :Cantaloupe_Island .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Riff
+:Cantaloupe_Island_Riff rdf:type owl:NamedIndividual ,
+                                 samo:Riff ;
+                        samo:looped_into :Cantaloupe_Island_Sample ;
+                        samo:part_of :Cantaloupe_Island .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Sample
+:Cantaloupe_Island_Sample rdf:type owl:NamedIndividual ,
+                                   samo:Direct_Sample ;
+                          samo:loop_of :Cantaloupe_Island_Drums ,
+                                       :Cantaloupe_Island_Riff ;
+                          samo:producer :Geoff_Wilkinson ,
+                                        :Mel_Simpson ;
+                          samo:used_in :Cantaloop_Flip_Fantasia .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Caravan
+:Caravan rdf:type owl:NamedIndividual ,
+                  mo:Track ;
+         mo:compiler :Barney_Bigard ;
+         mo:duration "191000.0"^^xsd:float ;
+         mo:genre :Jazz ;
+         samo:has_elements :Caravan_Riff ;
+         samo:is_sampled_in :Jazzy_Sensation_Jazzy_Mix ;
+         samo:release_year "1937"^^xsd:int ;
+         rdfs:label "Caravan" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Caravan_Riff
+:Caravan_Riff rdf:type owl:NamedIndividual ,
+                       samo:Riff ;
+              samo:looped_into :Caravan_Sample ;
+              samo:part_of :Caravan .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Caravan_Sample
+:Caravan_Sample rdf:type owl:NamedIndividual ,
+                         samo:Direct_Sample ;
+                samo:loop_of :Caravan_Riff ;
+                samo:producer :Double_Dee ,
+                              :Steinski ;
+                samo:used_in :Jazzy_Sensation_Jazzy_Mix .
+
+
 ###  http://www.semanticweb.org/samo-dataset-abox#Charlie_Parker
 :Charlie_Parker rdf:type owl:NamedIndividual ,
                          mo:MusicArtist ;
                 mo:collaborated_with :Miles_Davis ;
                 mo:compiled :A_Night_In_Tunisia ;
                 rdfs:label "Charlie Parker" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#Childish_Gambino
-:Childish_Gambino rdf:type owl:NamedIndividual ,
-                           mo:MusicArtist ;
-                  mo:compiled :Jump_Hi ;
-                  rdfs:label "Childish Gambino" . 
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Coldcut
@@ -758,11 +593,114 @@ samo:Voice rdf:type owl:Class .
         rdfs:label "Coolio" .
 
 
+###  http://www.semanticweb.org/samo-dataset-abox#Curtains
+:Curtains rdf:type owl:NamedIndividual ,
+                   mo:Track ;
+          mo:compiler :The_Jeff_Lorber_Fusion ;
+          mo:duration "360000.0"^^xsd:float ;
+          mo:genre :Jazz ;
+          samo:has_elements :Curtains_Bass ,
+                            :Curtains_Riff ;
+          samo:is_sampled_in :Peng_Black_Girls ;
+          samo:release_year "1978"^^xsd:int ;
+          rdfs:label "Curtains" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Bass
+:Curtains_Bass rdf:type owl:NamedIndividual ,
+                        samo:Bass ;
+               samo:looped_into :Curtains_Sample ;
+               samo:part_of :Curtains .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Riff
+:Curtains_Riff rdf:type owl:NamedIndividual ,
+                        samo:Riff ;
+               samo:looped_into :Curtains_Sample ;
+               samo:part_of :Curtains .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Sample
+:Curtains_Sample rdf:type owl:NamedIndividual ,
+                          samo:Interpolation ;
+                 samo:loop_of :Curtains_Bass ,
+                              :Curtains_Riff ;
+                 samo:producer :Paya ;
+                 samo:used_in :Peng_Black_Girls .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Django
+:Django rdf:type owl:NamedIndividual ,
+                 mo:Track ;
+        mo:compiler :Michel_Legrand ,
+                    :Miles_Davis ;
+        mo:duration "270000.0"^^xsd:float ;
+        mo:genre :Jazz ;
+        samo:has_elements :Django_Riff ,
+                          :Django_Sound_Effects ;
+        samo:is_sampled_in :The_Words ;
+        samo:release_year "1958"^^xsd:int ;
+        rdfs:label "Django" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Django_Riff
+:Django_Riff rdf:type owl:NamedIndividual ,
+                      samo:Riff ;
+             samo:chopped_into :Django_Sample ;
+             samo:part_of :Django .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Django_Sample
+:Django_Sample rdf:type owl:NamedIndividual ,
+                        samo:Interpolation ;
+               samo:chop_of :Django_Riff ,
+                            :Django_Sound_Effects ;
+               samo:producer :Exile ;
+               samo:used_in :The_Words .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Django_Sound_Effects
+:Django_Sound_Effects rdf:type owl:NamedIndividual ,
+                               samo:Sound_Effects ;
+                      samo:chopped_into :Django_Sample ;
+                      samo:part_of :Django .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Dopamina
+:Dopamina rdf:type owl:NamedIndividual ,
+                   mo:Track ;
+          mo:compiler :Neffa ;
+          mo:duration "101000.0"^^xsd:float ;
+          mo:genre :HipHop ;
+          samo:has_sample :In_a_Silent_Way_Its_About_That_Time_Sample ;
+          samo:release_year "1996"^^xsd:int ;
+          samo:samples :In_a_Silent_Way_Its_About_That_Time ;
+          rdfs:label "Dopamina" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#DrumAndBass
+:DrumAndBass rdf:type owl:NamedIndividual ,
+                      mo:Genre ;
+             rdfs:label "Drum & Bass" .
+
+
 ###  http://www.semanticweb.org/samo-dataset-abox#ENNY
 :ENNY rdf:type owl:NamedIndividual ,
                mo:MusicArtist ;
       mo:compiled :Peng_Black_Girls ;
       rdfs:label "ENNY" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Electric_Relaxation
+:Electric_Relaxation rdf:type owl:NamedIndividual ,
+                              mo:Track ;
+                     mo:compiler :A_Tribe_Called_Quest ;
+                     mo:duration "245000.0"^^xsd:float ;
+                     mo:genre :HipHop ;
+                     samo:has_sample :Mystic_Brew_Sample_ATCQ ;
+                     samo:release_year "1993"^^xsd:int ;
+                     samo:samples :Mystic_Brew ;
+                     rdfs:label "Electric Relaxation" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Emanon
@@ -781,9 +719,63 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Erykah_Badu
 :Erykah_Badu rdf:type owl:NamedIndividual ,
-             mo:MusicArtist ;
-             mo:compiled :Rimshot_ ;
+                      mo:MusicArtist ;
+             mo:compiled :Rimshot_Intro_Live ;
              rdfs:label "Erykah Badu" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Fattanza_Blu
+:Fattanza_Blu rdf:type owl:NamedIndividual ,
+                       mo:Track ;
+              mo:compiler :Sangue_Misto ;
+              mo:duration "312000.0"^^xsd:float ;
+              mo:genre :HipHop ;
+              samo:has_sample :Bitches_Brew_Sample ;
+              samo:release_year "1994"^^xsd:int ;
+              samo:samples :Bitches_Brew ;
+              rdfs:label "Fattanza Blu" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon
+:Fly_Me_To_The_Moon rdf:type owl:NamedIndividual ,
+                             mo:Track ;
+                    mo:compiler :Vince_Guaraldi_Trio ;
+                    mo:duration "535000.0"^^xsd:float ;
+                    mo:genre :Jazz ;
+                    samo:has_elements :Fly_Me_To_The_Moon_Bass ,
+                                      :Fly_Me_To_The_Moon_Riff ;
+                    samo:is_sampled_in :Splattitorium ;
+                    samo:release_year "1989"^^xsd:int ;
+                    rdfs:label "Fly Me To The Moon" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Bass
+:Fly_Me_To_The_Moon_Bass rdf:type owl:NamedIndividual ,
+                                  samo:Bass ;
+                         samo:chopped_into :Fly_Me_To_The_Moon_Sample ;
+                         samo:part_of :Fly_Me_To_The_Moon .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Riff
+:Fly_Me_To_The_Moon_Riff rdf:type owl:NamedIndividual ,
+                                  samo:Riff ;
+                         samo:chopped_into :Fly_Me_To_The_Moon_Sample ;
+                         samo:part_of :Fly_Me_To_The_Moon .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Sample
+:Fly_Me_To_The_Moon_Sample rdf:type owl:NamedIndividual ,
+                                    samo:Direct_Sample ;
+                           samo:chop_of :Fly_Me_To_The_Moon_Bass ,
+                                        :Fly_Me_To_The_Moon_Riff ;
+                           samo:producer :Jay_Dee ;
+                           samo:used_in :Splattitorium .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Funk
+:Funk rdf:type owl:NamedIndividual ,
+               mo:Genre ;
+      rdfs:label "Funk" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Gangstarr
@@ -793,31 +785,22 @@ samo:Voice rdf:type owl:Class .
            rdfs:label "Gangstarr" .
 
 
+###  http://www.semanticweb.org/samo-dataset-abox#Girl_From_Alaska
+:Girl_From_Alaska rdf:type owl:NamedIndividual ,
+                           mo:Track ;
+                  mo:compiler :Slo_Mo ;
+                  mo:duration "245000.0"^^xsd:float ;
+                  mo:genre :HipHop ;
+                  samo:has_sample :Aguas_De_Marco_Girl_From_Alaska_Sample ;
+                  samo:release_year "2003"^^xsd:int ;
+                  samo:samples :Aguas_De_Marco ;
+                  rdfs:label "Girl From Alaska" .
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+###  http://www.semanticweb.org/samo-dataset-abox#Gospel
+:Gospel rdf:type owl:NamedIndividual ,
+                 mo:Genre ;
+        rdfs:label "Gospel" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Grover_Washington_Jr
@@ -825,85 +808,122 @@ samo:Voice rdf:type owl:Class .
                                mo:MusicArtist ;
                       mo:compiled :It_Feels_So_Good ,
                                   :Just_The_Two_of_Us_1981 ,
-                                  :Mister_Magic .
+                                  :Mister_Magic ;
+                      rdfs:label "Grover Washington Jr." .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Herbie_Hancock
 :Herbie_Hancock rdf:type owl:NamedIndividual ,
                          mo:MusicArtist ;
-                mo:compiled :Cantaloupe_Island .
+                mo:compiled :Cantaloupe_Island ;
+                rdfs:label "Herbie Hancock" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#HipHop
+:HipHop rdf:type owl:NamedIndividual ,
+                 mo:Genre ;
+        rdfs:label "Hip-Hop" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#I_Want_You
 :I_Want_You rdf:type owl:NamedIndividual ,
                      mo:Track ;
-            samo:has_elements :I_Want_You_Lyrics ;
+            mo:compiler :Marvin_Gaye ;
+            mo:duration "272000.0"^^xsd:float ;
+            mo:genre :Soul ;
+            samo:has_elements :I_Want_You_Voice ;
+            samo:is_sampled_in :Be_Happy ;
+            samo:release_year "1976"^^xsd:int ;
             rdfs:label "I Want You" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#I_Want_You_Lyrics
-:I_Want_You_Lyrics rdf:type owl:NamedIndividual ,
-                            samo:Lyrics ;
-                   samo:manipulated_into :I_Want_You_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#I_Want_You_Sample
 :I_Want_You_Sample rdf:type owl:NamedIndividual ,
                             samo:Interpolation ;
-                   samo:manipulation_of :I_Want_You .
+                   samo:clip_of :I_Want_You_Voice ;
+                   samo:producer :Poke ,
+                                 :Sean_Puffy_Combs ;
+                   samo:used_in :Be_Happy .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#I_Want_You_Voice
+:I_Want_You_Voice rdf:type owl:NamedIndividual ,
+                           samo:Voice ;
+                  samo:clipped_into :I_Want_You_Sample ;
+                  samo:part_of :I_Want_You .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#In_a_Silent_Way_Its_About_That_Time
 :In_a_Silent_Way_Its_About_That_Time rdf:type owl:NamedIndividual ,
                                               mo:Track ;
+                                     mo:compiler :Miles_Davis ;
+                                     mo:duration "435000.0"^^xsd:float ;
+                                     mo:genre :Jazz ;
                                      samo:has_elements :In_a_Silent_Way_Its_About_That_Time_Riff ;
                                      samo:is_sampled_in :Dopamina ;
+                                     samo:release_year "1969"^^xsd:int ;
                                      rdfs:label "In A Silent Way / It's About That Time" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#In_a_Silent_Way_Its_About_That_Time_Riff
 :In_a_Silent_Way_Its_About_That_Time_Riff rdf:type owl:NamedIndividual ,
                                                    samo:Riff ;
-                                          samo:manipulated_into :In_a_Silent_Way_Its_About_That_Time_Sample .
+                                          samo:part_of :In_a_Silent_Way_Its_About_That_Time ;
+                                          samo:timestretched_into :In_a_Silent_Way_Its_About_That_Time_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#In_a_Silent_Way_Its_About_That_Time_Sample
 :In_a_Silent_Way_Its_About_That_Time_Sample rdf:type owl:NamedIndividual ,
-                                                     samo:Sample ;
+                                                     samo:Direct_Sample ;
+                                            samo:producer :Neffa ;
+                                            samo:timestretched :In_a_Silent_Way_Its_About_That_Time_Riff ;
                                             samo:used_in :Dopamina .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#It_Feels_So_Good
 :It_Feels_So_Good rdf:type owl:NamedIndividual ,
                            mo:Track ;
+                  mo:compiler :Grover_Washington_Jr ;
+                  mo:duration "499000.0"^^xsd:float ;
+                  mo:genre :Jazz ;
                   samo:has_elements :It_Feels_So_Good_Bass ,
                                     :It_Feels_So_Good_Drums ;
                   samo:is_sampled_in :Sticky_Fingers ;
+                  samo:release_year "1975"^^xsd:int ;
                   rdfs:label "It Feels So Good" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#It_Feels_So_Good_Bass
 :It_Feels_So_Good_Bass rdf:type owl:NamedIndividual ,
                                 samo:Bass ;
-                       samo:manipulated_into :It_Feels_So_Good_Sample .
+                       samo:part_of :It_Feels_So_Good ;
+                       samo:pitch_shifted_into :It_Feels_So_Good_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#It_Feels_So_Good_Drums
 :It_Feels_So_Good_Drums rdf:type owl:NamedIndividual ,
                                  samo:Drums ;
-                        samo:manipulated_into :It_Feels_So_Good_Sample .
+                        samo:part_of :It_Feels_So_Good ;
+                        samo:pitch_shifted_into :It_Feels_So_Good_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#It_Feels_So_Good_Sample
 :It_Feels_So_Good_Sample rdf:type owl:NamedIndividual ,
                                   samo:Direct_Sample ;
+                         samo:pitch_shift_of :It_Feels_So_Good_Bass ,
+                                             :It_Feels_So_Good_Drums ;
+                         samo:producer :Wino ;
                          samo:used_in :Sticky_Fingers .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Its_A_Jazz_Thing
 :Its_A_Jazz_Thing rdf:type owl:NamedIndividual ,
                            mo:Track ;
+                  mo:compiler :Roni_Size ;
+                  mo:duration "308000.0"^^xsd:float ;
+                  mo:genre :DrumAndBass ;
                   samo:has_sample :Shadows_Sample ;
+                  samo:release_year "1994"^^xsd:int ;
                   samo:samples :Shadows ;
                   rdfs:label "It's A Jazz Thing" .
 
@@ -911,15 +931,36 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Ive_Got_Life
 :Ive_Got_Life rdf:type owl:NamedIndividual ,
                        mo:Track ;
-              samo:has_sample :Aint_Got_No_I_Got_Life_Lyrics ;
+              mo:compiler :Lauryn_Hill ;
+              mo:duration "450000.0"^^xsd:float ;
+              mo:genre :Soul ;
+              samo:has_sample :Aint_Got_No_I_Got_Life_Sample ;
+              samo:release_year "2015"^^xsd:int ;
               samo:samples :Aint_Got_No_I_Got_Life ;
               rdfs:label "I've Got Life" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#James_Brown
+:James_Brown rdf:type owl:NamedIndividual ,
+                      mo:MusicArtist ;
+             mo:compiled :Aint_That_A_Groove ;
+             rdfs:label "James Brown" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Jazz
+:Jazz rdf:type owl:NamedIndividual ,
+               mo:Genre ;
+      rdfs:label "Jazz" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Jazzy_Sensation_Jazzy_Mix
 :Jazzy_Sensation_Jazzy_Mix rdf:type owl:NamedIndividual ,
                                     mo:Track ;
+                           mo:compiler :Afrika_Bambaataa ;
+                           mo:duration "304000.0"^^xsd:float ;
+                           mo:genre :HipHop ;
                            samo:has_sample :Caravan_Sample ;
+                           samo:release_year "1997" ;
                            samo:samples :Caravan ;
                            rdfs:label "Jazzy Sensation (Jazzy Mix)" .
 
@@ -927,19 +968,25 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Jo_Stafford
 :Jo_Stafford rdf:type owl:NamedIndividual ,
                       mo:MusicArtist ;
-             mo:compiled :Autumn_Leaves .
+             mo:compiled :Autumn_Leaves ;
+             rdfs:label "Jo Stafford" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Joao_Gilberto
 :Joao_Gilberto rdf:type owl:NamedIndividual ,
                         mo:MusicArtist ;
-               mo:compiled :Aguas_De_Marco .
+               mo:compiled :Aguas_De_Marco ;
+               rdfs:label "Joäo Gilberto" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Jump_Hi
 :Jump_Hi rdf:type owl:NamedIndividual ,
                   mo:Track ;
+         mo:compiler :Lion_Babe ;
+         mo:duration "178000.0"^^xsd:float ;
+         mo:genre :Funk ;
          samo:has_sample :Mr_Bojangles_Sample ;
+         samo:release_year "2014"^^xsd:int ;
          samo:samples :Mr_Bojangles ;
          rdfs:label "Jump Hi" .
 
@@ -947,41 +994,75 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Jungle_Boogie
 :Jungle_Boogie rdf:type owl:NamedIndividual ,
                         mo:Track ;
+               mo:compiler :Kool_and_The_Gang ;
+               mo:duration "186000.0"^^xsd:float ;
+               mo:genre :Funk ;
+               samo:has_elements :Jungle_Boogie_Riff ;
+               samo:is_sampled_in :The_Doo_Bop_Song ;
+               samo:release_year "1973"^^xsd:int ;
                rdfs:label "Jungle Boogie" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Jungle_Boogie_Riff
+:Jungle_Boogie_Riff rdf:type owl:NamedIndividual ,
+                             samo:Riff ;
+                    samo:part_of :Jungle_Boogie ;
+                    samo:pitch_shifted_into :Jungle_Boogie_Sample .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Jungle_Boogie_Sample
+:Jungle_Boogie_Sample rdf:type owl:NamedIndividual ,
+                               samo:Direct_Sample ;
+                      samo:pitch_shift_of :Jungle_Boogie_Riff ;
+                      samo:producer :Easy_Moo_Bee ;
+                      samo:used_in :The_Doo_Bop_Song .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981
 :Just_The_Two_of_Us_1981 rdf:type owl:NamedIndividual ,
                                   mo:Track ;
+                         mo:compiler :Bill_Withers ,
+                                     :Grover_Washington_Jr ;
+                         mo:duration "426000.0"^^xsd:float ;
+                         mo:genre :RnB ;
                          samo:has_elements :Just_The_Two_of_Us_1981_Riff ,
                                            :Just_The_Two_of_Us_1981_Sound_Effects ;
                          samo:is_sampled_in :Just_The_Two_of_Us_1997 ;
+                         samo:release_year "1981"^^xsd:int ;
                          rdfs:label "Just The Two Of Us (1981)" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Riff
 :Just_The_Two_of_Us_1981_Riff rdf:type owl:NamedIndividual ,
                                        samo:Riff ;
-                              samo:manipulated_into :Just_The_Two_of_Us_1981_Sample .
+                              samo:filtered_into :Just_The_Two_of_Us_1981_Sample ;
+                              samo:part_of :Just_The_Two_of_Us_1981 .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Sample
 :Just_The_Two_of_Us_1981_Sample rdf:type owl:NamedIndividual ,
-                                         samo:Interpolation ,
-                                         samo:Sample ;
+                                         samo:Interpolation ;
+                                samo:filtered :Just_The_Two_of_Us_1981_Riff ,
+                                              :Just_The_Two_of_Us_1981_Sound_Effects ;
+                                samo:producer :DJ_Head ;
                                 samo:used_in :Just_The_Two_of_Us_1997 .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Sound_Effects
 :Just_The_Two_of_Us_1981_Sound_Effects rdf:type owl:NamedIndividual ,
                                                 samo:Sound_Effects ;
-                                       samo:manipulated_into :Just_The_Two_of_Us_1981_Sample .
+                                       samo:filtered_into :Just_The_Two_of_Us_1981_Sample ;
+                                       samo:part_of :Just_The_Two_of_Us_1981 .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1997
 :Just_The_Two_of_Us_1997 rdf:type owl:NamedIndividual ,
                                   mo:Track ;
+                         mo:compiler :Eminem ;
+                         mo:duration "260000.0"^^xsd:float ;
+                         mo:genre :HipHop ;
                          samo:has_sample :Just_The_Two_of_Us_1981_Sample ;
+                         samo:release_year "1997" ;
                          samo:samples :Just_The_Two_of_Us_1981 ;
                          rdfs:label "Just The Two Of Us (1997)" .
 
@@ -989,54 +1070,78 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Kool_and_The_Gang
 :Kool_and_The_Gang rdf:type owl:NamedIndividual ,
                             mo:MusicArtist ;
-                   mo:compiled :Jungle_Boogie .
+                   mo:compiled :Jungle_Boogie ;
+                   rdfs:label "Kool & The Gang" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Lauryn_Hill
 :Lauryn_Hill rdf:type owl:NamedIndividual ,
                       mo:MusicArtist ;
-             mo:compiled :Ive_Got_Life .
+             mo:compiled :Ive_Got_Life ;
+             rdfs:label "Lauryn Hill" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Lion_Babe
 :Lion_Babe rdf:type owl:NamedIndividual ,
                     mo:MusicArtist ;
-           mo:collaborated_with :Childish_Gambino ;
-           mo:compiled :Jump_Hi .
+           mo:compiled :Jump_Hi ;
+           rdfs:label "Lion Babe" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Lonnie_Liston_Smith
 :Lonnie_Liston_Smith rdf:type owl:NamedIndividual ,
                               mo:MusicArtist ;
-                     mo:compiled :Shadows .
+                     mo:compiled :Shadows ;
+                     rdfs:label "Lonnie Liston Smith" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Madlib
 :Madlib rdf:type owl:NamedIndividual ,
                  mo:MusicArtist ;
-        mo:compiled :Mystic_Bounce .
+        mo:compiled :Mystic_Bounce ;
+        rdfs:label "Madlib" .
 
 
-
+###  http://www.semanticweb.org/samo-dataset-abox#Manifest
+:Manifest rdf:type owl:NamedIndividual ,
+                   mo:Track ;
+          mo:compiler :Gangstarr ;
+          mo:duration "242000.0"^^xsd:float ;
+          mo:genre :HipHop ;
+          samo:has_sample :A_Night_In_Tunisia_Sample ,
+                          :Aint_That_A_Groove_Sample ,
+                          :Bring_It_Up_Sample ,
+                          :Papa_Was_Too_Sample ,
+                          :Word_To_The_Mother_Land_Sample ;
+          samo:release_year "1989"^^xsd:int ;
+          samo:samples :A_Night_In_Tunisia ,
+                       :Aint_That_A_Groove ,
+                       :Bring_It_Up ,
+                       :Papa_Was_Too ,
+                       :Word_To_The_Mother_Land ;
+          rdfs:label "Manifest" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Marvin_Gaye
 :Marvin_Gaye rdf:type owl:NamedIndividual ,
                       mo:MusicArtist ;
-             mo:compiled :I_Want_You .
+             mo:compiled :I_Want_You ;
+             rdfs:label "Marvin Gaye" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mary_J_Blige
 :Mary_J_Blige rdf:type owl:NamedIndividual ,
-                        mo:MusicArtist ;
-               mo:compiled :Be_Happy .
+                       mo:MusicArtist ;
+              mo:compiled :Be_Happy ;
+              rdfs:label "Mary J. Blige" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Michel_Legrand
 :Michel_Legrand rdf:type owl:NamedIndividual ,
                          mo:MusicArtist ;
                 mo:collaborated_with :Miles_Davis ;
-                mo:compiled :Django .
+                mo:compiled :Django ;
+                rdfs:label "Michel Legrand" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Miles_Davis
@@ -1048,89 +1153,118 @@ samo:Voice rdf:type owl:Class .
                          :Bitches_Brew ,
                          :Django ,
                          :In_a_Silent_Way_Its_About_That_Time ,
-                         :So_What .
+                         :So_What ,
+                         :The_Doo_Bop_Song ;
+             rdfs:label "Miles Davis" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic
 :Mister_Magic rdf:type owl:NamedIndividual ,
                        mo:Track ;
+              mo:compiler :Grover_Washington_Jr ;
+              mo:duration "544000" ;
+              mo:genre :Jazz ;
               samo:has_elements :Mister_Magic_Bass ,
                                 :Mister_Magic_Drums ,
                                 :Mister_Magic_Riff ;
               samo:is_sampled_in :Understanding ;
+              samo:release_year "1975" ;
               rdfs:label "Mister Magic" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Bass
 :Mister_Magic_Bass rdf:type owl:NamedIndividual ,
                             samo:Bass ;
-                   samo:manipulated_into :Mister_Magic_Sample .
+                   samo:detuned_into :Mister_Magic_Sample ;
+                   samo:part_of :Mister_Magic .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Drums
 :Mister_Magic_Drums rdf:type owl:NamedIndividual ,
                              samo:Drums ;
-                    samo:manipulated_into :Mister_Magic_Sample .
+                    samo:chopped_into :Mister_Magic_Sample ;
+                    samo:part_of :Mister_Magic .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Riff
 :Mister_Magic_Riff rdf:type owl:NamedIndividual ,
                             samo:Riff ;
-                   samo:manipulated_into :Mister_Magic_Sample .
+                   samo:detuned_into :Mister_Magic_Sample ;
+                   samo:part_of :Mister_Magic .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Sample
 :Mister_Magic_Sample rdf:type owl:NamedIndividual ,
-                              samo:Direct_Sample ,
-                              samo:Sample ;
+                              samo:Direct_Sample ;
+                     samo:chop_of :Mister_Magic_Drums ;
+                     samo:detuned :Mister_Magic_Bass ,
+                                  :Mister_Magic_Riff ;
+                     samo:producer :Large_Professor ;
                      samo:used_in :Understanding .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mobb_Deep
 :Mobb_Deep rdf:type owl:NamedIndividual ,
                     mo:MusicArtist ;
-           mo:compiled :Survival_of_The_Fittest .
+           mo:compiled :Survival_of_The_Fittest ;
+           rdfs:label "Mobb Deep" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles
 :Mr_Bojangles rdf:type owl:NamedIndividual ,
                        mo:Track ;
+              mo:compiler :Nina_Simone ;
+              mo:duration "301000.0"^^xsd:float ;
+              mo:genre :Jazz ,
+                       :Soul ;
               samo:has_elements :Mr_Bojangles_Lyrics ,
                                 :Mr_Bojangles_Riff ,
                                 :Mr_Bojangles_Voice ;
               samo:is_sampled_in :Jump_Hi ;
+              samo:release_year "1971"^^xsd:int ;
               rdfs:label "Mr. Bojangles" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Lyrics
 :Mr_Bojangles_Lyrics rdf:type owl:NamedIndividual ,
                               samo:Lyrics ;
-                     samo:manipulated_into :Mr_Bojangles_Sample .
+                     samo:clipped_into :Mr_Bojangles_Sample ;
+                     samo:part_of :Mr_Bojangles .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Riff
 :Mr_Bojangles_Riff rdf:type owl:NamedIndividual ,
                             samo:Riff ;
-                   samo:manipulated_into :Mr_Bojangles_Sample .
+                   samo:chopped_into :Mr_Bojangles_Sample ;
+                   samo:part_of :Mr_Bojangles .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Sample
 :Mr_Bojangles_Sample rdf:type owl:NamedIndividual ,
-                              samo:Direct_Sample ,
-                              samo:Sample ;
+                              samo:Direct_Sample ;
+                     samo:EQed :Mr_Bojangles_Voice ;
+                     samo:chop_of :Mr_Bojangles_Riff ;
+                     samo:clip_of :Mr_Bojangles_Lyrics ;
+                     samo:producer :Lucas_Goodman ;
                      samo:used_in :Jump_Hi .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Voice
 :Mr_Bojangles_Voice rdf:type owl:NamedIndividual ,
                              samo:Voice ;
-                    samo:manipulated_into :Mr_Bojangles_Sample .
+                    samo:EQed_into :Mr_Bojangles_Sample ;
+                    samo:part_of :Mr_Bojangles .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Bounce
 :Mystic_Bounce rdf:type owl:NamedIndividual ,
                         mo:Track ;
-               samo:has_sample :Mystic_Brew_Sample ;
+               mo:compiler :Madlib ;
+               mo:duration "220000.0"^^xsd:float ;
+               mo:genre :HipHop ,
+                        :Jazz ;
+               samo:has_sample :Mystic_Brew_Sample_Madlib ;
+               samo:release_year "2003"^^xsd:int ;
                samo:samples :Mystic_Brew ;
                rdfs:label "Mystic Bounce" .
 
@@ -1138,50 +1272,71 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew
 :Mystic_Brew rdf:type owl:NamedIndividual ,
                       mo:Track ;
+             mo:compiler :Ronnie_Foster ;
+             mo:duration "246000.0"^^xsd:float ;
+             mo:genre :Jazz ;
              samo:has_elements :Mystic_Brew_Bass ,
-                               :Mystic_Brew_Riff ,
-                               :Mystic_Brew_Sound_Effects ;
+                               :Mystic_Brew_Riff ;
              samo:is_sampled_in :Electric_Relaxation ,
                                 :Mystic_Bounce ;
+             samo:release_year "1972"^^xsd:int ;
              rdfs:label "Mystic Brew" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew_Bass
 :Mystic_Brew_Bass rdf:type owl:NamedIndividual ,
                            samo:Bass ;
-                  samo:manipulated_into :Mystic_Brew_Sample .
+                  samo:filtered_into :Mystic_Brew_Sample_ATCQ ;
+                  samo:looped_into :Mystic_Brew_Sample_ATCQ ,
+                                   :Mystic_Brew_Sample_Madlib ;
+                  samo:part_of :Mystic_Brew ;
+                  samo:tuned_into :Mystic_Brew_Sample_Madlib .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew_Riff
 :Mystic_Brew_Riff rdf:type owl:NamedIndividual ,
                            samo:Riff ;
-                  samo:manipulated_into :Mystic_Brew_Sample .
+                  samo:filtered_into :Mystic_Brew_Sample_ATCQ ;
+                  samo:looped_into :Mystic_Brew_Sample_Madlib ;
+                  samo:part_of :Mystic_Brew ;
+                  samo:pitch_shifted_into :Mystic_Brew_Sample_ATCQ ;
+                  samo:tuned_into :Mystic_Brew_Sample_Madlib .
 
 
-###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew_Sample
-:Mystic_Brew_Sample rdf:type owl:NamedIndividual ,
-                             samo:Direct_Sample ,
-                             samo:Sample ;
-                    samo:used_in :Electric_Relaxation ,
-                                 :Mystic_Bounce .
+###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew_Sample_ATCQ
+:Mystic_Brew_Sample_ATCQ rdf:type owl:NamedIndividual ,
+                                  samo:Direct_Sample ;
+                         samo:filtered :Mystic_Brew_Bass ,
+                                       :Mystic_Brew_Riff ;
+                         samo:loop_of :Mystic_Brew_Bass ;
+                         samo:pitch_shift_of :Mystic_Brew_Riff ;
+                         samo:producer :A_Tribe_Called_Quest ;
+                         samo:used_in :Electric_Relaxation .
 
 
-###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew_Sound_Effects
-:Mystic_Brew_Sound_Effects rdf:type owl:NamedIndividual ,
-                                    samo:Sound_Effects ;
-                           samo:manipulated_into :Mystic_Brew_Sample .
+###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Brew_Sample_Madlib
+:Mystic_Brew_Sample_Madlib rdf:type owl:NamedIndividual ,
+                                    samo:Direct_Sample ;
+                           samo:loop_of :Mystic_Brew_Bass ,
+                                        :Mystic_Brew_Riff ;
+                           samo:producer :Madlib ;
+                           samo:tuned :Mystic_Brew_Bass ,
+                                      :Mystic_Brew_Riff ;
+                           samo:used_in :Mystic_Bounce .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Nas
 :Nas rdf:type owl:NamedIndividual ,
               mo:MusicArtist ;
-     mo:compiled :Understanding .
+     mo:compiled :Understanding ;
+     rdfs:label "Nas" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Neffa
 :Neffa rdf:type owl:NamedIndividual ,
                 mo:MusicArtist ;
-       mo:compiled :Dopamina .
+       mo:compiled :Dopamina ;
+       rdfs:label "Neffa" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Nina_Simone
@@ -1189,13 +1344,18 @@ samo:Voice rdf:type owl:Class .
                       mo:MusicArtist ;
              mo:compiled :Aint_Got_No_I_Got_Life ,
                          :Mr_Bojangles ,
-                         :Sinnerman .
+                         :Sinnerman ;
+             rdfs:label "Nina Simone" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Oh_Timbaland
 :Oh_Timbaland rdf:type owl:NamedIndividual ,
                        mo:Track ;
+              mo:compiler :Timbaland ;
+              mo:duration "213400.0"^^xsd:float ;
+              mo:genre :HipHop ;
               samo:has_sample :Sinnerman_Sample ;
+              samo:release_year "2007"^^xsd:int ;
               samo:samples :Sinnerman ;
               rdfs:label "Oh Timbaland" .
 
@@ -1203,185 +1363,279 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Papa_Was_Too
 :Papa_Was_Too rdf:type owl:NamedIndividual ,
                        mo:Track ;
+              mo:compiler :Joe_Tex ;
+              mo:duration "180000.0"^^xsd:float ;
+              mo:genre :Funk ;
+              samo:has_elements :Papa_Was_Too_Drums ;
+              samo:is_sampled_in :Manifest ;
+              samo:release_year "1966"^^xsd:int ;
               rdfs:label "Papa Was Too" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Papa_Was_Too_Drums
 :Papa_Was_Too_Drums rdf:type owl:NamedIndividual ,
-                             samo:Drums .
+                             samo:Drums ;
+                    samo:clipped_into :Papa_Was_Too_Sample ;
+                    samo:part_of :Papa_Was_Too .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Papa_Was_Too_Sample
 :Papa_Was_Too_Sample rdf:type owl:NamedIndividual ,
-                              samo:Sample .
+                              samo:Direct_Sample ;
+                     samo:clip_of :Papa_Was_Too_Drums ;
+                     samo:producer :DJ_Premier ;
+                     samo:used_in :Manifest .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Peng_Black_Girls
 :Peng_Black_Girls rdf:type owl:NamedIndividual ,
                            mo:Track ;
+                  mo:compiler :ENNY ;
+                  mo:duration "183500.0"^^xsd:float ;
+                  mo:genre :HipHop ;
                   samo:has_sample :Curtains_Sample ;
-                  samo:samples :Curtains .
+                  samo:release_year "2020"^^xsd:int ;
+                  samo:samples :Curtains ;
+                  rdfs:label "Peng Black Girls" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Rimshot_Intro_Live
 :Rimshot_Intro_Live rdf:type owl:NamedIndividual ,
                              mo:Track ;
+                    mo:compiler :Erykah_Badu ;
+                    mo:duration "720000.0"^^xsd:float ;
+                    mo:genre :HipHop ;
                     samo:has_sample :So_What_Sample ;
+                    samo:release_year "1997"^^xsd:int ;
                     samo:samples :So_What ;
                     rdfs:label "Rimshot (Intro) (Live)" .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#RnB
+:RnB rdf:type owl:NamedIndividual ,
+              mo:Genre ;
+     rdfs:label "R&B" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Roni_Size
 :Roni_Size rdf:type owl:NamedIndividual ,
                     mo:MusicArtist ;
-           mo:compiled :Its_A_Jazz_Thing .
+           mo:compiled :Its_A_Jazz_Thing ;
+           rdfs:label "Roni Size" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Ronnie_Foster
 :Ronnie_Foster rdf:type owl:NamedIndividual ,
                         mo:MusicArtist ;
-               mo:compiled :Mystic_Brew .
+               mo:compiled :Mystic_Brew ;
+               rdfs:label "Ronnie Foster" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sangue_Misto
 :Sangue_Misto rdf:type owl:NamedIndividual ,
                        mo:MusicArtist ;
-              mo:compiled :Fattanza_Blu .
+              mo:compiled :Fattanza_Blu ;
+              rdfs:label "Sangue Misto" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Shadows
 :Shadows rdf:type owl:NamedIndividual ,
                   mo:Track ;
+         mo:compiler :Lonnie_Liston_Smith ;
+         mo:duration "380000.0"^^xsd:float ;
+         mo:genre :Jazz ;
          samo:has_elements :Shadows_Bass ,
                            :Shadows_Riff ,
                            :Shadows_Sound_Effects ;
          samo:is_sampled_in :Its_A_Jazz_Thing ;
+         samo:release_year "1974"^^xsd:int ;
          rdfs:label "Shadows" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Shadows_Bass
 :Shadows_Bass rdf:type owl:NamedIndividual ,
                        samo:Bass ;
-              samo:manipulated_into :Shadows_Sample .
+              samo:looped_into :Shadows_Sample ;
+              samo:part_of :Shadows ;
+              samo:timestretched_into :Shadows_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Shadows_Riff
 :Shadows_Riff rdf:type owl:NamedIndividual ,
                        samo:Riff ;
-              samo:manipulated_into :Shadows_Sample .
+              samo:looped_into :Shadows_Sample ;
+              samo:part_of :Shadows ;
+              samo:timestretched_into :Shadows_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Shadows_Sample
 :Shadows_Sample rdf:type owl:NamedIndividual ,
                          samo:Direct_Sample ;
+                samo:loop_of :Shadows_Bass ,
+                             :Shadows_Riff ,
+                             :Shadows_Sound_Effects ;
+                samo:producer :Roni_Size ;
+                samo:timestretched :Shadows_Bass ,
+                                   :Shadows_Riff ,
+                                   :Shadows_Sound_Effects ;
                 samo:used_in :Its_A_Jazz_Thing .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Shadows_Sound_Effects
 :Shadows_Sound_Effects rdf:type owl:NamedIndividual ,
                                 samo:Sound_Effects ;
-                       samo:manipulated_into :Shadows_Sample .
+                       samo:looped_into :Shadows_Sample ;
+                       samo:part_of :Shadows ;
+                       samo:timestretched_into :Shadows_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman
 :Sinnerman rdf:type owl:NamedIndividual ,
                     mo:Track ;
+           mo:compiler :Nina_Simone ;
+           mo:duration "620000.0"^^xsd:float ;
+           mo:genre :Gospel ,
+                    :Jazz ;
            samo:has_elements :Sinnerman_Drums ,
                              :Sinnerman_Lyrics ,
                              :Sinnerman_Riff ,
                              :Sinnerman_Voice ;
            samo:is_sampled_in :Oh_Timbaland ;
+           samo:release_year "1965" ;
            rdfs:label "Sinnerman" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Drums
 :Sinnerman_Drums rdf:type owl:NamedIndividual ,
                           samo:Drums ;
-                 samo:manipulated_into :Sinnerman_Sample .
+                 samo:chopped_into :Sinnerman_Sample ;
+                 samo:looped_into :Sinnerman_Sample ;
+                 samo:part_of :Sinnerman .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Lyrics
 :Sinnerman_Lyrics rdf:type owl:NamedIndividual ,
                            samo:Lyrics ;
-                  samo:manipulated_into :Sinnerman_Sample .
+                  samo:clipped_into :Sinnerman_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Riff
 :Sinnerman_Riff rdf:type owl:NamedIndividual ,
                          samo:Riff ;
-                samo:manipulated_into :Sinnerman_Sample .
+                samo:chopped_into :Sinnerman_Sample ;
+                samo:looped_into :Sinnerman_Sample ;
+                samo:part_of :Sinnerman .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Sample
 :Sinnerman_Sample rdf:type owl:NamedIndividual ,
-                           samo:Direct_Sample ,
-                           samo:Sample ;
+                           samo:Direct_Sample ;
+                  samo:chop_of :Sinnerman_Drums ,
+                               :Sinnerman_Riff ;
+                  samo:clip_of :Sinnerman_Lyrics ,
+                               :Sinnerman_Voice ;
+                  samo:filtered :Sinnerman_Voice ;
+                  samo:loop_of :Sinnerman_Drums ,
+                               :Sinnerman_Riff ;
+                  samo:producer :Timbaland ;
                   samo:used_in :Oh_Timbaland .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Voice
 :Sinnerman_Voice rdf:type owl:NamedIndividual ,
                           samo:Voice ;
-                 samo:manipulated_into :Sinnerman_Sample .
+                 samo:clipped_into :Sinnerman_Sample ;
+                 samo:filtered_into :Sinnerman_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Skylark
 :Skylark rdf:type owl:NamedIndividual ,
                   mo:Track ;
+         mo:compiler :Al_Cohn ;
+         mo:duration "379000.0"^^xsd:float ;
+         mo:genre :Jazz ;
          samo:has_elements :Skylark_Riff ;
+         samo:is_sampled_in :Survival_of_The_Fittest ;
+         samo:release_year "1977"^^xsd:int ;
          rdfs:label "Skylark" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Skylark_Riff
 :Skylark_Riff rdf:type owl:NamedIndividual ,
                        samo:Riff ;
-              samo:manipulated_into :Skylark_Sample .
+              samo:chopped_into :Skylark_Sample ;
+              samo:filtered_into :Skylark_Sample ;
+              samo:part_of :Skylark ;
+              samo:pitch_shifted_into :Skylark_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Skylark_Sample
 :Skylark_Sample rdf:type owl:NamedIndividual ,
-                         samo:Sample ;
-                samo:manipulation_of :Skylark_Riff .
+                         samo:Direct_Sample ;
+                samo:chop_of :Skylark_Riff ;
+                samo:filtered :Skylark_Riff ;
+                samo:pitch_shift_of :Skylark ;
+                samo:producer :Havoc ;
+                samo:used_in :Survival_of_The_Fittest .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Slo_Mo
 :Slo_Mo rdf:type owl:NamedIndividual ,
                  mo:MusicArtist ;
-        mo:compiled :Girl_From_Alaska .
+        mo:compiled :Girl_From_Alaska ;
+        rdfs:label "Slo Mo" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What
 :So_What rdf:type owl:NamedIndividual ,
                   mo:Track ;
+         mo:compiler :Miles_Davis ;
+         mo:duration "563000.0"^^xsd:float ;
+         mo:genre :Jazz ;
          samo:has_elements :So_What_Bass ,
                            :So_What_Riff ;
          samo:is_sampled_in :Rimshot_Intro_Live ;
+         samo:release_year "1959"^^xsd:int ;
          rdfs:label "So What" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What_Bass
 :So_What_Bass rdf:type owl:NamedIndividual ,
                        samo:Bass ;
-              samo:manipulated_into :So_What_Sample .
+              samo:looped_into :So_What_Sample ;
+              samo:part_of :So_What .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What_Riff
 :So_What_Riff rdf:type owl:NamedIndividual ,
                        samo:Riff ;
-              samo:manipulated_into :So_What_Sample .
+              samo:looped_into :So_What_Sample ;
+              samo:part_of :So_What .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What_Sample
 :So_What_Sample rdf:type owl:NamedIndividual ,
-                         samo:Interpolation ,
-                         samo:Sample ;
+                         samo:Interpolation ;
+                samo:loop_of :So_What_Bass ,
+                             :So_What_Riff ;
+                samo:producer :Erykah_Badu ;
                 samo:used_in :Rimshot_Intro_Live .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Soul
+:Soul rdf:type owl:NamedIndividual ,
+               mo:Genre ;
+      rdfs:label "Soul" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Splattitorium
 :Splattitorium rdf:type owl:NamedIndividual ,
                         mo:Track ;
+               mo:compiler :The_Pharcyde ;
+               mo:duration "180000.0"^^xsd:float ;
+               mo:genre :HipHop ;
                samo:has_sample :Fly_Me_To_The_Moon_Sample ;
+               samo:release_year "1995"^^xsd:int ;
                samo:samples :Fly_Me_To_The_Moon ;
                rdfs:label "Splattitorium" .
 
@@ -1389,13 +1643,18 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Stan_Getz
 :Stan_Getz rdf:type owl:NamedIndividual ,
                     mo:MusicArtist ;
-           mo:compiled :Aguas_De_Marco .
+           mo:compiled :Aguas_De_Marco ;
+           rdfs:label "Stan Getz" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sticky_Fingers
 :Sticky_Fingers rdf:type owl:NamedIndividual ,
                          mo:Track ;
+                mo:compiler :Coolio ;
+                mo:duration "180000.0"^^xsd:float ;
+                mo:genre :HipHop ;
                 samo:has_sample :It_Feels_So_Good_Sample ;
+                samo:release_year "1994"^^xsd:int ;
                 samo:samples :It_Feels_So_Good ;
                 rdfs:label "Sticky Fingers" .
 
@@ -1403,7 +1662,11 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Survival_of_The_Fittest
 :Survival_of_The_Fittest rdf:type owl:NamedIndividual ,
                                   mo:Track ;
+                         mo:compiler :Mobb_Deep ;
+                         mo:duration "218000.0"^^xsd:float ;
+                         mo:genre :HipHop ;
                          samo:has_sample :Skylark_Sample ;
+                         samo:release_year "1995"^^xsd:int ;
                          samo:samples :Skylark ;
                          rdfs:label "Survival Of The Fittest" .
 
@@ -1411,39 +1674,37 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#The_Doo_Bop_Song
 :The_Doo_Bop_Song rdf:type owl:NamedIndividual ,
                            mo:Track ;
-                  samo:has_elements :The_Doo_Bop_Song_Riff ;
-                  samo:is_sampled_in :Jungle_Boogie ;
+                  mo:compiler :Miles_Davis ;
+                  mo:duration "300000.0"^^xsd:float ;
+                  mo:genre :HipHop ;
+                  samo:has_sample :Jungle_Boogie_Sample ;
+                  samo:release_year "1991"^^xsd:int ;
+                  samo:samples :Jungle_Boogie ;
                   rdfs:label "The Doo Bop Song" .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#The_Doo_Bop_Song_Riff
-:The_Doo_Bop_Song_Riff rdf:type owl:NamedIndividual ,
-                                samo:Riff ;
-                       samo:manipulated_into :The_Doo_Bop_Song_Sample .
-
-
-###  http://www.semanticweb.org/samo-dataset-abox#The_Doo_Bop_Song_Sample
-:The_Doo_Bop_Song_Sample rdf:type owl:NamedIndividual ,
-                                  samo:Sample ;
-                         samo:used_in :Jungle_Boogie .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#The_Jeff_Lorber_Fusion
 :The_Jeff_Lorber_Fusion rdf:type owl:NamedIndividual ,
                                  mo:MusicArtist ;
-                        mo:compiled :Curtains .
+                        mo:compiled :Curtains ;
+                        rdfs:label "The Jeff Lorber Fusion" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#The_Pharcyde
 :The_Pharcyde rdf:type owl:NamedIndividual ,
                        mo:MusicArtist ;
-              mo:compiled :Splattitorium .
+              mo:compiled :Splattitorium ;
+              rdfs:label "The Pharcyde" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#The_Words
 :The_Words rdf:type owl:NamedIndividual ,
                     mo:Track ;
+           mo:compiler :Emanon ;
+           mo:duration "300000.0"^^xsd:float ;
+           mo:genre :HipHop ;
            samo:has_sample :Django_Sample ;
+           samo:release_year "2005"^^xsd:int ;
            samo:samples :Django ;
            rdfs:label "The Words" .
 
@@ -1451,13 +1712,18 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Timbaland
 :Timbaland rdf:type owl:NamedIndividual ,
                     mo:MusicArtist ;
-           mo:compiled :Oh_Timbaland .
+           mo:compiled :Oh_Timbaland ;
+           rdfs:label "Timbaland" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Understanding
 :Understanding rdf:type owl:NamedIndividual ,
                         mo:Track ;
+               mo:compiler :Nas ;
+               mo:duration "193000.0"^^xsd:float ;
+               mo:genre :HipHop ;
                samo:has_sample :Mister_Magic_Sample ;
+               samo:release_year "1994" ;
                samo:samples :Mister_Magic ;
                rdfs:label "Understanding" .
 
@@ -1465,26 +1731,63 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Us3
 :Us3 rdf:type owl:NamedIndividual ,
               mo:MusicArtist ;
-     mo:compiled :Cantaloop_Flip_Fantasia .
+     mo:compiled :Cantaloop_Flip_Fantasia ;
+     rdfs:label "Us3" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Vince_Guaraldi_Trio
 :Vince_Guaraldi_Trio rdf:type owl:NamedIndividual ,
                               mo:MusicArtist ;
-                     mo:compiled :Fly_Me_To_The_Moon .
+                     mo:compiled :Fly_Me_To_The_Moon ;
+                     rdfs:label "Vince Guaraldi Trio" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land
 :Word_To_The_Mother_Land rdf:type owl:NamedIndividual ,
                                   mo:Track ;
+                         mo:compiler :Big_Daddy_Kane ;
+                         mo:duration "189000.0"^^xsd:float ;
+                         mo:genre :HipHop ;
+                         samo:has_elements :Word_To_The_Mother_Land_Lyrics ,
+                                           :Word_To_The_Mother_Land_Voice ;
+                         samo:is_sampled_in :Manifest ;
+                         samo:release_year "1988"^^xsd:int ;
                          rdfs:label "Word To The Mother Land" .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Lyrics
 :Word_To_The_Mother_Land_Lyrics rdf:type owl:NamedIndividual ,
-                                         samo:Lyrics .
+                                         samo:Lyrics ;
+                                samo:clipped_into :Manifest ;
+                                samo:part_of :Word_To_The_Mother_Land .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Sample
 :Word_To_The_Mother_Land_Sample rdf:type owl:NamedIndividual ,
-                                         samo:Sample .
+                                         samo:Direct_Sample ;
+                                samo:clip_of :Word_To_The_Mother_Land_Lyrics ;
+                                samo:pitch_shift_of :Word_To_The_Mother_Land_Voice ;
+                                samo:producer :DJ_Premier ;
+                                samo:scratch_of :Word_To_The_Mother_Land_Voice ;
+                                samo:used_in :Manifest .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Voice
+:Word_To_The_Mother_Land_Voice rdf:type owl:NamedIndividual ,
+                                        samo:Lyrics ;
+                               samo:part_of :Word_To_The_Mother_Land ;
+                               samo:pitch_shifted_into :Word_To_The_Mother_Land_Sample ;
+                               samo:scratched_into :Word_To_The_Mother_Land_Sample .
+
+
+###  http://www.semanticweb.org/samo-dataset-abox#SP_1200
+:SP_1200 rdf:type owl:NamedIndividual ,
+                               samo:Analog_Sampler ;
+                               samo:manipulated :A_Night_In_Tunisia_Sample ,
+                                                :Aint_Got_No_I_Got_Life_Sample ,
+                                                :Bring_It_Up_Sample ,
+                                                :Papa_Was_Too_Sample ,
+                                                :Word_To_The_Mother_Land_Sample .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
