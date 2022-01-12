@@ -647,10 +647,10 @@ section .container {
   font-size: 14px;
   margin-bottom: 0;
 }
-.services .icon-box:hover {
+/*.services .icon-box:hover {
   background: #ff9900;
   border-color: #ff9900;
-}
+}*/
 .services .icon-box:hover .icon {
   background: #fff;
 }
@@ -1058,5 +1058,5 @@ section .container {
   background-color: #80d4ff;
 }
 .log_impl:hover {
-  background-color: #ff4d88;
+  background-color: #ff4dc4;
 }
