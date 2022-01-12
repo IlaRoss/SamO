@@ -1,17 +1,32 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "undefined" ],
-    "baseIris" : [ "http://purl.org/ontology/samo", "http://purl.org/NET/c4dm/event.owl", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/ontology/mo", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://purl.org/ontology/samo", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/NET/c4dm/event.owl", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/ontology/mo", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
     "title" : {
       "undefined" : "The Sampling Ontology"
     },
     "iri" : "http://purl.org/ontology/samo/",
+    "description" : {
+      "undefined" : "The Sampling Ontology offers a set concepts and properties to describe sampling in music on the Semantic Web. It is an extension of the Music Ontology (mo) and is based on the relationships used by whosampled.com."
+    },
     "other" : {
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "January 2022",
+        "type" : "label"
+      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
         "value" : "samo",
+        "type" : "label"
+      } ],
+      "preferredNamespaceURI" : [ {
+        "identifier" : "preferredNamespaceURI",
+        "language" : "undefined",
+        "value" : "http://purl.org/ontology/samo/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -25,90 +40,93 @@
   "namespace" : [ ],
   "class" : [ {
     "id" : "0",
-    "type" : "owl:Class"
+    "type" : "owl:intersectionOf"
   }, {
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "22",
     "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "rdfs:Datatype"
   }, {
     "id" : "7",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "19",
+    "id" : "6",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "20",
     "type" : "owl:Thing"
   }, {
-    "id" : "37",
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
     "type" : "owl:Class"
   }, {
     "id" : "39",
     "type" : "owl:unionOf"
   }, {
-    "id" : "6",
+    "id" : "38",
     "type" : "owl:unionOf"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "48",
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "50",
     "type" : "owl:Class"
   }, {
-    "id" : "44",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "29",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
+    "id" : "72",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
+    "id" : "86",
     "type" : "owl:Class"
   }, {
-    "id" : "104",
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -118,7 +136,8 @@
     "label" : {
       "IRI-based" : "Track"
     },
-    "attributes" : [ "external" ],
+    "intersection" : [ "0" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "0",
     "superClasses" : [ "1" ]
   }, {
@@ -138,16 +157,9 @@
     "label" : {
       "IRI-based" : "Event"
     },
-    "subClasses" : [ "13" ],
+    "subClasses" : [ "11" ],
     "attributes" : [ "external" ],
-    "id" : "21"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#gYear",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "35",
-    "label" : {
-      "IRI-based" : "gYear"
-    }
+    "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -156,11 +168,23 @@
       "IRI-based" : "float"
     }
   }, {
+    "instances" : 0,
+    "union" : [ "0", "12" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "6"
+  }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "19",
+    "id" : "20",
     "label" : {
       "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "int"
     }
   }, {
     "iri" : "http://purl.org/ontology/samo/Bass",
@@ -173,18 +197,18 @@
     "comment" : {
       "undefined" : "Constitutive element of a track relating to bass."
     },
-    "id" : "37",
-    "superClasses" : [ "38" ]
+    "id" : "3",
+    "superClasses" : [ "4" ]
   }, {
     "instances" : 0,
-    "union" : [ "1", "23", "13" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "1", "34", "11" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "39"
   }, {
     "instances" : 0,
-    "union" : [ "0", "4" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "6"
+    "union" : [ "26", "8" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "38"
   }, {
     "iri" : "http://purl.org/ontology/mo/MusicalManifestation",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -202,9 +226,9 @@
     "label" : {
       "IRI-based" : "MusicalExpression"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "12" ],
     "attributes" : [ "external" ],
-    "id" : "23"
+    "id" : "34"
   }, {
     "iri" : "http://purl.org/ontology/samo/Sound_Effects",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -216,8 +240,8 @@
     "comment" : {
       "undefined" : "Constitutive element of a track relating to sound effects."
     },
-    "id" : "48",
-    "superClasses" : [ "38" ]
+    "id" : "47",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Direct_Sample",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -229,8 +253,8 @@
     "comment" : {
       "undefined" : "Type of sample based on categorization by whosampled.com. Covers all samples created only by a sampler, not any other instrument."
     },
-    "id" : "50",
-    "superClasses" : [ "3" ]
+    "id" : "49",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Riff",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -240,10 +264,10 @@
       "undefined" : "Riff"
     },
     "comment" : {
-      "undefined" : "Constitutive element of a track relating to melodic elements, such as motifs, keyboard lines, horn riffs etc..."
+      "undefined" : "Constitutive element of a track relating to melodic elements such as motifs, lines, etc..."
     },
-    "id" : "44",
-    "superClasses" : [ "38" ]
+    "id" : "24",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/ontology/mo/Instrument",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -251,9 +275,9 @@
     "label" : {
       "IRI-based" : "Instrument"
     },
-    "subClasses" : [ "16" ],
+    "subClasses" : [ "17" ],
     "attributes" : [ "external" ],
-    "id" : "68"
+    "id" : "26"
   }, {
     "iri" : "http://purl.org/ontology/samo/Interpolation",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -265,8 +289,8 @@
     "comment" : {
       "undefined" : "Type of sample based on categorization by whosampled.com. Covers all samples created by instruments other than a sampler."
     },
-    "id" : "51",
-    "superClasses" : [ "3" ]
+    "id" : "50",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Analog_Sampler",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -276,10 +300,10 @@
       "undefined" : "Analog Sampler"
     },
     "comment" : {
-      "undefined" : "Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers."
+      "undefined" : "Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers even if they process sound through digital means."
     },
-    "id" : "29",
-    "superClasses" : [ "16" ]
+    "id" : "72",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Elements",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -288,9 +312,9 @@
       "IRI-based" : "Elements",
       "undefined" : "Elements"
     },
-    "subClasses" : [ "44", "37", "48", "78", "54", "45" ],
-    "id" : "38",
-    "superClasses" : [ "4" ]
+    "subClasses" : [ "24", "3", "47", "86", "53", "44" ],
+    "id" : "4",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Sampler",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -299,12 +323,12 @@
       "IRI-based" : "Sampler",
       "undefined" : "Sampler"
     },
-    "subClasses" : [ "31", "29" ],
+    "subClasses" : [ "78", "72" ],
     "comment" : {
-      "undefined" : "Top-level class for the machines used in the sampling event to create a sample."
+      "undefined" : "Subclass of Music Ontology's Instrument to describe the machines used in the sampling event to create a sample."
     },
-    "id" : "16",
-    "superClasses" : [ "68" ]
+    "id" : "17",
+    "superClasses" : [ "26" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Drums",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -316,8 +340,8 @@
     "comment" : {
       "undefined" : "Constitutive element of a track relating to drums and other rhythmic elements."
     },
-    "id" : "78",
-    "superClasses" : [ "38" ]
+    "id" : "86",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/ontology/mo/MusicArtist",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -337,20 +361,22 @@
       "undefined" : "Lyrics"
     },
     "comment" : {
-      "undefined" : "Constitutive element of a track relating to lyrics. EXPLAIN THE DIFFERENCE BTW VOICE AND LYRICS"
+      "undefined" : "Constitutive element of a track relating to lyrics, or words. Different from the voice element in that a voice can be an element of a track but not be used to relate lyrics."
     },
-    "id" : "54",
-    "superClasses" : [ "38" ]
+    "id" : "53",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Sampling",
     "baseIri" : "http://purl.org/ontology/samo",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Sampling",
-      "undefined" : "Sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression."
+      "undefined" : "Sampling"
     },
-    "id" : "33",
-    "superClasses" : [ "13" ]
+    "intersection" : [ "83" ],
+    "attributes" : [ "intersection" ],
+    "id" : "83",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Digital_Sampler",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -360,10 +386,10 @@
       "undefined" : "Digital Sampler"
     },
     "comment" : {
-      "undefined" : "Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers."
+      "undefined" : "Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers even if they process sound through analog means."
     },
-    "id" : "31",
-    "superClasses" : [ "16" ]
+    "id" : "78",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://purl.org/ontology/mo/Performance",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -371,10 +397,10 @@
     "label" : {
       "IRI-based" : "Performance"
     },
-    "subClasses" : [ "33" ],
+    "subClasses" : [ "83" ],
     "attributes" : [ "external" ],
-    "id" : "13",
-    "superClasses" : [ "21" ]
+    "id" : "11",
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "http://purl.org/ontology/mo/Signal",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -382,10 +408,10 @@
     "label" : {
       "IRI-based" : "Signal"
     },
-    "subClasses" : [ "3", "38" ],
+    "subClasses" : [ "28", "4" ],
     "attributes" : [ "external" ],
-    "id" : "4",
-    "superClasses" : [ "23" ]
+    "id" : "12",
+    "superClasses" : [ "34" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Sample",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -394,12 +420,12 @@
       "IRI-based" : "Sample",
       "undefined" : "Sample"
     },
-    "subClasses" : [ "51", "50" ],
+    "subClasses" : [ "50", "49" ],
     "comment" : {
       "undefined" : "An instance of a sample, created through a performance (Sampling) by an agent using an instrument (Sampler)."
     },
-    "id" : "3",
-    "superClasses" : [ "4" ]
+    "id" : "28",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://purl.org/ontology/samo/Voice",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -409,10 +435,10 @@
       "undefined" : "Voice"
     },
     "comment" : {
-      "undefined" : "Constitutive element of a track relating to voices."
+      "undefined" : "Constitutive element of a track relating to the use of voices."
     },
-    "id" : "45",
-    "superClasses" : [ "38" ]
+    "id" : "44",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/ontology/mo/Genre",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -421,7 +447,7 @@
       "IRI-based" : "Genre"
     },
     "attributes" : [ "external" ],
-    "id" : "104"
+    "id" : "111"
   } ],
   "property" : [ {
     "id" : "2",
@@ -433,41 +459,41 @@
     "id" : "10",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "12",
+    "id" : "14",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "18",
+    "id" : "19",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "22",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "24",
+    "id" : "23",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "25",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "28",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "30",
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "11",
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "15",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "36",
-    "type" : "rdfs:SubClassOf"
+    "id" : "37",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "40",
     "type" : "owl:someValuesFrom"
@@ -478,31 +504,34 @@
     "id" : "43",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "46",
+    "id" : "45",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "47",
+    "id" : "46",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "49",
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
     "type" : "owl:disjointWith"
   }, {
     "id" : "52",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "53",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "42",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "55",
     "type" : "owl:disjointWith"
   }, {
     "id" : "56",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "57",
+    "id" : "58",
     "type" : "owl:objectProperty"
   }, {
     "id" : "59",
@@ -514,14 +543,14 @@
     "id" : "61",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "62",
+    "id" : "63",
     "type" : "owl:objectProperty"
   }, {
     "id" : "64",
     "type" : "owl:objectProperty"
   }, {
     "id" : "65",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "66",
     "type" : "rdfs:SubClassOf"
@@ -529,25 +558,19 @@
     "id" : "67",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "69",
     "type" : "owl:objectProperty"
   }, {
     "id" : "70",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "71",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "72",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "58",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "75",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "76",
+    "id" : "57",
     "type" : "owl:objectProperty"
   }, {
     "id" : "77",
@@ -560,64 +583,55 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "81",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "82",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "83",
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "84",
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "73",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "27",
+    "id" : "30",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "26",
+    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "74",
+    "id" : "75",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "63",
+    "id" : "62",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "88",
+    "id" : "94",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "14",
+    "id" : "13",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "89",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "85",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "90",
+    "id" : "95",
     "type" : "owl:objectProperty"
   }, {
     "id" : "91",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "92",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "93",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "94",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "95",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "96",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "97",
     "type" : "owl:disjointWith"
@@ -626,7 +640,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "99",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "100",
     "type" : "owl:disjointWith"
@@ -635,24 +649,54 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "102",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "103",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "104",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "90",
     "type" : "owl:objectProperty"
   }, {
     "id" : "105",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "17",
+    "id" : "106",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "107",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "108",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "86",
+    "id" : "76",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "87",
+    "id" : "109",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "20",
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -668,11 +712,22 @@
       "IRI-based" : "duration"
     },
     "domain" : "6",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "5"
   }, {
+    "iri" : "http://purl.org/ontology/mo/recorded_as",
+    "inverse" : "13",
+    "baseIri" : "http://purl.org/ontology/mo",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "recorded_as"
+    },
+    "domain" : "11",
+    "attributes" : [ "object", "external" ],
+    "id" : "10"
+  }, {
     "iri" : "http://purl.org/ontology/mo/compiled",
-    "inverse" : "11",
+    "inverse" : "15",
     "baseIri" : "http://purl.org/ontology/mo",
     "range" : "1",
     "label" : {
@@ -680,85 +735,74 @@
     },
     "domain" : "9",
     "attributes" : [ "object", "external" ],
-    "id" : "10"
-  }, {
-    "iri" : "http://purl.org/ontology/mo/recorded_as",
-    "inverse" : "14",
-    "baseIri" : "http://purl.org/ontology/mo",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "recorded_as"
-    },
-    "domain" : "13",
-    "attributes" : [ "object", "external" ],
-    "id" : "12"
+    "id" : "14"
   }, {
     "iri" : "http://purl.org/ontology/samo/manipulated",
-    "inverse" : "17",
+    "inverse" : "18",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "4",
+    "range" : "12",
     "label" : {
       "IRI-based" : "manipulated",
       "undefined" : "manipulated"
     },
-    "domain" : "16",
+    "domain" : "17",
     "comment" : {
       "undefined" : "Relates a Sampler to the Signal it manipulated."
     },
     "attributes" : [ "object" ],
-    "id" : "15"
+    "id" : "16"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#agent",
     "baseIri" : "http://purl.org/NET/c4dm/event.owl",
-    "range" : "19",
+    "range" : "20",
     "label" : {
       "IRI-based" : "agent"
     },
-    "domain" : "19",
-    "subproperty" : [ "20" ],
+    "domain" : "20",
+    "subproperty" : [ "21" ],
     "attributes" : [ "object", "external" ],
-    "id" : "18"
+    "id" : "19"
   }, {
-    "range" : "23",
-    "domain" : "4",
+    "range" : "4",
+    "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "22"
+    "id" : "23"
   }, {
-    "range" : "1",
-    "domain" : "0",
+    "range" : "26",
+    "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "24"
+    "id" : "25"
   }, {
     "iri" : "http://purl.org/ontology/samo/filtered",
-    "inverse" : "26",
+    "inverse" : "29",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
       "IRI-based" : "filtered",
       "undefined" : "filtered"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the filtering technique."
     },
     "attributes" : [ "object" ],
-    "id" : "25"
+    "id" : "27"
   }, {
-    "range" : "16",
-    "domain" : "29",
+    "range" : "22",
+    "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
+    "id" : "31"
   }, {
-    "range" : "16",
-    "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "30"
-  }, {
-    "range" : "13",
-    "domain" : "33",
+    "range" : "8",
+    "domain" : "9",
     "attributes" : [ "object", "anonymous" ],
     "id" : "32"
+  }, {
+    "range" : "34",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
   }, {
     "iri" : "http://purl.org/ontology/mo/compiler",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -768,17 +812,26 @@
     },
     "domain" : "1",
     "attributes" : [ "object", "external" ],
-    "id" : "11"
+    "id" : "15"
   }, {
-    "range" : "21",
-    "domain" : "13",
+    "range" : "1",
+    "domain" : "0",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "34"
+    "id" : "35"
   }, {
-    "range" : "8",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "36"
+    "iri" : "http://purl.org/ontology/samo/requires",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "requires",
+      "undefined" : "requires"
+    },
+    "domain" : "11",
+    "comment" : {
+      "undefined" : "Functional property to indicate class relationships."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "37"
   }, {
     "iri" : "http://purl.org/ontology/samo/part_of",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -787,11 +840,11 @@
       "IRI-based" : "part_of",
       "undefined" : "part_of"
     },
-    "domain" : "3",
+    "domain" : "28",
     "comment" : {
       "undefined" : "Functional property to indicate class relationships."
     },
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "object", "someValues", "functional" ],
     "id" : "40"
   }, {
     "iri" : "http://purl.org/ontology/samo/is_sampled_in",
@@ -804,45 +857,45 @@
     },
     "domain" : "0",
     "comment" : {
-      "undefined" : "Shortcut property to relate a Track with the track that samples it. For example: A Night In Tunisia is_sampled_in Manifest."
+      "undefined" : "Shortcut property to relate a Track with the track that samples it."
     },
     "attributes" : [ "object" ],
     "id" : "41"
   }, {
-    "range" : "45",
-    "domain" : "44",
+    "range" : "44",
+    "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "iri" : "http://purl.org/ontology/mo/compilation_of",
     "baseIri" : "http://purl.org/ontology/mo",
-    "range" : "4",
+    "range" : "12",
     "label" : {
       "IRI-based" : "compilation_of"
     },
     "domain" : "1",
     "attributes" : [ "object", "external" ],
+    "id" : "45"
+  }, {
+    "range" : "47",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
-    "range" : "48",
-    "domain" : "44",
+    "range" : "50",
+    "domain" : "49",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "47"
-  }, {
-    "range" : "51",
-    "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "49"
-  }, {
-    "range" : "45",
-    "domain" : "48",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "52"
+    "id" : "48"
   }, {
     "range" : "44",
-    "domain" : "54",
+    "domain" : "47",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "53"
+    "id" : "51"
+  }, {
+    "range" : "24",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
   }, {
     "iri" : "http://purl.org/ontology/samo/samples",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -853,268 +906,289 @@
     },
     "domain" : "0",
     "comment" : {
-      "undefined" : "Shortcut property to relate a Track with the track that it samples. For example: Manifest samples A Night In Tunisia."
+      "undefined" : "Shortcut property to relate a Track with the track that it samples. For example."
     },
     "attributes" : [ "object" ],
     "id" : "42"
   }, {
-    "range" : "45",
-    "domain" : "54",
+    "range" : "44",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "47",
+    "domain" : "53",
     "attributes" : [ "object", "anonymous" ],
     "id" : "55"
   }, {
-    "range" : "48",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "56"
-  }, {
     "iri" : "http://purl.org/ontology/samo/detuned_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "detuned_into",
       "undefined" : "detuned_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the detuning technique."
     },
     "attributes" : [ "object" ],
-    "id" : "57"
+    "id" : "56"
   }, {
     "iri" : "http://purl.org/ontology/samo/EQed_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "EQed_into",
       "undefined" : "EQed_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the EQing technique."
     },
     "attributes" : [ "object" ],
-    "id" : "59"
+    "id" : "58"
   }, {
     "iri" : "http://purl.org/ontology/samo/chopped_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "chopped_into",
       "undefined" : "chopped_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the chopping technique."
     },
     "attributes" : [ "object" ],
-    "id" : "60"
+    "id" : "59"
   }, {
     "iri" : "http://purl.org/ontology/samo/clipped_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "clipped_into",
       "undefined" : "clipped_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the clipping technique."
     },
     "attributes" : [ "object" ],
-    "id" : "61"
+    "id" : "60"
   }, {
     "iri" : "http://purl.org/ontology/mo/publication_of",
-    "inverse" : "63",
+    "inverse" : "62",
     "baseIri" : "http://purl.org/ontology/mo",
-    "range" : "23",
+    "range" : "34",
     "label" : {
       "IRI-based" : "publication_of"
     },
     "domain" : "1",
     "attributes" : [ "object", "external" ],
-    "id" : "62"
+    "id" : "61"
   }, {
     "iri" : "http://purl.org/ontology/samo/chop_of",
-    "inverse" : "60",
+    "inverse" : "59",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
       "IRI-based" : "chop_of",
       "undefined" : "chop_of"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the chopping technique."
     },
     "attributes" : [ "object" ],
-    "id" : "64"
+    "id" : "63"
   }, {
     "iri" : "http://purl.org/ontology/samo/tuned_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "tuned_into",
       "undefined" : "tuned_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the tuning technique."
     },
     "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "range" : "28",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "65"
   }, {
-    "range" : "38",
-    "domain" : "45",
+    "range" : "28",
+    "domain" : "50",
     "attributes" : [ "object", "anonymous" ],
     "id" : "66"
   }, {
     "iri" : "http://purl.org/ontology/mo/instrument",
     "baseIri" : "http://purl.org/ontology/mo",
-    "range" : "68",
+    "range" : "26",
     "label" : {
       "IRI-based" : "instrument"
     },
-    "superproperty" : [ "69" ],
-    "domain" : "13",
+    "superproperty" : [ "68" ],
+    "domain" : "11",
     "attributes" : [ "object", "external" ],
     "id" : "67"
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#factor",
     "baseIri" : "http://purl.org/NET/c4dm/event.owl",
-    "range" : "19",
+    "range" : "20",
     "label" : {
       "IRI-based" : "factor"
     },
-    "domain" : "19",
+    "domain" : "20",
     "subproperty" : [ "67" ],
     "attributes" : [ "object", "external" ],
-    "id" : "69"
+    "id" : "68"
   }, {
     "iri" : "http://purl.org/ontology/samo/EQed",
-    "inverse" : "59",
+    "inverse" : "58",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
       "IRI-based" : "EQed",
       "undefined" : "EQed"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the EQing technique."
     },
     "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "range" : "12",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "70"
   }, {
-    "range" : "38",
-    "domain" : "54",
+    "range" : "17",
+    "domain" : "72",
     "attributes" : [ "object", "anonymous" ],
     "id" : "71"
   }, {
-    "range" : "38",
-    "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "72"
-  }, {
     "iri" : "http://purl.org/ontology/samo/manipulated_into",
-    "inverse" : "27",
+    "inverse" : "30",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "3",
+    "range" : "28",
     "label" : {
       "IRI-based" : "manipulated_into",
       "undefined" : "manipulated_into"
     },
-    "domain" : "38",
-    "subproperty" : [ "57", "73", "65", "59", "60", "61", "26", "74" ],
+    "domain" : "4",
+    "subproperty" : [ "56", "73", "64", "58", "74", "59", "60", "29", "75", "76" ],
     "comment" : {
       "undefined" : "Relates an Element to a Sample, indicating a process of transformation from one class to the other through manipulation."
     },
     "attributes" : [ "object", "transitive" ],
-    "id" : "58"
+    "id" : "57"
   }, {
-    "range" : "38",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "75"
-  }, {
-    "iri" : "http://purl.org/ontology/samo/detuned",
-    "inverse" : "57",
-    "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
-    "label" : {
-      "IRI-based" : "detuned",
-      "undefined" : "detuned"
-    },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
-    "comment" : {
-      "undefined" : "Indicates a process of manipulation using the detuning technique."
-    },
-    "attributes" : [ "object" ],
-    "id" : "76"
-  }, {
-    "range" : "38",
+    "range" : "17",
     "domain" : "78",
     "attributes" : [ "object", "anonymous" ],
     "id" : "77"
   }, {
-    "iri" : "http://purl.org/ontology/samo/clip_of",
-    "inverse" : "61",
+    "iri" : "http://purl.org/ontology/samo/detuned",
+    "inverse" : "56",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
-      "IRI-based" : "clip_of",
-      "undefined" : "clip_of"
+      "IRI-based" : "detuned",
+      "undefined" : "detuned"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
-      "undefined" : "Indicates a process of manipulation using the clipping technique."
+      "undefined" : "Indicates a process of manipulation using the detuning technique."
     },
     "attributes" : [ "object" ],
     "id" : "79"
   }, {
-    "range" : "38",
-    "domain" : "48",
+    "range" : "12",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "80"
   }, {
-    "range" : "3",
-    "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "iri" : "http://purl.org/ontology/samo/clip_of",
+    "inverse" : "60",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "clip_of",
+      "undefined" : "clip_of"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "28",
+    "comment" : {
+      "undefined" : "Indicates a process of manipulation using the clipping technique."
+    },
+    "attributes" : [ "object" ],
     "id" : "81"
   }, {
-    "range" : "4",
-    "domain" : "38",
+    "range" : "11",
+    "domain" : "83",
     "attributes" : [ "object", "anonymous" ],
     "id" : "82"
   }, {
-    "range" : "68",
-    "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "83"
-  }, {
-    "range" : "3",
-    "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "iri" : "http://purl.org/ontology/samo/pitch_shift_of",
+    "inverse" : "76",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "pitch_shift_of",
+      "en" : "pitch_shift_of"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "28",
+    "comment" : {
+      "undefined" : "Indicates a process of manipulation using the pitch shifting technique."
+    },
+    "attributes" : [ "object" ],
     "id" : "84"
+  }, {
+    "range" : "4",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "4",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "4",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "4",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
   }, {
     "iri" : "http://purl.org/ontology/samo/timestretched_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "timestretched_into",
       "undefined" : "timestretched_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the timestretching technique."
     },
@@ -1123,48 +1197,48 @@
   }, {
     "iri" : "http://purl.org/ontology/samo/manipulation_of",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "38",
+    "range" : "4",
     "label" : {
       "IRI-based" : "manipulation_of",
       "undefined" : "manipulation_of"
     },
-    "domain" : "3",
-    "subproperty" : [ "64", "70", "25", "85", "76", "79", "86", "87" ],
+    "domain" : "28",
+    "subproperty" : [ "63", "90", "69", "27", "91", "79", "81", "84", "92", "93" ],
     "comment" : {
       "undefined" : "Relates a Sample to an Element, indicating a process of transformation from one class to the other through manipulation."
     },
     "attributes" : [ "object", "transitive" ],
-    "id" : "27"
+    "id" : "30"
   }, {
     "iri" : "http://purl.org/ontology/samo/filtered_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "filtered_into",
       "undefined" : "filtered_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the filtering technique."
     },
     "attributes" : [ "object" ],
-    "id" : "26"
+    "id" : "29"
   }, {
     "iri" : "http://purl.org/ontology/samo/looped_into",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "28",
     "label" : {
       "IRI-based" : "looped_into",
       "undefined" : "looped_into"
     },
-    "superproperty" : [ "58" ],
-    "domain" : "19",
+    "superproperty" : [ "57" ],
+    "domain" : "4",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the looping technique."
     },
     "attributes" : [ "object" ],
-    "id" : "74"
+    "id" : "75"
   }, {
     "iri" : "http://purl.org/ontology/mo/published_as",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -1172,68 +1246,68 @@
     "label" : {
       "IRI-based" : "published_as"
     },
-    "domain" : "23",
+    "domain" : "34",
     "attributes" : [ "object", "external" ],
-    "id" : "63"
+    "id" : "62"
   }, {
     "iri" : "http://purl.org/ontology/samo/release_year",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "35",
+    "range" : "36",
     "label" : {
       "IRI-based" : "release_year",
       "undefined" : "release_year"
     },
     "domain" : "0",
     "comment" : {
-      "undefined" : "Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology but could be extended to fully reflect the intricacies of music releases if needed or could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia."
+      "undefined" : "Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology and could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia."
     },
     "attributes" : [ "datatype" ],
-    "id" : "88"
+    "id" : "94"
   }, {
     "iri" : "http://purl.org/ontology/mo/records",
     "baseIri" : "http://purl.org/ontology/mo",
-    "range" : "13",
+    "range" : "11",
     "label" : {
       "IRI-based" : "records"
     },
-    "domain" : "4",
+    "domain" : "12",
     "attributes" : [ "object", "external" ],
-    "id" : "14"
+    "id" : "13"
   }, {
     "iri" : "http://purl.org/ontology/samo/producer",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "8",
     "label" : {
       "IRI-based" : "producer",
       "undefined" : "has producer"
     },
-    "superproperty" : [ "20" ],
-    "domain" : "19",
+    "superproperty" : [ "21" ],
+    "domain" : "11",
     "comment" : {
-      "undefined" : "Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent."
+      "undefined" : "Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent. By default this agent should be the producer of the track, who is most likely to have created the sample in the act of production."
     },
     "attributes" : [ "object" ],
-    "id" : "89"
+    "id" : "95"
   }, {
     "iri" : "http://purl.org/ontology/samo/loop_of",
-    "inverse" : "74",
+    "inverse" : "75",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
       "IRI-based" : "loop_of",
       "undefined" : "loop_of"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the looping technique."
     },
     "attributes" : [ "object" ],
-    "id" : "85"
+    "id" : "91"
   }, {
     "iri" : "http://purl.org/ontology/samo/has_elements",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "38",
+    "range" : "4",
     "label" : {
       "IRI-based" : "has_elements",
       "undefined" : "has_elements"
@@ -1242,48 +1316,64 @@
     "comment" : {
       "undefined" : "Relates a Track to any number of Elements, with a minimum of 1."
     },
-    "attributes" : [ "object", "inverse functional" ],
-    "id" : "90"
-  }, {
-    "range" : "54",
-    "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "91"
-  }, {
-    "range" : "44",
-    "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "92"
-  }, {
-    "range" : "48",
-    "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "93"
-  }, {
-    "range" : "45",
-    "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "94"
-  }, {
-    "range" : "54",
-    "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "95"
-  }, {
-    "range" : "44",
-    "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "object", "transitive" ],
     "id" : "96"
   }, {
-    "range" : "48",
-    "domain" : "78",
+    "range" : "53",
+    "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
-    "range" : "45",
-    "domain" : "78",
+    "range" : "24",
+    "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "98"
+  }, {
+    "range" : "47",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "99"
+  }, {
+    "range" : "44",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "100"
+  }, {
+    "range" : "53",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "24",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "range" : "47",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "103"
+  }, {
+    "range" : "44",
+    "domain" : "86",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "iri" : "http://purl.org/ontology/samo/scratch_of",
+    "inverse" : "74",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "scratch_of",
+      "undefined" : "scratch_of"
+    },
+    "superproperty" : [ "30" ],
+    "domain" : "28",
+    "comment" : {
+      "undefined" : "Indicates a process of manipulation using the scratching technique."
+    },
+    "attributes" : [ "object" ],
+    "id" : "90"
   }, {
     "iri" : "http://purl.org/ontology/samo/used_in",
     "baseIri" : "http://purl.org/ontology/samo",
@@ -1292,22 +1382,22 @@
       "IRI-based" : "used_in",
       "undefined" : "used_in"
     },
-    "domain" : "3",
+    "domain" : "28",
     "comment" : {
       "undefined" : "Relates an instance of a Sample to a Track."
     },
     "attributes" : [ "object", "transitive" ],
-    "id" : "99"
-  }, {
-    "range" : "31",
-    "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "100"
+    "id" : "105"
   }, {
     "range" : "78",
-    "domain" : "37",
+    "domain" : "72",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "101"
+    "id" : "106"
+  }, {
+    "range" : "86",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
   }, {
     "iri" : "http://purl.org/ontology/mo/collaborated_with",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -1316,23 +1406,28 @@
       "IRI-based" : "collaborated_with"
     },
     "domain" : "8",
-    "attributes" : [ "object", "external", "symmetric" ],
-    "id" : "102"
+    "attributes" : [ "object", "symmetric", "external" ],
+    "id" : "108"
   }, {
-    "iri" : "http://purl.org/ontology/mo/genre",
-    "baseIri" : "http://purl.org/ontology/mo",
-    "range" : "104",
+    "iri" : "http://purl.org/ontology/samo/pitch_shifted_into",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "28",
     "label" : {
-      "IRI-based" : "genre"
+      "IRI-based" : "pitch_shifted_into",
+      "undefined" : "pitch_shifted_into"
     },
-    "domain" : "39",
-    "attributes" : [ "object", "external" ],
-    "id" : "103"
+    "superproperty" : [ "57" ],
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Indicates a process of manipulation using the pitch shifting technique."
+    },
+    "attributes" : [ "object" ],
+    "id" : "76"
   }, {
     "iri" : "http://purl.org/ontology/samo/has_sample",
-    "inverse" : "99",
+    "inverse" : "105",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "3",
+    "range" : "28",
     "label" : {
       "IRI-based" : "has_sample",
       "undefined" : "has_sample"
@@ -1342,52 +1437,91 @@
       "undefined" : "Relates a Track to an instance of a Sample."
     },
     "attributes" : [ "object", "transitive" ],
-    "id" : "105"
+    "id" : "109"
+  }, {
+    "iri" : "http://purl.org/ontology/mo/genre",
+    "baseIri" : "http://purl.org/ontology/mo",
+    "range" : "111",
+    "label" : {
+      "IRI-based" : "genre"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://purl.org/ontology/samo/is_cover_of",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "is_cover_of",
+      "undefined" : "is_cover_of"
+    },
+    "domain" : "0",
+    "comment" : {
+      "undefined" : "Shortcut property to relate a Track with the track that covers it."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "112"
   }, {
     "iri" : "http://purl.org/ontology/samo/manipulated_with",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "16",
+    "range" : "17",
     "label" : {
       "IRI-based" : "manipulated_with"
     },
-    "domain" : "4",
+    "domain" : "12",
     "comment" : {
       "undefined" : "Relates a Signal to the Sampler used to manipulate it."
     },
     "attributes" : [ "object" ],
-    "id" : "17"
+    "id" : "18"
   }, {
     "iri" : "http://purl.org/ontology/samo/timestretched",
     "inverse" : "73",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
       "IRI-based" : "timestretched",
       "undefined" : "timestretched"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the timestretching technique."
     },
     "attributes" : [ "object" ],
-    "id" : "86"
+    "id" : "92"
   }, {
     "iri" : "http://purl.org/ontology/samo/tuned",
-    "inverse" : "65",
+    "inverse" : "64",
     "baseIri" : "http://purl.org/ontology/samo",
-    "range" : "19",
+    "range" : "4",
     "label" : {
       "IRI-based" : "tuned",
       "undefined" : "tuned"
     },
-    "superproperty" : [ "27" ],
-    "domain" : "19",
+    "superproperty" : [ "30" ],
+    "domain" : "28",
     "comment" : {
       "undefined" : "Indicates a process of manipulation using the tuning technique."
     },
     "attributes" : [ "object" ],
-    "id" : "87"
+    "id" : "93"
+  }, {
+    "iri" : "http://purl.org/ontology/samo/scratched_into",
+    "baseIri" : "http://purl.org/ontology/samo",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "scratched_into",
+      "undefined" : "scratched_into"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Indicates a process of manipulation using the scratching technique."
+    },
+    "attributes" : [ "object" ],
+    "id" : "74"
   }, {
     "iri" : "http://purl.org/ontology/mo/performer",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -1395,10 +1529,10 @@
     "label" : {
       "IRI-based" : "performer"
     },
-    "superproperty" : [ "18" ],
-    "domain" : "13",
-    "subproperty" : [ "89" ],
+    "superproperty" : [ "19" ],
+    "domain" : "11",
+    "subproperty" : [ "95" ],
     "attributes" : [ "object", "external" ],
-    "id" : "20"
+    "id" : "21"
   } ]
 }
