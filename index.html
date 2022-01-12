@@ -460,7 +460,7 @@
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #1</h4>
-	            <p><span class=’log_impl’>How many</span> <span class=’log_class’>samples</span> <span class=’log_event’>are</span> <span class=’log_rel’>in</span> <span class=’log_impl’>the</span> <span class=’log_class’>song</span> <span class=’log_indiv’>Electric Relaxation</span>?</p><br/>
+	            <p><span class='log_impl'>How many</span> <span class='log_class'>samples</span> <span class='log_event'>are</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
 	            <code>SELECT (COUNT(?sample) AS ?count)<br/> 
 					WHERE { :Electric_Relaxationsamo:has_sample ?sample }
 				</code>
@@ -473,7 +473,7 @@
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #2</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>songs</span> <span class=’log_event’>are sampled</span> <span class=’log_rel’>in</span> <span class=’log_impl’>the</span> <span class=’log_class’>song</span> <span class=’log_indiv’>Electric Relaxation</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>are sampled</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
 	            <code>SELECT ?label<br/>
 WHERE { ?songsamo:is_sampled_in :Electric_Relaxation ;
 	rdfs:label ?label }
@@ -494,7 +494,7 @@ WHERE { ?songsamo:has_elements ?elements ; <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #3</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_indiv’>jazz</span> <span class=’log_class’>songs</span> <span class=’log_event’>are used</span> <span class=’log_impl’>as</span> <span class=’log_class’>samples</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span> <span class='log_event'>are used</span> <span class='log_impl'>as</span> <span class='log_class'>samples</span>?</p><br/>
 	            <code>SELECT ?label<br/>
 WHERE { ?songsmo:genre :Jazz; <br/>
 	samo:is_sampled_in ?anything ; <br/>
@@ -509,7 +509,7 @@ WHERE { ?songsmo:genre :Jazz; <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #4</h4>
-	            <p><span class=’log_impl’>How many</span> <span class=’log_class’>songs</span> <span class=’log_event’>contain</span> <span class=’log_impl’>a</span> <span class=’log_class’>sample</span> <span class=’log_rel’>of</span> <span class=’log_indiv’>It feels so good</span>?</p><br/>
+	            <p><span class='log_impl'>How many</span> <span class='log_class'>songs</span> <span class='log_event'>contain</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>of</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
 	            <code>SELECT (COUNT(?song) AS ?count) <br/>
 WHERE { ?songsamo:samples :It_Feels_So_Good }
 				</code>
@@ -535,7 +535,7 @@ WHERE { ?songsamo:samples :It_Feels_So_Good }
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #5</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>songs</span> <span class=’log_event’>have sampled</span> <span class=’log_indiv’>It feels so good</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>have sampled</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
 	            <code>
 				///
 				<br/><br/>
@@ -548,7 +548,7 @@ WHERE { ?songsamo:samples :It_Feels_So_Good }
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #6</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>songs</span> <span class=’log_event’>released</span> <span class=’log_rel’>between</span> <span class=’log_indiv’>1970</span> <span class=’log_impl’>and</span> <span class=’log_indiv’>1972</span> <span class=’log_event’>have been used as</span> <span class=’log_impl’>a</span> <span class=’log_class’>sample</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
 	            <code>SELECT DISTINCT ?song<br/>
 { ?songsamo:release_year ?year ; <br/>
 samo:is_sampled_in ?something . <br/>
@@ -564,7 +564,7 @@ FILTER(?year <= 1972) }
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #7</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>songs</span> <span class=’log_rel’>by</span> <span class=’log_indiv’>Nina Simone</span> <span class=’log_event’>have been used as</span> <span class=’log_impl’>a</span> <span class=’log_class’>sample</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_rel'>by</span> <span class='log_indiv'>Nina Simone</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
 	            <code>SELECT ?subject<br/>
 WHERE { ?subjectmo:compiler :Nina_Simone; <br/>
 samo:is_sampled_in ?anything }
@@ -578,7 +578,7 @@ samo:is_sampled_in ?anything }
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #8</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>elements</span> <span class=’log_rel’>from</span> <span class=’log_indiv’>Mr. Bojangles</span> <span class=’log_event’>are sampled in</span> <span class=’log_indiv’>Jump Hi</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>elements</span> <span class='log_rel'>from</span> <span class='log_indiv'>Mr. Bojangles</span> <span class='log_event'>are sampled in</span> <span class='log_indiv'>Jump Hi</span>?</p><br/>
 	            <code>SELECT ?element<br/>
 WHERE {:Jump_Hisamo:has_sample ?sample . <br/>
 ?sample ?manipulation ?element . <br/>
@@ -593,7 +593,7 @@ WHERE {:Jump_Hisamo:has_sample ?sample . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #9</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>artist</span> <span class=’log_event’>is sampled</span> <span class=’log_impl’>the highest</span> <span class=’log_class’>number</span> <span class=’log_rel’>of</span> <span class=’log_class’>times</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_event'>is sampled</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>times</span>?</p><br/>
 	            <code>SELECT ?subject (COUNT(DISTINCT ?song) as ?count) <br/>
 WHERE {?subjectmo:compiled ?song . <br/>
 ?songsamo:is_sampled_in ?anything } <br/>
@@ -609,7 +609,7 @@ ORDER BY desc(?count)
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #10</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>song</span> <span class=’log_event’>contains</span> <span class=’log_impl’>the highest</span> <span class=’log_class’>number</span> <span class=’log_rel’>of</span> <span class=’log_class’>samples</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_event'>contains</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>samples</span>?</p><br/>
 	            <code>SELECT ?song (COUNT(DISTINCT ?sample) as ?count) <br/>
 WHERE {?songsamo:has_sample ?sample }<br/>
 GROUP BY ?song<br/>
@@ -624,7 +624,7 @@ ORDER BY desc(?count)
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #11</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>song(s)</span> <span class=’log_event’>use(s)</span> <span class=’log_rel’>looped</span> <span class=’log_class’>samples</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>song(s)</span> <span class='log_event'>use(s)</span> <span class='log_rel'>looped</span> <span class='log_class'>samples</span>?</p><br/>
 	            <code>SELECT DISTINCT ?song<br/>
 WHERE {?songsamo:has_sample ?sample . <br/>
 ?samplesamo:loop_of ?element }
@@ -643,7 +643,7 @@ WHERE {?elementsamo:looped_into ?sample . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #12</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>samples</span> <span class=’log_rel’>in</span> <span class=’log_indiv’>Rimshot (Intro Live)</span> <span class=’log_event’>are</span> <span class=’log_class’>interpolation</span>?</p><br/><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>samples</span> <span class='log_rel'>in</span> <span class='log_indiv'>Rimshot (Intro Live)</span> <span class='log_event'>are</span> <span class='log_class'>interpolation</span>?</p><br/><br/>
 	            <code>SELECT ?sample<br/>
 WHERE {:Rimshot_Intro_Livesamo:has_sample ?sample . <br/>
 ?samplerdf:typesamo:Interpolation }
@@ -658,7 +658,7 @@ WHERE {:Rimshot_Intro_Livesamo:has_sample ?sample . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #13</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>song</span> <span class=’log_rel’>is a cover</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_rel'>is a cover</span>?</p><br/>
 	            <code>SELECT ?song<br/>
 WHERE {?songsamo:is_cover_of ?anything }
 				</code>
@@ -671,7 +671,7 @@ WHERE {?songsamo:is_cover_of ?anything }
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #14</h4>
-	            <p><span class=’log_impl’>How is</span> <span class=’log_class’>the sample</span> <span class=’log_rel’>from</span> <span class=’log_indiv’>Shadows</span> <span class=’log_rel’>manipulated in</span> <span class=’log_indiv’>It’s A Jazz Thing</span>?</p><br/>
+	            <p><span class='log_impl'>How is</span> <span class='log_class'>the sample</span> <span class='log_rel'>from</span> <span class='log_indiv'>Shadows</span> <span class='log_rel'>manipulated in</span> <span class='log_indiv'>It's A Jazz Thing</span>?</p><br/>
 	            <code>SELECT DISTINCT ?sample ?manipulation<br/>
 WHERE {:Shadowssamo:has_elements ?elements . <br/>
 ?elements ?manipulation ?sample . <br/>
@@ -692,7 +692,7 @@ WHERE {:Shadowssamo:has_elements ?elements . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #15</h4>
-	            <p><span class=’log_impl’>Who</span> <span class=’log_event’>sampled</span> <span class=’log_indiv’>Cantaloupe Island</span>?</p><br/>
+	            <p><span class='log_impl'>Who</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Cantaloupe Island</span>?</p><br/>
 	            <code>SELECT ?artist<br/>
 WHERE {?artistmo:compiled ?song . <br/>
 ?songsamo:samples :Cantaloupe_Island }
@@ -713,7 +713,7 @@ WHERE {?artistmo:compiled ?song . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #16</h4>
-	            <p><span class=’log_impl’>Who</span> <span class=’log_event’>is sampled</span> <span class=’log_rel’>in</span> <span class=’log_indiv’>The words</span>?</p><br/>
+	            <p><span class='log_impl'>Who</span> <span class='log_event'>is sampled</span> <span class='log_rel'>in</span> <span class='log_indiv'>The words</span>?</p><br/>
 	            <code>SELECT ?artist<br/>
 WHERE {?artistmo:compiled ?song . <br/>
 ?songsamo:is_sampled_in :The_Words }
@@ -734,7 +734,7 @@ WHERE {?artistmo:compiled ?song . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #17</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>artists</span> <span class=’log_rel’>have written</span> <span class=’log_indiv’>jazz</span> <span class=’log_class’>songs</span>?</p><br/><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>artists</span> <span class='log_rel'>have written</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span>?</p><br/><br/>
 	            <code>SELECT ?artist<br/>
 WHERE {?artistmo:compiled ?song . <br/>
 ?songmo:genre :Jazz }
@@ -749,7 +749,7 @@ WHERE {?artistmo:compiled ?song . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #18</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_rel’>producer</span> <span class=’log_event’>sampled</span> <span class=’log_indiv’>Nina Simone</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_rel'>producer</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Nina Simone</span>?</p><br/>
 	            <code>SELECT DISTINCT ?producer<br/>
 WHERE {?samplesamo:producer ?producer ; <br/>
 ?manipulation ?elements . <br/>
@@ -772,7 +772,7 @@ samo:used_in ?song . <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #19</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>sampler</span> <span class=’log_rel’>did</span> <span class=’log_indiv’>DJ Premier</span> <span class=’log_rel’>use in</span> <span class=’log_indiv’>Manifest</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>sampler</span> <span class='log_rel'>did</span> <span class='log_indiv'>DJ Premier</span> <span class='log_rel'>use in</span> <span class='log_indiv'>Manifest</span>?</p><br/>
 	            <code>SELECT DISTINCT ?sampler<br/>
 WHERE {?samplesamo:producer :DJ_Premier ; <br/>
 ^samo:manipulated ?sampler }
@@ -786,7 +786,7 @@ WHERE {?samplesamo:producer :DJ_Premier ; <br/>
 	          <div class="icon-box">
 	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
 	            <h4>CQ #20</h4>
-	            <p><span class=’log_impl’>Which</span> <span class=’log_class’>songs</span> <span class=’log_event’>released</span> <span class=’log_rel’>between</span> <span class=’log_indiv’>1970</span> <span class=’log_impl’>and</span> <span class=’log_indiv’>1972</span> <span class=’log_event’>have been used as</span> <span class=’log_impl’>a</span> <span class=’log_class’>sample</span> <span class=’log_rel’>in</span> <span class=’log_impl’>a</span> <span class=’log_indiv’>hip-hop</span> <span class=’log_class’>song</span>?</p><br/>
+	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>in</span> <span class='log_impl'>a</span> <span class='log_indiv'>hip-hop</span> <span class='log_class'>song</span>?</p><br/>
 	            <code>SELECT DISTINCT ?song<br/>
 { ?songsamo:release_year ?year ; <br/>
 samo:is_sampled_in ?something . <br/>
