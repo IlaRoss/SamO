@@ -306,7 +306,7 @@ section.section-show {
   padding-bottom: 45px;
 }
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgb(0, 0, 0);
   padding: 30px;
 }
 @media (max-width: 768px) {
@@ -1042,4 +1042,21 @@ section .container {
 }
 .credits a:hover {
   color: #fff;
+}
+
+
+.log_event:hover {
+  background-color: #ffcc00;
+}
+.log_rel:hover {
+  background-color: #2eb82e;
+}
+.log_class:hover {
+  background-color: #e62e00;
+}
+.log_indiv:hover {
+  background-color: #80d4ff;
+}
+.log_impl:hover {
+  background-color: #ff4d88;
 }
