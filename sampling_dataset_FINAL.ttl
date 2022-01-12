@@ -118,10 +118,6 @@ samo:manipulated_into rdf:type owl:AnnotationProperty .
 samo:manipulation_of rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/ontology/samo/part_of
-samo:part_of rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/ontology/samo/pitch_shift_of
 samo:pitch_shift_of rdf:type owl:AnnotationProperty .
 
@@ -242,8 +238,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#A_Night_In_Tunisia_Riff
 :A_Night_In_Tunisia_Riff rdf:type owl:NamedIndividual ,
                                   samo:Riff ;
-                         samo:looped_into :A_Night_In_Tunisia_Sample ;
-                         samo:part_of :A_Night_In_Tunisia .
+                         samo:looped_into :A_Night_In_Tunisia_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#A_Night_In_Tunisia_Sample
@@ -287,8 +282,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Drums
 :Aguas_De_Marco_Drums rdf:type owl:NamedIndividual ,
                                samo:Drums ;
-                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
-                      samo:part_of :Aguas_De_Marco .
+                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Girl_From_Alaska_Sample
@@ -305,22 +299,19 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Lyrics
 :Aguas_De_Marco_Lyrics rdf:type owl:NamedIndividual ,
                                 samo:Lyrics ;
-                       samo:clipped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
-                       samo:part_of :Aguas_De_Marco .
+                       samo:clipped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Riff
 :Aguas_De_Marco_Riff rdf:type owl:NamedIndividual ,
                               samo:Riff ;
-                     samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
-                     samo:part_of :Aguas_De_Marco .
+                     samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Voice
 :Aguas_De_Marco_Voice rdf:type owl:NamedIndividual ,
                                samo:Voice ;
-                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample ;
-                      samo:part_of :Aguas_De_Marco .
+                      samo:looped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life
@@ -338,8 +329,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Lyrics
 :Aint_Got_No_I_Got_Life_Lyrics rdf:type owl:NamedIndividual ,
                                         samo:Lyrics ;
-                               samo:clipped_into :Aint_Got_No_I_Got_Life_Sample ;
-                               samo:part_of :Aint_Got_No_I_Got_Life .
+                               samo:clipped_into :Aint_Got_No_I_Got_Life_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Sample
@@ -354,8 +344,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Voice
 :Aint_Got_No_I_Got_Life_Voice rdf:type owl:NamedIndividual ,
                                        samo:Voice ;
-                              samo:EQed_into :Aint_Got_No_I_Got_Life_Sample ;
-                              samo:part_of :Aint_Got_No_I_Got_Life .
+                              samo:EQed_into :Aint_Got_No_I_Got_Life_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove
@@ -381,8 +370,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_That_A_Groove_Voice
 :Aint_That_A_Groove_Voice rdf:type owl:NamedIndividual ,
                                    samo:Voice ;
-                          samo:clipped_into :Aint_That_A_Groove_Sample ;
-                          samo:part_of :Aint_That_A_Groove .
+                          samo:clipped_into :Aint_That_A_Groove_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Al_Cohn
@@ -455,7 +443,6 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Bitches_Brew_Riff
 :Bitches_Brew_Riff rdf:type owl:NamedIndividual ,
                             samo:Riff ;
-                   samo:part_of :Bitches_Brew ;
                    samo:scratched_into :Bitches_Brew_Sample .
 
 
@@ -482,8 +469,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up_Riff
 :Bring_It_Up_Riff rdf:type owl:NamedIndividual ,
                            samo:Riff ;
-                  samo:looped_into :Bring_It_Up_Sample ;
-                  samo:part_of :Bring_It_Up .
+                  samo:looped_into :Bring_It_Up_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Bring_It_Up_Sample
@@ -522,15 +508,13 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Drums
 :Cantaloupe_Island_Drums rdf:type owl:NamedIndividual ,
                                   samo:Drums ;
-                         samo:looped_into :Cantaloupe_Island_Sample ;
-                         samo:part_of :Cantaloupe_Island .
+                         samo:looped_into :Cantaloupe_Island_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Riff
 :Cantaloupe_Island_Riff rdf:type owl:NamedIndividual ,
                                  samo:Riff ;
-                        samo:looped_into :Cantaloupe_Island_Sample ;
-                        samo:part_of :Cantaloupe_Island .
+                        samo:looped_into :Cantaloupe_Island_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Cantaloupe_Island_Sample
@@ -558,8 +542,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Caravan_Riff
 :Caravan_Riff rdf:type owl:NamedIndividual ,
                        samo:Riff ;
-              samo:looped_into :Caravan_Sample ;
-              samo:part_of :Caravan .
+              samo:looped_into :Caravan_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Caravan_Sample
@@ -609,15 +592,13 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Bass
 :Curtains_Bass rdf:type owl:NamedIndividual ,
                         samo:Bass ;
-               samo:looped_into :Curtains_Sample ;
-               samo:part_of :Curtains .
+               samo:looped_into :Curtains_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Riff
 :Curtains_Riff rdf:type owl:NamedIndividual ,
                         samo:Riff ;
-               samo:looped_into :Curtains_Sample ;
-               samo:part_of :Curtains .
+               samo:looped_into :Curtains_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Curtains_Sample
@@ -646,8 +627,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Django_Riff
 :Django_Riff rdf:type owl:NamedIndividual ,
                       samo:Riff ;
-             samo:chopped_into :Django_Sample ;
-             samo:part_of :Django .
+             samo:chopped_into :Django_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Django_Sample
@@ -662,8 +642,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Django_Sound_Effects
 :Django_Sound_Effects rdf:type owl:NamedIndividual ,
                                samo:Sound_Effects ;
-                      samo:chopped_into :Django_Sample ;
-                      samo:part_of :Django .
+                      samo:chopped_into :Django_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Dopamina
@@ -752,15 +731,13 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Bass
 :Fly_Me_To_The_Moon_Bass rdf:type owl:NamedIndividual ,
                                   samo:Bass ;
-                         samo:chopped_into :Fly_Me_To_The_Moon_Sample ;
-                         samo:part_of :Fly_Me_To_The_Moon .
+                         samo:chopped_into :Fly_Me_To_The_Moon_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Riff
 :Fly_Me_To_The_Moon_Riff rdf:type owl:NamedIndividual ,
                                   samo:Riff ;
-                         samo:chopped_into :Fly_Me_To_The_Moon_Sample ;
-                         samo:part_of :Fly_Me_To_The_Moon .
+                         samo:chopped_into :Fly_Me_To_The_Moon_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Fly_Me_To_The_Moon_Sample
@@ -849,8 +826,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#I_Want_You_Voice
 :I_Want_You_Voice rdf:type owl:NamedIndividual ,
                            samo:Voice ;
-                  samo:clipped_into :I_Want_You_Sample ;
-                  samo:part_of :I_Want_You .
+                  samo:clipped_into :I_Want_You_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#In_a_Silent_Way_Its_About_That_Time
@@ -868,7 +844,6 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#In_a_Silent_Way_Its_About_That_Time_Riff
 :In_a_Silent_Way_Its_About_That_Time_Riff rdf:type owl:NamedIndividual ,
                                                    samo:Riff ;
-                                          samo:part_of :In_a_Silent_Way_Its_About_That_Time ;
                                           samo:timestretched_into :In_a_Silent_Way_Its_About_That_Time_Sample .
 
 
@@ -896,14 +871,12 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#It_Feels_So_Good_Bass
 :It_Feels_So_Good_Bass rdf:type owl:NamedIndividual ,
                                 samo:Bass ;
-                       samo:part_of :It_Feels_So_Good ;
                        samo:pitch_shifted_into :It_Feels_So_Good_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#It_Feels_So_Good_Drums
 :It_Feels_So_Good_Drums rdf:type owl:NamedIndividual ,
                                  samo:Drums ;
-                        samo:part_of :It_Feels_So_Good ;
                         samo:pitch_shifted_into :It_Feels_So_Good_Sample .
 
 
@@ -1006,7 +979,6 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Jungle_Boogie_Riff
 :Jungle_Boogie_Riff rdf:type owl:NamedIndividual ,
                              samo:Riff ;
-                    samo:part_of :Jungle_Boogie ;
                     samo:pitch_shifted_into :Jungle_Boogie_Sample .
 
 
@@ -1035,8 +1007,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Riff
 :Just_The_Two_of_Us_1981_Riff rdf:type owl:NamedIndividual ,
                                        samo:Riff ;
-                              samo:filtered_into :Just_The_Two_of_Us_1981_Sample ;
-                              samo:part_of :Just_The_Two_of_Us_1981 .
+                              samo:filtered_into :Just_The_Two_of_Us_1981_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Sample
@@ -1051,8 +1022,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Sound_Effects
 :Just_The_Two_of_Us_1981_Sound_Effects rdf:type owl:NamedIndividual ,
                                                 samo:Sound_Effects ;
-                                       samo:filtered_into :Just_The_Two_of_Us_1981_Sample ;
-                                       samo:part_of :Just_The_Two_of_Us_1981 .
+                                       samo:filtered_into :Just_The_Two_of_Us_1981_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1997
@@ -1175,22 +1145,19 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Bass
 :Mister_Magic_Bass rdf:type owl:NamedIndividual ,
                             samo:Bass ;
-                   samo:detuned_into :Mister_Magic_Sample ;
-                   samo:part_of :Mister_Magic .
+                   samo:detuned_into :Mister_Magic_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Drums
 :Mister_Magic_Drums rdf:type owl:NamedIndividual ,
                              samo:Drums ;
-                    samo:chopped_into :Mister_Magic_Sample ;
-                    samo:part_of :Mister_Magic .
+                    samo:chopped_into :Mister_Magic_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Riff
 :Mister_Magic_Riff rdf:type owl:NamedIndividual ,
                             samo:Riff ;
-                   samo:detuned_into :Mister_Magic_Sample ;
-                   samo:part_of :Mister_Magic .
+                   samo:detuned_into :Mister_Magic_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mister_Magic_Sample
@@ -1228,15 +1195,13 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Lyrics
 :Mr_Bojangles_Lyrics rdf:type owl:NamedIndividual ,
                               samo:Lyrics ;
-                     samo:clipped_into :Mr_Bojangles_Sample ;
-                     samo:part_of :Mr_Bojangles .
+                     samo:clipped_into :Mr_Bojangles_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Riff
 :Mr_Bojangles_Riff rdf:type owl:NamedIndividual ,
                             samo:Riff ;
-                   samo:chopped_into :Mr_Bojangles_Sample ;
-                   samo:part_of :Mr_Bojangles .
+                   samo:chopped_into :Mr_Bojangles_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Sample
@@ -1252,8 +1217,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Voice
 :Mr_Bojangles_Voice rdf:type owl:NamedIndividual ,
                              samo:Voice ;
-                    samo:EQed_into :Mr_Bojangles_Sample ;
-                    samo:part_of :Mr_Bojangles .
+                    samo:EQed_into :Mr_Bojangles_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mystic_Bounce
@@ -1289,7 +1253,6 @@ samo:Voice rdf:type owl:Class .
                   samo:filtered_into :Mystic_Brew_Sample_ATCQ ;
                   samo:looped_into :Mystic_Brew_Sample_ATCQ ,
                                    :Mystic_Brew_Sample_Madlib ;
-                  samo:part_of :Mystic_Brew ;
                   samo:tuned_into :Mystic_Brew_Sample_Madlib .
 
 
@@ -1298,7 +1261,6 @@ samo:Voice rdf:type owl:Class .
                            samo:Riff ;
                   samo:filtered_into :Mystic_Brew_Sample_ATCQ ;
                   samo:looped_into :Mystic_Brew_Sample_Madlib ;
-                  samo:part_of :Mystic_Brew ;
                   samo:pitch_shifted_into :Mystic_Brew_Sample_ATCQ ;
                   samo:tuned_into :Mystic_Brew_Sample_Madlib .
 
@@ -1375,8 +1337,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Papa_Was_Too_Drums
 :Papa_Was_Too_Drums rdf:type owl:NamedIndividual ,
                              samo:Drums ;
-                    samo:clipped_into :Papa_Was_Too_Sample ;
-                    samo:part_of :Papa_Was_Too .
+                    samo:clipped_into :Papa_Was_Too_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Papa_Was_Too_Sample
@@ -1456,7 +1417,6 @@ samo:Voice rdf:type owl:Class .
 :Shadows_Bass rdf:type owl:NamedIndividual ,
                        samo:Bass ;
               samo:looped_into :Shadows_Sample ;
-              samo:part_of :Shadows ;
               samo:timestretched_into :Shadows_Sample .
 
 
@@ -1464,7 +1424,6 @@ samo:Voice rdf:type owl:Class .
 :Shadows_Riff rdf:type owl:NamedIndividual ,
                        samo:Riff ;
               samo:looped_into :Shadows_Sample ;
-              samo:part_of :Shadows ;
               samo:timestretched_into :Shadows_Sample .
 
 
@@ -1485,7 +1444,6 @@ samo:Voice rdf:type owl:Class .
 :Shadows_Sound_Effects rdf:type owl:NamedIndividual ,
                                 samo:Sound_Effects ;
                        samo:looped_into :Shadows_Sample ;
-                       samo:part_of :Shadows ;
                        samo:timestretched_into :Shadows_Sample .
 
 
@@ -1509,8 +1467,7 @@ samo:Voice rdf:type owl:Class .
 :Sinnerman_Drums rdf:type owl:NamedIndividual ,
                           samo:Drums ;
                  samo:chopped_into :Sinnerman_Sample ;
-                 samo:looped_into :Sinnerman_Sample ;
-                 samo:part_of :Sinnerman .
+                 samo:looped_into :Sinnerman_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Lyrics
@@ -1523,8 +1480,7 @@ samo:Voice rdf:type owl:Class .
 :Sinnerman_Riff rdf:type owl:NamedIndividual ,
                          samo:Riff ;
                 samo:chopped_into :Sinnerman_Sample ;
-                samo:looped_into :Sinnerman_Sample ;
-                samo:part_of :Sinnerman .
+                samo:looped_into :Sinnerman_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Sample
@@ -1565,7 +1521,6 @@ samo:Voice rdf:type owl:Class .
                        samo:Riff ;
               samo:chopped_into :Skylark_Sample ;
               samo:filtered_into :Skylark_Sample ;
-              samo:part_of :Skylark ;
               samo:pitch_shifted_into :Skylark_Sample .
 
 
@@ -1602,15 +1557,13 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What_Bass
 :So_What_Bass rdf:type owl:NamedIndividual ,
                        samo:Bass ;
-              samo:looped_into :So_What_Sample ;
-              samo:part_of :So_What .
+              samo:looped_into :So_What_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What_Riff
 :So_What_Riff rdf:type owl:NamedIndividual ,
                        samo:Riff ;
-              samo:looped_into :So_What_Sample ;
-              samo:part_of :So_What .
+              samo:looped_into :So_What_Sample .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#So_What_Sample
@@ -1758,8 +1711,7 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Lyrics
 :Word_To_The_Mother_Land_Lyrics rdf:type owl:NamedIndividual ,
                                          samo:Lyrics ;
-                                samo:clipped_into :Manifest ;
-                                samo:part_of :Word_To_The_Mother_Land .
+                                samo:clipped_into :Manifest .
 
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Sample
@@ -1775,7 +1727,6 @@ samo:Voice rdf:type owl:Class .
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Voice
 :Word_To_The_Mother_Land_Voice rdf:type owl:NamedIndividual ,
                                         samo:Lyrics ;
-                               samo:part_of :Word_To_The_Mother_Land ;
                                samo:pitch_shifted_into :Word_To_The_Mother_Land_Sample ;
                                samo:scratched_into :Word_To_The_Mother_Land_Sample .
 
