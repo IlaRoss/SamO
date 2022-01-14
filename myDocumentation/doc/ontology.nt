@@ -1,6 +1,9 @@
 <http://purl.org/ontology/samo/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/ontology/samo/> <http://purl.org/dc/elements/1.1/created> "January 2022" .
+<http://purl.org/ontology/samo/> <http://purl.org/dc/elements/1.1/description> "The Sampling Ontology offers a set concepts and properties to describe sampling in music on the Semantic Web. It is an extension of the Music Ontology (mo) and is based on the relationships used by whosampled.com." .
 <http://purl.org/ontology/samo/> <http://purl.org/dc/elements/1.1/title> "The Sampling Ontology" .
 <http://purl.org/ontology/samo/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "samo" .
+<http://purl.org/ontology/samo/> <http://purl.org/vocab/vann/preferredNamespaceURI> "http://purl.org/ontology/samo/" .
 # 
 # 
 # #################################################################
@@ -10,11 +13,20 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceURI
+<http://purl.org/vocab/vann/preferredNamespaceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -119,12 +131,16 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/EQed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/EQed> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/EQed> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/EQed_into> .
+<http://purl.org/ontology/samo/EQed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/EQed> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/EQed> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the EQing technique." .
 <http://purl.org/ontology/samo/EQed> <http://www.w3.org/2000/01/rdf-schema#label> "EQed" .
 # 
 # http://purl.org/ontology/samo/EQed_into
 <http://purl.org/ontology/samo/EQed_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/EQed_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/EQed_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/EQed_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/EQed_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the EQing technique." .
 <http://purl.org/ontology/samo/EQed_into> <http://www.w3.org/2000/01/rdf-schema#label> "EQed_into" .
 # 
@@ -132,12 +148,18 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/chop_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/chopped_into> .
+<http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/ontology/samo/loop_of> .
 <http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the chopping technique." .
 <http://purl.org/ontology/samo/chop_of> <http://www.w3.org/2000/01/rdf-schema#label> "chop_of" .
 # 
 # http://purl.org/ontology/samo/chopped_into
 <http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/ontology/samo/looped_into> .
 <http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the chopping technique." .
 <http://purl.org/ontology/samo/chopped_into> <http://www.w3.org/2000/01/rdf-schema#label> "chopped_into" .
 # 
@@ -145,12 +167,16 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/clip_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/clip_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/clip_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/clipped_into> .
+<http://purl.org/ontology/samo/clip_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/clip_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/clip_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the clipping technique." .
 <http://purl.org/ontology/samo/clip_of> <http://www.w3.org/2000/01/rdf-schema#label> "clip_of" .
 # 
 # http://purl.org/ontology/samo/clipped_into
 <http://purl.org/ontology/samo/clipped_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/clipped_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/clipped_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/clipped_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/clipped_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the clipping technique." .
 <http://purl.org/ontology/samo/clipped_into> <http://www.w3.org/2000/01/rdf-schema#label> "clipped_into" .
 # 
@@ -158,12 +184,18 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/detuned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/detuned> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/detuned> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/detuned_into> .
+<http://purl.org/ontology/samo/detuned> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/detuned> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/detuned> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/ontology/samo/tuned> .
 <http://purl.org/ontology/samo/detuned> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the detuning technique." .
 <http://purl.org/ontology/samo/detuned> <http://www.w3.org/2000/01/rdf-schema#label> "detuned" .
 # 
 # http://purl.org/ontology/samo/detuned_into
 <http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://purl.org/ontology/samo/tuned_into> .
 <http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the detuning technique." .
 <http://purl.org/ontology/samo/detuned_into> <http://www.w3.org/2000/01/rdf-schema#label> "detuned_into" .
 # 
@@ -171,18 +203,22 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/filtered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/filtered> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/filtered> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/filtered_into> .
+<http://purl.org/ontology/samo/filtered> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/filtered> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/filtered> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the filtering technique." .
 <http://purl.org/ontology/samo/filtered> <http://www.w3.org/2000/01/rdf-schema#label> "filtered" .
 # 
 # http://purl.org/ontology/samo/filtered_into
 <http://purl.org/ontology/samo/filtered_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/filtered_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/filtered_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/filtered_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/filtered_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the filtering technique." .
 <http://purl.org/ontology/samo/filtered_into> <http://www.w3.org/2000/01/rdf-schema#label> "filtered_into" .
 # 
 # http://purl.org/ontology/samo/has_elements
 <http://purl.org/ontology/samo/has_elements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/ontology/samo/has_elements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<http://purl.org/ontology/samo/has_elements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <http://purl.org/ontology/samo/has_elements> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/has_elements> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/has_elements> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Track to any number of Elements, with a minimum of 1." .
@@ -197,24 +233,36 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/has_sample> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Track to an instance of a Sample." .
 <http://purl.org/ontology/samo/has_sample> <http://www.w3.org/2000/01/rdf-schema#label> "has_sample" .
 # 
+# http://purl.org/ontology/samo/is_cover_of
+<http://purl.org/ontology/samo/is_cover_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/is_cover_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/samo/is_cover_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Track> .
+<http://purl.org/ontology/samo/is_cover_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/mo/Track> .
+<http://purl.org/ontology/samo/is_cover_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortcut property to relate a Track with the track that covers it." .
+<http://purl.org/ontology/samo/is_cover_of> <http://www.w3.org/2000/01/rdf-schema#label> "is_cover_of" .
+# 
 # http://purl.org/ontology/samo/is_sampled_in
 <http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/samples> .
 <http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/mo/Track> .
-<http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortcut property to relate a Track with the track that samples it. For example: A Night In Tunisia is_sampled_in Manifest." .
+<http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortcut property to relate a Track with the track that samples it." .
 <http://purl.org/ontology/samo/is_sampled_in> <http://www.w3.org/2000/01/rdf-schema#label> "is_sampled_in" .
 # 
 # http://purl.org/ontology/samo/loop_of
 <http://purl.org/ontology/samo/loop_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/loop_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/loop_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/looped_into> .
+<http://purl.org/ontology/samo/loop_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/loop_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/loop_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the looping technique." .
 <http://purl.org/ontology/samo/loop_of> <http://www.w3.org/2000/01/rdf-schema#label> "loop_of" .
 # 
 # http://purl.org/ontology/samo/looped_into
 <http://purl.org/ontology/samo/looped_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/looped_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/looped_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/looped_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/looped_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the looping technique." .
 <http://purl.org/ontology/samo/looped_into> <http://www.w3.org/2000/01/rdf-schema#label> "looped_into" .
 # 
@@ -251,32 +299,89 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/ontology/samo/part_of
 <http://purl.org/ontology/samo/part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/part_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/ontology/samo/part_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Functional property to indicate class relationships." .
 <http://purl.org/ontology/samo/part_of> <http://www.w3.org/2000/01/rdf-schema#label> "part_of" .
+# 
+# http://purl.org/ontology/samo/pitch_shift_of
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/pitch_shifted_into> .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the pitch shifting technique."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#label> "pitch_shift_of"@en .
+# 
+# http://purl.org/ontology/samo/pitch_shifted_into
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the pitch shifting technique."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#label> "pitch_shifted_into"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
 # 
 # http://purl.org/ontology/samo/producer
 <http://purl.org/ontology/samo/producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/producer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/mo/performer> .
-<http://purl.org/ontology/samo/producer> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent." .
+<http://purl.org/ontology/samo/producer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Performance> .
+<http://purl.org/ontology/samo/producer> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://purl.org/ontology/samo/producer> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent. By default this agent should be the producer of the track, who is most likely to have created the sample in the act of production." .
 <http://purl.org/ontology/samo/producer> <http://www.w3.org/2000/01/rdf-schema#label> "has producer" .
+# 
+# http://purl.org/ontology/samo/requires
+<http://purl.org/ontology/samo/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/ontology/samo/requires> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Performance> .
+<http://purl.org/ontology/samo/requires> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Instrument> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Agent> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/ontology/samo/requires> <http://www.w3.org/2000/01/rdf-schema#comment> "Functional property to indicate class relationships." .
+<http://purl.org/ontology/samo/requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires" .
 # 
 # http://purl.org/ontology/samo/samples
 <http://purl.org/ontology/samo/samples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/samples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/samples> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/mo/Track> .
-<http://purl.org/ontology/samo/samples> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortcut property to relate a Track with the track that it samples. For example: Manifest samples A Night In Tunisia." .
+<http://purl.org/ontology/samo/samples> <http://www.w3.org/2000/01/rdf-schema#comment> "Shortcut property to relate a Track with the track that it samples. For example." .
 <http://purl.org/ontology/samo/samples> <http://www.w3.org/2000/01/rdf-schema#label> "samples" .
+# 
+# http://purl.org/ontology/samo/scratch_of
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/scratched_into> .
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the scratching technique." .
+<http://purl.org/ontology/samo/scratch_of> <http://www.w3.org/2000/01/rdf-schema#label> "scratch_of" .
+# 
+# http://purl.org/ontology/samo/scratched_into
+<http://purl.org/ontology/samo/scratched_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/ontology/samo/scratched_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/scratched_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/scratched_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/scratched_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the scratching technique." .
+<http://purl.org/ontology/samo/scratched_into> <http://www.w3.org/2000/01/rdf-schema#label> "scratched_into" .
 # 
 # http://purl.org/ontology/samo/timestretched
 <http://purl.org/ontology/samo/timestretched> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/timestretched> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/timestretched> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/timestretched_into> .
+<http://purl.org/ontology/samo/timestretched> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/timestretched> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/timestretched> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the timestretching technique." .
 <http://purl.org/ontology/samo/timestretched> <http://www.w3.org/2000/01/rdf-schema#label> "timestretched" .
 # 
 # http://purl.org/ontology/samo/timestretched_into
 <http://purl.org/ontology/samo/timestretched_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/timestretched_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/timestretched_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/timestretched_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/timestretched_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the timestretching technique." .
 <http://purl.org/ontology/samo/timestretched_into> <http://www.w3.org/2000/01/rdf-schema#label> "timestretched_into" .
 # 
@@ -284,12 +389,16 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/tuned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/tuned> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulation_of> .
 <http://purl.org/ontology/samo/tuned> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/tuned_into> .
+<http://purl.org/ontology/samo/tuned> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
+<http://purl.org/ontology/samo/tuned> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/tuned> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the tuning technique." .
 <http://purl.org/ontology/samo/tuned> <http://www.w3.org/2000/01/rdf-schema#label> "tuned" .
 # 
 # http://purl.org/ontology/samo/tuned_into
 <http://purl.org/ontology/samo/tuned_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/tuned_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
+<http://purl.org/ontology/samo/tuned_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/tuned_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/tuned_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the tuning technique." .
 <http://purl.org/ontology/samo/tuned_into> <http://www.w3.org/2000/01/rdf-schema#label> "tuned_into" .
 # 
@@ -312,22 +421,22 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/ontology/mo/duration
 <http://purl.org/ontology/mo/duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/ontology/mo/duration> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Signal> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Track> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://purl.org/ontology/mo/duration> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Signal> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Track> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://purl.org/ontology/mo/duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 # 
 # http://purl.org/ontology/samo/release_year
 <http://purl.org/ontology/samo/release_year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/ontology/samo/release_year> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Track> .
-<http://purl.org/ontology/samo/release_year> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
-<http://purl.org/ontology/samo/release_year> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology but could be extended to fully reflect the intricacies of music releases if needed or could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia." .
+<http://purl.org/ontology/samo/release_year> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
+<http://purl.org/ontology/samo/release_year> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology and could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia." .
 <http://purl.org/ontology/samo/release_year> <http://www.w3.org/2000/01/rdf-schema#label> "release_year" .
 # 
 # 
@@ -368,23 +477,33 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/ontology/mo/Track
 <http://purl.org/ontology/mo/Track> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/mo/Track> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/mo/Track> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/mo/genre> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/Genre> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/has_elements> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/Elements> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/mo/Track> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/MusicalManifestation> .
-<http://purl.org/ontology/mo/Track> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/mo/genre> .
-_:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/Genre> .
-<http://purl.org/ontology/mo/Track> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/has_elements> .
-_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/Elements> .
 # 
 # http://purl.org/ontology/samo/Analog_Sampler
 <http://purl.org/ontology/samo/Analog_Sampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Analog_Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/samo/Sampler> .
 <http://purl.org/ontology/samo/Analog_Sampler> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/ontology/samo/Digital_Sampler> .
-<http://purl.org/ontology/samo/Analog_Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers." .
+<http://purl.org/ontology/samo/Analog_Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers even if they process sound through digital means." .
 <http://purl.org/ontology/samo/Analog_Sampler> <http://www.w3.org/2000/01/rdf-schema#label> "Analog Sampler" .
 # 
 # http://purl.org/ontology/samo/Bass
@@ -396,11 +515,16 @@ _:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/
 # http://purl.org/ontology/samo/Digital_Sampler
 <http://purl.org/ontology/samo/Digital_Sampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Digital_Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/samo/Sampler> .
-<http://purl.org/ontology/samo/Digital_Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers." .
+<http://purl.org/ontology/samo/Digital_Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers even if they process sound through analog means." .
 <http://purl.org/ontology/samo/Digital_Sampler> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Sampler" .
 # 
 # http://purl.org/ontology/samo/Direct_Sample
 <http://purl.org/ontology/samo/Direct_Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/samo/Direct_Sample> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/manipulation_of> .
+_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/Direct_Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/Direct_Sample> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/ontology/samo/Interpolation> .
 <http://purl.org/ontology/samo/Direct_Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of sample based on categorization by whosampled.com. Covers all samples created only by a sampler, not any other instrument." .
@@ -414,14 +538,14 @@ _:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/
 # 
 # http://purl.org/ontology/samo/Elements
 <http://purl.org/ontology/samo/Elements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/samo/Elements> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/part_of> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Signal> .
-<http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/part_of> .
-_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/Track> .
-<http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#label> "Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com." .
 <http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#label> "Elements" .
+<http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#label> "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." .
 # 
 # http://purl.org/ontology/samo/Interpolation
 <http://purl.org/ontology/samo/Interpolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -432,51 +556,56 @@ _:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/T
 # http://purl.org/ontology/samo/Lyrics
 <http://purl.org/ontology/samo/Lyrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Lyrics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/samo/Elements> .
-<http://purl.org/ontology/samo/Lyrics> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutive element of a track relating to lyrics. EXPLAIN THE DIFFERENCE BTW VOICE AND LYRICS" .
+<http://purl.org/ontology/samo/Lyrics> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutive element of a track relating to lyrics, or words. Different from the voice element in that a voice can be an element of a track but not be used to relate lyrics." .
 <http://purl.org/ontology/samo/Lyrics> <http://www.w3.org/2000/01/rdf-schema#label> "Lyrics" .
 # 
 # http://purl.org/ontology/samo/Riff
 <http://purl.org/ontology/samo/Riff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Riff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/samo/Elements> .
-<http://purl.org/ontology/samo/Riff> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutive element of a track relating to melodic elements, such as motifs, keyboard lines, horn riffs etc..." .
+<http://purl.org/ontology/samo/Riff> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutive element of a track relating to melodic elements such as motifs, lines, etc..." .
 <http://purl.org/ontology/samo/Riff> <http://www.w3.org/2000/01/rdf-schema#label> "Riff" .
 # 
 # http://purl.org/ontology/samo/Sample
 <http://purl.org/ontology/samo/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/ontology/samo/Sample> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/manipulation_of> .
-_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/Elements> .
+<http://purl.org/ontology/samo/Sample> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/part_of> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Signal> .
-<http://purl.org/ontology/samo/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/part_of> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of a sample, created through a performance (Sampling) by an agent using an instrument (Sampler)." .
 <http://purl.org/ontology/samo/Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample" .
 # 
 # http://purl.org/ontology/samo/Sampler
 <http://purl.org/ontology/samo/Sampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Sampler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Instrument> .
-<http://purl.org/ontology/samo/Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Top-level class for the machines used in the sampling event to create a sample." .
+<http://purl.org/ontology/samo/Sampler> <http://www.w3.org/2000/01/rdf-schema#comment> "Subclass of Music Ontology's Instrument to describe the machines used in the sampling event to create a sample." .
 <http://purl.org/ontology/samo/Sampler> <http://www.w3.org/2000/01/rdf-schema#label> "Sampler" .
 # 
 # http://purl.org/ontology/samo/Sampling
 <http://purl.org/ontology/samo/Sampling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Sampling> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/requires> .
+_:genid24 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/MusicArtist> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/requires> .
+_:genid22 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/Sampler> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Performance> .
-<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/mo/instrument> .
-_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo/Sampler> .
-<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/samo/producer> .
-_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/MusicArtist> .
 <http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#label> "Sampling" .
-<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#label> "Sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." .
+<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#label> "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." .
 # 
 # http://purl.org/ontology/samo/Sound_Effects
 <http://purl.org/ontology/samo/Sound_Effects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -487,7 +616,7 @@ _:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/M
 # http://purl.org/ontology/samo/Voice
 <http://purl.org/ontology/samo/Voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Voice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/samo/Elements> .
-<http://purl.org/ontology/samo/Voice> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutive element of a track relating to voices." .
+<http://purl.org/ontology/samo/Voice> <http://www.w3.org/2000/01/rdf-schema#comment> "Constitutive element of a track relating to the use of voices." .
 <http://purl.org/ontology/samo/Voice> <http://www.w3.org/2000/01/rdf-schema#label> "Voice" .
 # 
 # http://xmlns.com/foaf/0.1/Agent
@@ -502,25 +631,25 @@ _:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/M
 # #################################################################
 # 
 # 
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid15 <http://www.w3.org/2002/07/owl#members> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Bass> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Drums> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Lyrics> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Riff> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Sound_Effects> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Voice> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid26 <http://www.w3.org/2002/07/owl#members> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Bass> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Drums> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Lyrics> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Riff> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Sound_Effects> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/ontology/samo/Voice> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

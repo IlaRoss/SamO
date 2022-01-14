@@ -7,9 +7,6 @@ This section provides details for each class and property defined by The Samplin
          <a href="#Analog_Sampler" title="http://purl.org/ontology/samo/Analog_Sampler">Analog Sampler</a>
       </li>
       <li>
-         <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
-      </li>
-      <li>
          <a href="#Bass" title="http://purl.org/ontology/samo/Bass">Bass</a>
       </li>
       <li>
@@ -20,6 +17,9 @@ This section provides details for each class and property defined by The Samplin
       </li>
       <li>
          <a href="#Drums" title="http://purl.org/ontology/samo/Drums">Drums</a>
+      </li>
+      <li>
+         <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
       </li>
       <li>
          <a href="#Interpolation" title="http://purl.org/ontology/samo/Interpolation">Interpolation</a>
@@ -74,7 +74,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Analog_Sampler</p>
       <div class="comment">
-         <span class="markdown">Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers.</span>
+         <span class="markdown">Any sampler that has a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover hardware-based samplers even if they process sound through digital means.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -86,42 +86,6 @@ This section provides details for each class and property defined by The Samplin
          <dd>
             <a href="#Digital_Sampler" title="http://purl.org/ontology/samo/Digital_Sampler">Digital Sampler</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Elements">
-      <h3>Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/ontology/samo/Elements</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://purl.org/ontology/mo/Signal" title="http://purl.org/ontology/mo/Signal">signal</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Bass" title="http://purl.org/ontology/samo/Bass">Bass</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Drums" title="http://purl.org/ontology/samo/Drums">Drums</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Lyrics" title="http://purl.org/ontology/samo/Lyrics">Lyrics</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Riff" title="http://purl.org/ontology/samo/Riff">Riff</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Sound_Effects" title="http://purl.org/ontology/samo/Sound_Effects">Sound Effects</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Voice" title="http://purl.org/ontology/samo/Voice">Voice</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#has_elements" title="http://purl.org/ontology/samo/has_elements">has_elements</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -138,7 +102,7 @@ This section provides details for each class and property defined by The Samplin
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -160,7 +124,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Digital_Sampler</p>
       <div class="comment">
-         <span class="markdown">Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers.</span>
+         <span class="markdown">Any sampler that does not have a physical interface other than a touch screen or keyboard/mouse/screen combination. Intended to cover software-based samplers even if they process sound through analog means.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -186,6 +150,13 @@ This section provides details for each class and property defined by The Samplin
          <span class="markdown">Type of sample based on categorization by whosampled.com. Covers all samples created only by a sampler, not any other instrument.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
@@ -211,7 +182,7 @@ This section provides details for each class and property defined by The Samplin
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -222,6 +193,69 @@ This section provides details for each class and property defined by The Samplin
             <sup class="type-c" title="class">c</sup>, <a href="#Sound_Effects" title="http://purl.org/ontology/samo/Sound_Effects">Sound Effects</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Voice" title="http://purl.org/ontology/samo/Voice">Voice</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Elements">
+      <h3>Elements<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/Elements</p>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#part_of" title="http://purl.org/ontology/samo/part_of">part_of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#http://purl.org/ontology/mo/Track" title="http://purl.org/ontology/mo/Track">track</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/ontology/mo/Signal" title="http://purl.org/ontology/mo/Signal">signal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Bass" title="http://purl.org/ontology/samo/Bass">Bass</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Drums" title="http://purl.org/ontology/samo/Drums">Drums</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Lyrics" title="http://purl.org/ontology/samo/Lyrics">Lyrics</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Riff" title="http://purl.org/ontology/samo/Riff">Riff</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Sound_Effects" title="http://purl.org/ontology/samo/Sound_Effects">Sound Effects</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Voice" title="http://purl.org/ontology/samo/Voice">Voice</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#EQed_into" title="http://purl.org/ontology/samo/EQed_into">EQed_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#chopped_into" title="http://purl.org/ontology/samo/chopped_into">chopped_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#clipped_into" title="http://purl.org/ontology/samo/clipped_into">clipped_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#detuned_into" title="http://purl.org/ontology/samo/detuned_into">detuned_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#filtered_into" title="http://purl.org/ontology/samo/filtered_into">filtered_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#looped_into" title="http://purl.org/ontology/samo/looped_into">looped_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#pitch_shifted_into" title="http://purl.org/ontology/samo/pitch_shifted_into">pitch_shifted_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#scratched_into" title="http://purl.org/ontology/samo/scratched_into">scratched_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#timestretched_into" title="http://purl.org/ontology/samo/timestretched_into">timestretched_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#tuned_into" title="http://purl.org/ontology/samo/tuned_into">tuned_into</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#EQed" title="http://purl.org/ontology/samo/EQed">EQed</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#chop_of" title="http://purl.org/ontology/samo/chop_of">chop_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#clip_of" title="http://purl.org/ontology/samo/clip_of">clip_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#detuned" title="http://purl.org/ontology/samo/detuned">detuned</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#filtered" title="http://purl.org/ontology/samo/filtered">filtered</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#has_elements" title="http://purl.org/ontology/samo/has_elements">has_elements</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#loop_of" title="http://purl.org/ontology/samo/loop_of">loop_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#pitch_shift_of" title="http://purl.org/ontology/samo/pitch_shift_of">pitch_shift_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#scratch_of" title="http://purl.org/ontology/samo/scratch_of">scratch_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#timestretched" title="http://purl.org/ontology/samo/timestretched">timestretched</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#tuned" title="http://purl.org/ontology/samo/tuned">tuned</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -256,12 +290,12 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Lyrics</p>
       <div class="comment">
-         <span class="markdown">Constitutive element of a track relating to lyrics. EXPLAIN THE DIFFERENCE BTW VOICE AND LYRICS</span>
+         <span class="markdown">Constitutive element of a track relating to lyrics, or words. Different from the voice element in that a voice can be an element of a track but not be used to relate lyrics.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -324,9 +358,11 @@ This section provides details for each class and property defined by The Samplin
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://purl.org/ontology/mo/instrument" title="http://purl.org/ontology/mo/instrument">instrument</a>
+            <a href="#producer" title="http://purl.org/ontology/samo/producer">has producer</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/ontology/mo/instrument" title="http://purl.org/ontology/mo/instrument">instrument</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/ontology/mo/performer" title="http://purl.org/ontology/mo/performer">performer</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/ontology/mo/recorded_as" title="http://purl.org/ontology/mo/recorded_as">recorded as</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#requires" title="http://purl.org/ontology/samo/requires">requires</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -344,12 +380,12 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Riff</p>
       <div class="comment">
-         <span class="markdown">Constitutive element of a track relating to melodic elements, such as motifs, keyboard lines, horn riffs etc...</span>
+         <span class="markdown">Constitutive element of a track relating to melodic elements such as motifs, lines, etc...</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -376,9 +412,10 @@ This section provides details for each class and property defined by The Samplin
       <dl class="description">
          <dt>is equivalent to</dt>
          <dd>
-            <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+            <a href="#part_of" title="http://purl.org/ontology/samo/part_of">part_of</a>
             <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">min</span> 1 <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <span class="logic">some</span> 
+            <a href="#http://purl.org/ontology/mo/Track" title="http://purl.org/ontology/mo/Track">track</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has super-classes</dt>
@@ -394,14 +431,34 @@ This section provides details for each class and property defined by The Samplin
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+            <a href="#EQed" title="http://purl.org/ontology/samo/EQed">EQed</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#chop_of" title="http://purl.org/ontology/samo/chop_of">chop_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#clip_of" title="http://purl.org/ontology/samo/clip_of">clip_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#detuned" title="http://purl.org/ontology/samo/detuned">detuned</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#filtered" title="http://purl.org/ontology/samo/filtered">filtered</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#loop_of" title="http://purl.org/ontology/samo/loop_of">loop_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#pitch_shift_of" title="http://purl.org/ontology/samo/pitch_shift_of">pitch_shift_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#scratch_of" title="http://purl.org/ontology/samo/scratch_of">scratch_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#timestretched" title="http://purl.org/ontology/samo/timestretched">timestretched</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#tuned" title="http://purl.org/ontology/samo/tuned">tuned</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#used_in" title="http://purl.org/ontology/samo/used_in">used_in</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#has_sample" title="http://purl.org/ontology/samo/has_sample">has_sample</a>
+            <a href="#EQed_into" title="http://purl.org/ontology/samo/EQed_into">EQed_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#chopped_into" title="http://purl.org/ontology/samo/chopped_into">chopped_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#clipped_into" title="http://purl.org/ontology/samo/clipped_into">clipped_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#detuned_into" title="http://purl.org/ontology/samo/detuned_into">detuned_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#filtered_into" title="http://purl.org/ontology/samo/filtered_into">filtered_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#has_sample" title="http://purl.org/ontology/samo/has_sample">has_sample</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#looped_into" title="http://purl.org/ontology/samo/looped_into">looped_into</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#pitch_shifted_into" title="http://purl.org/ontology/samo/pitch_shifted_into">pitch_shifted_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#scratched_into" title="http://purl.org/ontology/samo/scratched_into">scratched_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#timestretched_into" title="http://purl.org/ontology/samo/timestretched_into">timestretched_into</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#tuned_into" title="http://purl.org/ontology/samo/tuned_into">tuned_into</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -414,7 +471,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Sampler</p>
       <div class="comment">
-         <span class="markdown">Top-level class for the machines used in the sampling event to create a sample.</span>
+         <span class="markdown">Subclass of Music Ontology's Instrument to describe the machines used in the sampling event to create a sample.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -450,6 +507,17 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Sampling</p>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Sampling" title="http://purl.org/ontology/samo/Sampling">Sampling</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#requires" title="http://purl.org/ontology/samo/requires">requires</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#http://purl.org/ontology/mo/MusicArtist" title="http://purl.org/ontology/mo/MusicArtist">music artist</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#requires" title="http://purl.org/ontology/samo/requires">requires</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#Sampler" title="http://purl.org/ontology/samo/Sampler">Sampler</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://purl.org/ontology/mo/Performance" title="http://purl.org/ontology/mo/Performance">performance</a>
@@ -474,7 +542,7 @@ This section provides details for each class and property defined by The Samplin
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -506,7 +574,7 @@ This section provides details for each class and property defined by The Samplin
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -528,6 +596,19 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/mo/Track</p>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://purl.org/ontology/mo/Track" title="http://purl.org/ontology/mo/Track">track</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#http://purl.org/ontology/mo/genre" title="http://purl.org/ontology/mo/genre">genre</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="http://purl.org/ontology/mo/Genre"
+               target="_blank"
+               title="http://purl.org/ontology/mo/Genre">genre</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#has_elements" title="http://purl.org/ontology/samo/has_elements">has_elements</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">min</span> 1 <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="http://purl.org/ontology/mo/MusicalManifestation"
@@ -539,6 +620,7 @@ This section provides details for each class and property defined by The Samplin
          <dd>
             <a href="#has_elements" title="http://purl.org/ontology/samo/has_elements">has_elements</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#has_sample" title="http://purl.org/ontology/samo/has_sample">has_sample</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#is_cover_of" title="http://purl.org/ontology/samo/is_cover_of">is_cover_of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#is_sampled_in" title="http://purl.org/ontology/samo/is_sampled_in">is_sampled_in</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#release_year" title="http://purl.org/ontology/samo/release_year">release_year</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#samples" title="http://purl.org/ontology/samo/samples">samples</a>
@@ -546,7 +628,8 @@ This section provides details for each class and property defined by The Samplin
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#is_sampled_in" title="http://purl.org/ontology/samo/is_sampled_in">is_sampled_in</a>
+            <a href="#is_cover_of" title="http://purl.org/ontology/samo/is_cover_of">is_cover_of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#is_sampled_in" title="http://purl.org/ontology/samo/is_sampled_in">is_sampled_in</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#samples" title="http://purl.org/ontology/samo/samples">samples</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#used_in" title="http://purl.org/ontology/samo/used_in">used_in</a>
             <sup class="type-op" title="object property">op</sup>
@@ -561,12 +644,12 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/Voice</p>
       <div class="comment">
-         <span class="markdown">Constitutive element of a track relating to voices.</span>
+         <span class="markdown">Constitutive element of a track relating to the use of voices.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+            <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -653,6 +736,9 @@ This section provides details for each class and property defined by The Samplin
          </a>
       </li>
       <li>
+         <a href="#is_cover_of" title="http://purl.org/ontology/samo/is_cover_of">is_cover_of</a>
+      </li>
+      <li>
          <a href="#is_sampled_in" title="http://purl.org/ontology/samo/is_sampled_in">is_sampled_in</a>
       </li>
       <li>
@@ -684,6 +770,12 @@ This section provides details for each class and property defined by The Samplin
          </a>
       </li>
       <li>
+         <a href="#pitch_shift_of" title="http://purl.org/ontology/samo/pitch_shift_of">pitch_shift_of</a>
+      </li>
+      <li>
+         <a href="#pitch_shifted_into" title="http://purl.org/ontology/samo/pitch_shifted_into">pitch_shifted_into</a>
+      </li>
+      <li>
          <a href="#http://purl.org/ontology/mo/publication_of" title="http://purl.org/ontology/mo/publication_of">
             <span>publication of</span>
          </a>
@@ -704,7 +796,16 @@ This section provides details for each class and property defined by The Samplin
          </a>
       </li>
       <li>
+         <a href="#requires" title="http://purl.org/ontology/samo/requires">requires</a>
+      </li>
+      <li>
          <a href="#samples" title="http://purl.org/ontology/samo/samples">samples</a>
+      </li>
+      <li>
+         <a href="#scratch_of" title="http://purl.org/ontology/samo/scratch_of">scratch_of</a>
+      </li>
+      <li>
+         <a href="#scratched_into" title="http://purl.org/ontology/samo/scratched_into">scratched_into</a>
       </li>
       <li>
          <a href="#timestretched" title="http://purl.org/ontology/samo/timestretched">timestretched</a>
@@ -739,6 +840,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#chopped_into" title="http://purl.org/ontology/samo/chopped_into">chopped_into</a>
@@ -763,6 +874,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -789,6 +910,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#clipped_into" title="http://purl.org/ontology/samo/clipped_into">clipped_into</a>
@@ -813,6 +944,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -950,6 +1091,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#detuned_into" title="http://purl.org/ontology/samo/detuned_into">detuned_into</a>
@@ -974,6 +1125,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -1000,6 +1161,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#EQed_into" title="http://purl.org/ontology/samo/EQed_into">EQed_into</a>
@@ -1024,6 +1195,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -1050,6 +1231,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#filtered_into" title="http://purl.org/ontology/samo/filtered_into">filtered_into</a>
@@ -1074,6 +1265,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -1125,7 +1326,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/producer</p>
       <div class="comment">
-         <span class="markdown">Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent.</span>
+         <span class="markdown">Extension of the Music Ontology performer sub-properties, used to relate the Sampling performance event to an agent. By default this agent should be the producer of the track, who is most likely to have created the sample in the act of production.</span>
       </div>
       <div class="description">
          <dl>
@@ -1133,6 +1334,18 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#http://purl.org/ontology/mo/performer" title="http://purl.org/ontology/mo/performer">performer</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/ontology/mo/Performance" title="http://purl.org/ontology/mo/Performance">performance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://xmlns.com/foaf/0.1/Agent"
+                  target="_blank"
+                  title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1150,7 +1363,7 @@ This section provides details for each class and property defined by The Samplin
       <div class="description">
          <p>
             <strong>has characteristics:
-                </strong> inverse functional</p>
+                </strong> transitive</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1159,7 +1372,7 @@ This section provides details for each class and property defined by The Samplin
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1229,6 +1442,34 @@ This section provides details for each class and property defined by The Samplin
          </dl>
       </div>
    </div>
+   <div class="entity" id="is_cover_of">
+      <h3>is_cover_of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/is_cover_of</p>
+      <div class="comment">
+         <span class="markdown">Shortcut property to relate a Track with the track that covers it.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/ontology/mo/Track" title="http://purl.org/ontology/mo/Track">track</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/ontology/mo/Track" title="http://purl.org/ontology/mo/Track">track</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="is_sampled_in">
       <h3>is_sampled_in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1237,7 +1478,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/is_sampled_in</p>
       <div class="comment">
-         <span class="markdown">Shortcut property to relate a Track with the track that samples it. For example: A Night In Tunisia is_sampled_in Manifest.</span>
+         <span class="markdown">Shortcut property to relate a Track with the track that samples it.</span>
       </div>
       <div class="description">
          <dl>
@@ -1276,6 +1517,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#looped_into" title="http://purl.org/ontology/samo/looped_into">looped_into</a>
@@ -1300,6 +1551,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -1392,13 +1653,15 @@ This section provides details for each class and property defined by The Samplin
                <sup class="type-op" title="object property">op</sup>, <a href="#detuned_into" title="http://purl.org/ontology/samo/detuned_into">detuned_into</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#filtered_into" title="http://purl.org/ontology/samo/filtered_into">filtered_into</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#looped_into" title="http://purl.org/ontology/samo/looped_into">looped_into</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#pitch_shifted_into" title="http://purl.org/ontology/samo/pitch_shifted_into">pitch_shifted_into</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#scratched_into" title="http://purl.org/ontology/samo/scratched_into">scratched_into</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#timestretched_into" title="http://purl.org/ontology/samo/timestretched_into">timestretched_into</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#tuned_into" title="http://purl.org/ontology/samo/tuned_into">tuned_into</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1437,6 +1700,8 @@ This section provides details for each class and property defined by The Samplin
                <sup class="type-op" title="object property">op</sup>, <a href="#detuned" title="http://purl.org/ontology/samo/detuned">detuned</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#filtered" title="http://purl.org/ontology/samo/filtered">filtered</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#loop_of" title="http://purl.org/ontology/samo/loop_of">loop_of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#pitch_shift_of" title="http://purl.org/ontology/samo/pitch_shift_of">pitch_shift_of</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#scratch_of" title="http://purl.org/ontology/samo/scratch_of">scratch_of</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#timestretched" title="http://purl.org/ontology/samo/timestretched">timestretched</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#tuned" title="http://purl.org/ontology/samo/tuned">tuned</a>
                <sup class="type-op" title="object property">op</sup>
@@ -1448,7 +1713,7 @@ This section provides details for each class and property defined by The Samplin
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Any musical element that constitutes a track, based on the structural logic implied by descriptions on whosampled.com.</a>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1502,6 +1767,76 @@ This section provides details for each class and property defined by The Samplin
                   target="_blank"
                   title="http://xmlns.com/foaf/0.1/Agent">agent</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pitch_shift_of">
+      <h3>pitch_shift_of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/pitch_shift_of</p>
+      <div class="comment">
+         <span class="markdown">Indicates a process of manipulation using the pitch shifting technique.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#pitch_shifted_into" title="http://purl.org/ontology/samo/pitch_shifted_into">pitch_shifted_into</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pitch_shifted_into">
+      <h3>pitch_shifted_into<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/pitch_shifted_into</p>
+      <div class="comment">
+         <span class="markdown">Indicates a process of manipulation using the pitch shifting technique.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#pitch_shift_of" title="http://purl.org/ontology/samo/pitch_shift_of">pitch_shift_of</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -1622,6 +1957,41 @@ This section provides details for each class and property defined by The Samplin
          </dl>
       </div>
    </div>
+   <div class="entity" id="requires">
+      <h3>requires<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/requires</p>
+      <div class="comment">
+         <span class="markdown">Functional property to indicate class relationships.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/ontology/mo/Performance" title="http://purl.org/ontology/mo/Performance">performance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://purl.org/ontology/mo/Instrument"
+                  target="_blank"
+                  title="http://purl.org/ontology/mo/Instrument">instrument</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="http://xmlns.com/foaf/0.1/Agent"
+                  target="_blank"
+                  title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="samples">
       <h3>samples<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1630,7 +2000,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/samples</p>
       <div class="comment">
-         <span class="markdown">Shortcut property to relate a Track with the track that it samples. For example: Manifest samples A Night In Tunisia.</span>
+         <span class="markdown">Shortcut property to relate a Track with the track that it samples. For example.</span>
       </div>
       <div class="description">
          <dl>
@@ -1652,6 +2022,76 @@ This section provides details for each class and property defined by The Samplin
          </dl>
       </div>
    </div>
+   <div class="entity" id="scratch_of">
+      <h3>scratch_of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/scratch_of</p>
+      <div class="comment">
+         <span class="markdown">Indicates a process of manipulation using the scratching technique.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#scratched_into" title="http://purl.org/ontology/samo/scratched_into">scratched_into</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="scratched_into">
+      <h3>scratched_into<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/samo/scratched_into</p>
+      <div class="comment">
+         <span class="markdown">Indicates a process of manipulation using the scratching technique.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#scratch_of" title="http://purl.org/ontology/samo/scratch_of">scratch_of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="timestretched">
       <h3>timestretched<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1668,6 +2108,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -1694,6 +2144,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#timestretched" title="http://purl.org/ontology/samo/timestretched">timestretched</a>
@@ -1719,6 +2179,16 @@ This section provides details for each class and property defined by The Samplin
                <a href="#manipulation_of" title="http://purl.org/ontology/samo/manipulation_of">manipulation_of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#tuned_into" title="http://purl.org/ontology/samo/tuned_into">tuned_into</a>
@@ -1743,6 +2213,16 @@ This section provides details for each class and property defined by The Samplin
             <dd>
                <a href="#manipulated_into" title="http://purl.org/ontology/samo/manipulated_into">manipulated_into</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Elements" title="http://purl.org/ontology/samo/Elements">Elements</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Sample" title="http://purl.org/ontology/samo/Sample">Sample</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
@@ -1831,7 +2311,7 @@ This section provides details for each class and property defined by The Samplin
       <p>
          <strong>IRI:</strong> http://purl.org/ontology/samo/release_year</p>
       <div class="comment">
-         <span class="markdown">Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology but could be extended to fully reflect the intricacies of music releases if needed or could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia.</span>
+         <span class="markdown">Used to relate a Track to a release year. Kept purposefully simple for the scope of this ontology and could be substituted with existing release properties and values that exist in large LOD sets such as wikidata or dbpedia.</span>
       </div>
       <div class="description">
          <dl>
@@ -1842,9 +2322,9 @@ This section provides details for each class and property defined by The Samplin
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#gYear"
+               <a href="http://www.w3.org/2001/XMLSchema#int"
                   target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#gYear">g year</a>
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
             </dd>
          </dl>
       </div>
