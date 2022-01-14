@@ -337,8 +337,8 @@ xsd:gYear rdf:type rdfs:Datatype .
                 owl:inverseOf :pitch_shifted_into ;
                 rdfs:domain :Sample ;
                 rdfs:range :Elements ;
-                rdfs:comment "Indicates a process of manipulation using the pitch shifting technique."^^rdfs:Literal ;
-                rdfs:label "pitch_shift_of"@en .
+                rdfs:comment "Indicates a process of manipulation using the pitch shifting technique." ;
+                rdfs:label "pitch_shift_of" .
 
 
 ###  http://purl.org/ontology/samo/pitch_shifted_into
@@ -346,8 +346,8 @@ xsd:gYear rdf:type rdfs:Datatype .
                     rdfs:subPropertyOf :manipulated_into ;
                     rdfs:domain :Elements ;
                     rdfs:range :Sample ;
-                    rdfs:comment "Indicates a process of manipulation using the pitch shifting technique."^^rdfs:Literal ;
-                    rdfs:label "pitch_shifted_into"^^rdfs:Literal .
+                    rdfs:comment "Indicates a process of manipulation using the pitch shifting technique." ;
+                    rdfs:label "pitch_shifted_into" .
 
 
 ###  http://purl.org/ontology/samo/producer
@@ -576,8 +576,8 @@ xsd:gYear rdf:type rdfs:Datatype .
                                 owl:onClass <http://purl.org/ontology/mo/Track>
                               ] ;
           rdfs:subClassOf <http://purl.org/ontology/mo/Signal> ;
-          rdfs:label "Elements" ,
-                     "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." .
+          rdfs:comment "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." ;
+          rdfs:label "Elements" .
 
 
 ###  http://purl.org/ontology/samo/Interpolation
@@ -636,8 +636,8 @@ xsd:gYear rdf:type rdfs:Datatype .
                                 rdf:type owl:Class
                               ] ;
           rdfs:subClassOf <http://purl.org/ontology/mo/Performance> ;
-          rdfs:label "Sampling" ,
-                     "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." .
+          rdfs:comment "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." ;
+          rdfs:label "Sampling" .
 
 
 ###  http://purl.org/ontology/samo/Sound_Effects

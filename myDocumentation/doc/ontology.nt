@@ -309,16 +309,16 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/samo/pitch_shifted_into> .
 <http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Sample> .
 <http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Elements> .
-<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the pitch shifting technique."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#label> "pitch_shift_of"@en .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the pitch shifting technique." .
+<http://purl.org/ontology/samo/pitch_shift_of> <http://www.w3.org/2000/01/rdf-schema#label> "pitch_shift_of" .
 # 
 # http://purl.org/ontology/samo/pitch_shifted_into
 <http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/samo/manipulated_into> .
 <http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/samo/Elements> .
 <http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/samo/Sample> .
-<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the pitch shifting technique."^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#label> "pitch_shifted_into"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a process of manipulation using the pitch shifting technique." .
+<http://purl.org/ontology/samo/pitch_shifted_into> <http://www.w3.org/2000/01/rdf-schema#label> "pitch_shifted_into" .
 # 
 # http://purl.org/ontology/samo/producer
 <http://purl.org/ontology/samo/producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -544,8 +544,8 @@ _:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/ontology/s
 _:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/mo/Track> .
 <http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Signal> .
+<http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#comment> "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." .
 <http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#label> "Elements" .
-<http://purl.org/ontology/samo/Elements> <http://www.w3.org/2000/01/rdf-schema#label> "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." .
 # 
 # http://purl.org/ontology/samo/Interpolation
 <http://purl.org/ontology/samo/Interpolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -604,8 +604,8 @@ _:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/ontology/samo
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/mo/Performance> .
+<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." .
 <http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#label> "Sampling" .
-<http://purl.org/ontology/samo/Sampling> <http://www.w3.org/2000/01/rdf-schema#label> "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." .
 # 
 # http://purl.org/ontology/samo/Sound_Effects
 <http://purl.org/ontology/samo/Sound_Effects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

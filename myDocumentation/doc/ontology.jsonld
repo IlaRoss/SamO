@@ -468,10 +468,11 @@
 }, {
   "@id" : "http://purl.org/ontology/samo/Elements",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Elements"
-  }, {
-    "@value" : "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/ontology/mo/Signal"
@@ -545,10 +546,11 @@
 }, {
   "@id" : "http://purl.org/ontology/samo/Sampling",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sampling"
-  }, {
-    "@value" : "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/ontology/mo/Performance"
@@ -929,14 +931,12 @@
   "@id" : "http://purl.org/ontology/samo/pitch_shift_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "Indicates a process of manipulation using the pitch shifting technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/ontology/samo/Sample"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
     "@value" : "pitch_shift_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -952,14 +952,12 @@
   "@id" : "http://purl.org/ontology/samo/pitch_shifted_into",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "Indicates a process of manipulation using the pitch shifting technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/ontology/samo/Elements"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "@value" : "pitch_shifted_into"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
