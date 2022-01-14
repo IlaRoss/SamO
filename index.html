@@ -395,7 +395,7 @@
 	            <p><span class='log_impl'>How many</span> <span class='log_class'>samples</span> <span class='log_event'>are</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT (COUNT(?sample) AS ?count)<br/> 
 					WHERE { :Electric_Relaxationsamo:has_sample ?sample }
@@ -412,7 +412,7 @@
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>are sampled</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 	            <code>SELECT ?label<br/>
 WHERE { ?songsamo:is_sampled_in :Electric_Relaxation ;
 	rdfs:label ?label }
@@ -436,7 +436,7 @@ WHERE { ?songsamo:has_elements ?elements ; <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span> <span class='log_event'>are used</span> <span class='log_impl'>as</span> <span class='log_class'>samples</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/>
 			  
 	            <code>SELECT ?label<br/>
 WHERE { ?songsmo:genre :Jazz; <br/>
@@ -455,7 +455,7 @@ WHERE { ?songsmo:genre :Jazz; <br/>
 	            <p><span class='log_impl'>How many</span> <span class='log_class'>songs</span> <span class='log_event'>contain</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>of</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT (COUNT(?song) AS ?count) <br/>
 WHERE { ?songsamo:samples :It_Feels_So_Good }
@@ -485,7 +485,7 @@ WHERE { ?songsamo:samples :It_Feels_So_Good }
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>have sampled</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/>
 			  
 	            <code>
 			    ///</code>
@@ -502,7 +502,7 @@ WHERE { ?songsamo:samples :It_Feels_So_Good }
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT DISTINCT ?song<br/>
 { ?songsamo:release_year ?year ; <br/>
@@ -522,7 +522,7 @@ FILTER(?year <= 1972) }
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_rel'>by</span> <span class='log_indiv'>Nina Simone</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/>
 			  
 	            <code>SELECT ?subject<br/>
 WHERE { ?subjectmo:compiler :Nina_Simone; <br/>
@@ -540,7 +540,7 @@ samo:is_sampled_in ?anything }
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>elements</span> <span class='log_rel'>from</span> <span class='log_indiv'>Mr. Bojangles</span> <span class='log_event'>are sampled in</span> <span class='log_indiv'>Jump Hi</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT ?element<br/>
 WHERE {:Jump_Hisamo:has_sample ?sample . <br/>
@@ -559,7 +559,7 @@ WHERE {:Jump_Hisamo:has_sample ?sample . <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_event'>is sampled</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>times</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT ?subject (COUNT(DISTINCT ?song) as ?count) <br/>
 WHERE {?subjectmo:compiled ?song . <br/>
@@ -579,7 +579,7 @@ ORDER BY desc(?count)
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_event'>contains</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>samples</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT ?song (COUNT(DISTINCT ?sample) as ?count) <br/>
 WHERE {?songsamo:has_sample ?sample }<br/>
@@ -598,7 +598,7 @@ ORDER BY desc(?count)
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>song(s)</span> <span class='log_event'>use(s)</span> <span class='log_rel'>looped</span> <span class='log_class'>samples</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/><br/>
 			  
 	            <code>SELECT DISTINCT ?song<br/>
 WHERE {?songsamo:has_sample ?sample . <br/>
@@ -621,7 +621,7 @@ WHERE {?elementsamo:looped_into ?sample . <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>samples</span> <span class='log_rel'>in</span> <span class='log_indiv'>Rimshot (Intro Live)</span> <span class='log_event'>are</span> <span class='log_class'>interpolation</span>?</p><br/><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/>
 			  
 	            <code>SELECT ?sample<br/>
 WHERE {:Rimshot_Intro_Livesamo:has_sample ?sample . <br/>
@@ -640,7 +640,7 @@ WHERE {:Rimshot_Intro_Livesamo:has_sample ?sample . <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_rel'>is a cover</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT ?song<br/>
 WHERE {?songsamo:is_cover_of ?anything }
@@ -657,7 +657,7 @@ WHERE {?songsamo:is_cover_of ?anything }
 	            <p><span class='log_impl'>How is</span> <span class='log_class'>the sample</span> <span class='log_rel'>from</span> <span class='log_indiv'>Shadows</span> <span class='log_rel'>manipulated in</span> <span class='log_indiv'>It's A Jazz Thing</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT DISTINCT ?sample ?manipulation<br/>
 WHERE {:Shadowssamo:has_elements ?elements . <br/>
@@ -682,7 +682,7 @@ WHERE {:Shadowssamo:has_elements ?elements . <br/>
 	            <p><span class='log_impl'>Who</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Cantaloupe Island</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/><br/>
 			  
 	            <code>SELECT ?artist<br/>
 WHERE {?artistmo:compiled ?song . <br/>
@@ -707,7 +707,7 @@ WHERE {?artistmo:compiled ?song . <br/>
 	            <p><span class='log_impl'>Who</span> <span class='log_event'>is sampled</span> <span class='log_rel'>in</span> <span class='log_indiv'>The words</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/>
 			  
 	            <code>SELECT ?artist<br/>
 WHERE {?artistmo:compiled ?song . <br/>
@@ -732,7 +732,7 @@ WHERE {?artistmo:compiled ?song . <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>artists</span> <span class='log_rel'>have written</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span>?</p><br/><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT ?artist<br/>
 WHERE {?artistmo:compiled ?song . <br/>
@@ -751,7 +751,7 @@ WHERE {?artistmo:compiled ?song . <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_rel'>producer</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Nina Simone</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/><br/>
 			  
 	            <code>SELECT DISTINCT ?producer<br/>
 WHERE {?samplesamo:producer ?producer ; <br/>
@@ -778,7 +778,7 @@ samo:used_in ?song . <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>sampler</span> <span class='log_rel'>did</span> <span class='log_indiv'>DJ Premier</span> <span class='log_rel'>use in</span> <span class='log_indiv'>Manifest</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT DISTINCT ?sampler<br/>
 WHERE {?samplesamo:producer :DJ_Premier ; <br/>
@@ -796,7 +796,7 @@ WHERE {?samplesamo:producer :DJ_Premier ; <br/>
 	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>in</span> <span class='log_impl'>a</span> <span class='log_indiv'>hip-hop</span> <span class='log_class'>song</span>?</p><br/>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
   Run query
-</button>
+</button><br/>
 			  
 	            <code>SELECT DISTINCT ?song<br/>
 { ?songsamo:release_year ?year ; <br/>
