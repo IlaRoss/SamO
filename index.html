@@ -52,7 +52,7 @@
           <li><a class="nav-link" href="#project">Project</a></li>
           <li><a class="nav-link" href="#documentation">Documentation</a></li>
           <li><a class="nav-link" href="#cqs">CQs</a></li>
-          <!--<li><a class="nav-link" href="#portfolio">CQs and tests</a></li>-->
+          <li><a class="nav-link" href="http://purl.org/ontology/samo/" target="_blank">Specification</a></li>
           <li><a class="nav-link" href="#team">Team</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -60,7 +60,6 @@
 
       <div class="social-links">
         <a href="https://github.com/IlaRoss/SamO" class="github" title="github" target="_blank"><i class="bi bi-github"></i></a>
-        <a href="http://purl.org/ontology/samo/" class="link" title="ontology purl" target="_blank"><i class="bi bi-link"></i></a>
         <!--a href="https://www.instagram.com/unibo/?hl=it" class="instagram"><i class="bi bi-instagram"></i></a-->
       </div>
 
@@ -104,8 +103,9 @@
             </p>
         <h3>Development Approach and Competency Questions</h3>
         <p>We decided to develop SamO using a bottom-up approach, that is beginning with data from WhoSampled to shape the structure of TBox, or terminology component of our ontology/knowledge base. We started by selecting 20 relationships (10 each) from WhoSampled that featured a jazz song being used as a sample in a hip-hop or electronic music song. The use of jazz was due to an early focus on the specific relationship between jazz and hip-hop, which we ultimately decided to keep as a theme rather than a limiting factor.</p>
-        <p>The next step was formulating a set of primary Competency Questions which would then be used to help us decide what SamO should be able to represent and what a user should be able to extract from it. These questions are detailed below.</p>
+        <p>The next step was formulating a set of primary Competency Questions which would then be used to help us decide what SamO should be able to represent and what a user should be able to extract from it.</p>
         <p>The final preliminary step in the development was to take a closer look at existing ontologies, in this case MO and Audio Commons, to understand what we may want to reuse as well as how the concepts had already been described. Audio Commons was chosen because it deals with concepts for describing audio contents within online libraries. Ultimately it proved to not be suited to our needs however by studying their approach we were able to get a better understanding of how to structure SamO.</p>
+        <p>Below are examples of some of the main generic competency questions we asked ourselves. Detailed examples of the same questions, as well as others, are given in the Competency Questions section.</p>
           </div>
 
             <!-- ======= Interests ======= -->
@@ -119,120 +119,48 @@
         <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>How many samples are present in the song <em>Electric Relaxation</em>?</h3>
+            <h3>How many samples are present in a song?</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs are sampled in the song <em>Electric Relaxation</em>?</h3>
+            <h3>Which songs are sampled in another song?</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which soul songs are used as samples?</h3>
+            <h3>Which songs of a specific genre are used as samples?</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+        <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>How many songs do contain a sample of <em>It feels so good</em>?</h3>
+            <h3>Which songs published between specific dates have been used as a sample in other songs?</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs have sampled <em>It feels so good</em>?</h3>
+            <h3>Which songs by a specific artist have been used as a sample?</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs published between 1970 and 1972 have been used as a sample in other songs?</h3>
+            <h3>Which song(s) use(s) samples that have been manipulated in a certain way?</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        <div class="col-lg-3 col-md-4">
           <div class="icon-box">
             <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs by Gregory Abbott have been used as a sample?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which artist is sampled the highest number of times?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which song contains the highest number of samples?
-</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which song(s) use(s) samples that have been looped?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Is the sample appearing in <em>Be Happy</em> a direct sample or an interpolation?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>How was the sample from <em>Mr Bojangles</em> manipulated in the song <em>Jump Hi</em>?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Who sampled the song <em>Cantaloupe Island</em>?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4 mt-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Who is sampled in the song <em>The words</em>?</h3>
+            <h3>What are the different types of samples?</h3>
           </div>
         </div>
       </div>
 
     </div><!-- End Interests -->
-
-<div class="about-me container">
-		<p class="fst-italic">
-            All throughout the development, we combined dinamically the user requirements as well as an idea of a possible dataset which would be available for queries and information extraction i.e. we mixed a top-down approach together with a bottom-up one.  
-          </p>
-          <!--div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-              </ul>
-            </div>
-          </div-->
-        </div>
-      </div>
-
-    </div><!-- End About Me -->
-
-
 
     <div class="about-me container">
     <div class="section-title">
@@ -244,24 +172,22 @@
         
         <div class="col-lg-8 pt-4 pt-lg-0 content">
 
-        <h3>Enhancement and Consistency Checking: an iterative process</h3>
+        <h3>An iterative process</h3>
 
-          <p class="fst-italic">
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+          <p>
+          Following the preliminary work detailed above, the development of SamO was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing.
           </p>
 
-
-
-          <h3>Releasing and publishing the SamO</h3>
-          <p class="fst-italic">
-      Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+          <h3>Releasing and publishing</h3>
+          <p>
+          We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. As for licenses TK TK TK.</p> 
+          <p>Unlike MO, we decided to use <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to share <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
+          </p>
           
-  <h3>Possible future developments</h3>
-  <p class="fst-italic">
-  	Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+          <h3>Possible future developments</h3>
+          <p>
+          TK TK TK
+          </p>
 </div>
 <div class="col-lg-4" data-aos="fade-left">
           <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
