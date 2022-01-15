@@ -376,7 +376,7 @@
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">REMOVE THIS</button>
+                                     
                                     </div>
                                   </div>
                                 </div>
@@ -403,6 +403,13 @@
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?label<br/>
 WHERE { ?song samo:is_sampled_in :Electric_Relaxation ;<br/>
 	rdfs:label ?label }<br/>
@@ -411,7 +418,6 @@ WHERE { ?song samo:is_sampled_in :Electric_Relaxation ;<br/>
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -438,6 +444,13 @@ WHERE { ?song samo:is_sampled_in :Electric_Relaxation ;<br/>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?label<br/>
 WHERE { ?songs mo:genre :Jazz; <br/>
 	samo:is_sampled_in ?anything ; <br/>
@@ -467,7 +480,6 @@ Mr. Bojangles
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -494,6 +506,13 @@ Mr. Bojangles
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT (COUNT(?song) AS ?count)<br/>
 WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
 <br/>
@@ -501,7 +520,6 @@ WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -529,6 +547,13 @@ WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                      SELECT DISTINCT ?song<br/>
 { ?song samo:has_sample ?sample .<br/>
 ?sample samo:pitch_shift_of ?element .<br/>
@@ -539,7 +564,6 @@ WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -567,6 +591,13 @@ WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT DISTINCT ?song<br/>
 { ?song samo:release_year ?year ; <br/>
 samo:is_sampled_in ?something . <br/>
@@ -580,7 +611,6 @@ Bitches Brew<br/>
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -607,6 +637,13 @@ Bitches Brew<br/>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                      SELECT ?subject<br/>
 WHERE { ?subject mo:compiler :Nina_Simone; <br/>
 samo:is_sampled_in ?anything }<br/>
@@ -618,7 +655,6 @@ Ain’t Got No I Got Life
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -645,6 +681,13 @@ Ain’t Got No I Got Life
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?element<br/>
 WHERE {:Jump_Hi samo:has_sample ?sample . <br/>
 ?sample ?manipulation ?element . <br/>
@@ -657,7 +700,6 @@ Mr_Bojangles_Lyrics<br/>
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -684,6 +726,13 @@ Mr_Bojangles_Lyrics<br/>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?subject (COUNT(DISTINCT ?song) as ?count)<br/>
 WHERE {?subject mo:compiled ?song . <br/>
 ?song samo:is_sampled_in ?anything } <br/>
@@ -695,7 +744,6 @@ Miles Davis
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -722,6 +770,13 @@ Miles Davis
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?song (COUNT(DISTINCT ?sample) as ?count)<br/>
 WHERE {?song samo:has_sample ?sample }<br/>
 GROUP BY ?song<br/>
@@ -732,7 +787,6 @@ Manifest
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -759,6 +813,13 @@ Manifest
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT DISTINCT ?song<br/>
 WHERE {?song samo:has_sample ?sample . <br/>
 ?sample samo:loop_of ?element }<br/>
@@ -777,7 +838,6 @@ Peng Black Girls
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -804,6 +864,13 @@ Peng Black Girls
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?sample<br/>
 WHERE {:Rimshot_Intro_Live samo:has_sample ?sample . <br/>
 ?sample rdf:type samo:Interpolation }<br/>
@@ -813,7 +880,6 @@ So_What_Sample
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -841,6 +907,13 @@ So_What_Sample
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?song<br/>
 WHERE {?song samo:is_cover_of ?anything }<br/>
 <br/>
@@ -849,7 +922,6 @@ Autumn_Leaves_Cover
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -876,6 +948,13 @@ Autumn_Leaves_Cover
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT DISTINCT ?sample ?manipulation<br/>
 WHERE {:Shadows samo:has_elements ?elements . <br/>
 ?elements ?manipulation ?sample . <br/>
@@ -886,7 +965,6 @@ looped and time-stretched
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -913,6 +991,13 @@ looped and time-stretched
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?artist<br/>
 WHERE {?artist mo:compiled ?song . <br/>
 ?song samo:samples :Cantaloupe_Island }<br/>
@@ -922,7 +1007,6 @@ Us3
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -949,6 +1033,13 @@ Us3
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                      SELECT ?artist<br/>
 WHERE {?artist mo:compiled ?song . <br/>
 ?song samo:is_sampled_in :The_Words }<br/>
@@ -959,7 +1050,6 @@ Miles Davis
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -986,6 +1076,13 @@ Miles Davis
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT ?artist<br/>
 WHERE {?artist mo:compiled ?song . <br/>
 ?song mo:genre :Jazz }<br/>
@@ -1010,7 +1107,6 @@ Charlie Parker
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -1038,6 +1134,13 @@ Charlie Parker
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT DISTINCT ?producer<br/>
 WHERE {?sample samo:producer ?producer ; <br/>
 ?manipulation ?elements . <br/>
@@ -1051,7 +1154,6 @@ Lauryn Hill
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -1078,6 +1180,13 @@ Lauryn Hill
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
                                       SELECT DISTINCT ?sampler<br/>
 WHERE {?sample samo:producer :DJ_Premier ; <br/>
 ^samo:manipulated ?sampler }<br/>
@@ -1087,7 +1196,6 @@ SP_1200
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
@@ -1110,17 +1218,30 @@ SP_1200
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which songs released between 1970 and 1972 have been used as a sample in a hip-hop song?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+					    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
+					SELECT DISTINCT ?song<br/>
+{ ?song samo:release_year ?year ; <br/>
+samo:is_sampled_in ?something . <br/>
+FILTER(?year >= 1970) <br/>
+FILTER(?year <= 1972) }<br/>
+<br/>
+Mystic Brew<br/>
+Mr. Bojangles<br/>
+Bitches Brew
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                      <button type="button" class="btn btn-primary">Save changes</button>
                                     </div>
                                   </div>
                                 </div>
