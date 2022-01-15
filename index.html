@@ -358,7 +358,7 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">QUESTION</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">How many samples are in the song Electric Relaxation?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -370,8 +370,9 @@
                                         PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
                                         <br/> 
                                         SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }<br/> 
-                                        ANSWER 
+                                        WHERE { :Electric_Relaxation samo:has_sample ?sample }<br/> 
+                                        <br/>
+																			1
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -398,13 +399,15 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which songs are sampled in the song Electric Relaxation?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?label<br/>
+WHERE { ?song samo:is_sampled_in :Electric_Relaxation ;<br/>
+	rdfs:label ?label }<br/>
+																			<br/>
+																			Mystic Brew
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -431,13 +434,36 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which jazz songs are used as samples?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?label<br/>
+WHERE { ?songs mo:genre :Jazz; <br/>
+	samo:is_sampled_in ?anything ; <br/>
+	rdfs:label ?label }<br/>
+																			<br/>
+																			Cantaloupe Island<br/>	
+Bitches Brew<br/>	
+Django<br/>	
+So What<br/>
+Sinnerman<br/>
+In A Silent Way / It's About That Time<br/>
+Curtains<br/>
+Mister Magic<br/>	
+Caravan<br/>
+Shadows<br/>
+Fly Me To The Moon<br/>
+Skylark<br/>
+It Feels So Good<br/>
+Aguas De Março<br/>
+Mystic Brew<br/>
+Mystic Brew<br/>
+A Night In Tunisia<br/>
+Mr. Bojangles
+
+								
+																			
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -464,13 +490,14 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">How many songs contain a sample of It feels so good?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT (COUNT(?song) AS ?count)<br/>
+WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
+<br/>
+																		1	
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -498,13 +525,17 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which songs have sampled It feels so good?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                     SELECT DISTINCT ?song<br/>
+{ ?song samo:has_sample ?sample .<br/>
+?sample samo:pitch_shift_of ?element .<br/>
+?element samo:part_of :It_Feels_So_Good }<br/>
+																			<br/>
+																			Sticky Fingers
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -532,13 +563,20 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which songs released between 1970 and 1972 have been used as a sample?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT DISTINCT ?song<br/>
+{ ?song samo:release_year ?year ; <br/>
+samo:is_sampled_in ?something . <br/>
+FILTER(?year >= 1970) <br/>
+FILTER(?year <= 1972) }<br/>
+<br/>
+																		Mystic Brew<br/>
+Mr. Bojangles<br/>
+Bitches Brew<br/>
+	
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -565,13 +603,18 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which songs by Nina Simone have been used as a sample?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                     SELECT ?subject<br/>
+WHERE { ?subject mo:compiler :Nina_Simone; <br/>
+samo:is_sampled_in ?anything }<br/>
+<br/>
+Mr. Bojangles<br/>
+																			Sinnerman<br/>
+Ain’t Got No I Got Life
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -598,13 +641,19 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which elements from Mr. Bojangles are sampled in Jump Hi?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?element<br/>
+WHERE {:Jump_Hi samo:has_sample ?sample . <br/>
+?sample ?manipulation ?element . <br/>
+?element ^samo:has_elements  :Mr_Bojangles }<br/>
+<br/>
+Mr_Bojangles_Riff<br/>
+Mr_Bojangles_Voice<br/>
+Mr_Bojangles_Lyrics<br/>
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -631,13 +680,18 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which artist is sampled the highest number of times?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?subject (COUNT(DISTINCT ?song) as ?count)<br/>
+WHERE {?subject mo:compiled ?song . <br/>
+?song samo:is_sampled_in ?anything } <br/>
+GROUP BY ?subject<br/>
+ORDER BY desc(?count) <br/>
+<br/>
+Miles Davis
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -664,13 +718,17 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which song contains the highest number of samples?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?song (COUNT(DISTINCT ?sample) as ?count)<br/>
+WHERE {?song samo:has_sample ?sample }<br/>
+GROUP BY ?song<br/>
+ORDER BY desc(?count) <br/>
+<br/>
+Manifest
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -697,13 +755,25 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which song(s) use(s) looped samples? </h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT DISTINCT ?song<br/>
+WHERE {?song samo:has_sample ?sample . <br/>
+?sample samo:loop_of ?element }<br/>
+<br/>
+Manifest<br/>
+Electric Relaxation<br/>
+It’s A Jazz Thing<br/>
+Rimshot Intro Live<br/>
+Cantaloop Flip Fantasia<br/>
+Mystic Bounce<br/>
+Girl From Alaska<br/>
+Oh Timbaland<br/>
+Jazzy Sensation Jazzy Mix<br/>
+Peng Black Girls
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -730,13 +800,16 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which samples in Rimshot (Intro Live) are interpolation?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?sample<br/>
+WHERE {:Rimshot_Intro_Live samo:has_sample ?sample . <br/>
+?sample rdf:type samo:Interpolation }<br/>
+<br/>
+So_What_Sample
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -764,13 +837,15 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which song is a cover?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?song<br/>
+WHERE {?song samo:is_cover_of ?anything }<br/>
+<br/>
+Autumn_Leaves_Cover
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -797,13 +872,17 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">How is the sample from Shadows manipulated in It’s A Jazz Thing?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT DISTINCT ?sample ?manipulation<br/>
+WHERE {:Shadows samo:has_elements ?elements . <br/>
+?elements ?manipulation ?sample . <br/>
+?sample samo:used_in :Its_A_Jazz_Thing }<br/>
+<br/>
+looped and time-stretched
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -830,13 +909,16 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Who sampled Cantaloupe Island?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?artist<br/>
+WHERE {?artist mo:compiled ?song . <br/>
+?song samo:samples :Cantaloupe_Island }<br/>
+<br/>
+Us3
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -863,13 +945,17 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Who is sampled in The Words?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                     SELECT ?artist<br/>
+WHERE {?artist mo:compiled ?song . <br/>
+?song samo:is_sampled_in :The_Words }<br/>
+<br/>
+Michel Legrand<br/>
+Miles Davis
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -896,13 +982,31 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which artists have written jazz songs?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT ?artist<br/>
+WHERE {?artist mo:compiled ?song . <br/>
+?song mo:genre :Jazz }<br/>
+<br/>
+Herbie Hancock<br/>
+Miles Davis<br/>
+Michel Legrand<br/>
+Nina Simone<br/>
+The Jeff Lorber Fusion<br/>
+Grover Washington Jr. <br/>
+Barney Bigard<br/>
+Lonnie Liston Smith<br/>
+Jo Stafford<br/>
+Vince Guaraldi Trio<br/>
+Al Cohn<br/>
+Madlib<br/>
+Joao Gilberto<br/>
+Stan Getz<br/>
+Ronnie Foster<br/>
+Charlie Parker
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -930,13 +1034,20 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which producer sampled Nina Simone?</h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT DISTINCT ?producer<br/>
+WHERE {?sample samo:producer ?producer ; <br/>
+?manipulation ?elements . <br/>
+?elements samo:part_of ?anything . <br/>
+?anything mo:compiler :Nina_Simone }<br/>
+<br/>
+Lucas Goodman<br/>
+Timbaland<br/>
+Lauryn Hill
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -963,13 +1074,16 @@
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <h5 class="modal-title" id="exampleModalLabel">Which sampler did DJ Premier use in Manifest? </h5>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-                                      </code>
+                                      SELECT DISTINCT ?sampler<br/>
+WHERE {?sample samo:producer :DJ_Premier ; <br/>
+^samo:manipulated ?sampler }<br/>
+<br/>
+SP_1200
+
                                     </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
