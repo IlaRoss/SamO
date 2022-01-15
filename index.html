@@ -4,18 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  
   <title>The Sampling Ontology (SamO)</title>
   <meta content="The Sampling Ontology offers a set concepts and properties to describe sampling in music on the Semantic Web. It is an extension of the Music Ontology (mo) and is based on the relationships used by whosampled.com." name="description">
   <meta content="Ontology, Linked Open Data, Sampling, Music, Digital Humanities" name="keywords">
-
+  
   <!-- Favicons -->
   <link href="assets/img/compact-disc-solid.svg" rel="icon">
   <link href="assets/img/compact-disc-solid.svg" rel="apple-touch-icon">
-
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -23,1033 +23,1282 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  
   <!-- =======================================================
-  * Template Name: Personal - v4.7.0
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container" id="samohome">
-
-      <h1><a href="index.html" style="text-shadow: 1pt 2pt #ff9900;">The Sampling Ontology (SamO)</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>An extension of the Music Ontology for <span style="color: #ff9900;">sampling</span> phenomena in music</h2>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <!--li><a class="nav-link active" href="#header">Home</a></li-->
-          <li><a class="nav-link" href="#project">Project</a></li>
-          <li><a class="nav-link" href="#documentation">Documentation</a></li>
-          <li><a class="nav-link" href="#cqs">CQs</a></li>
-          <li><a class="nav-link" href="http://purl.org/ontology/samo/" target="_blank">Specification</a></li>
-          <li><a class="nav-link" href="#team">Team</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="social-links">
-        <a href="https://github.com/IlaRoss/SamO" class="github" title="github" target="_blank"><i class="bi bi-github"></i></a>
-        <!--a href="https://www.instagram.com/unibo/?hl=it" class="instagram"><i class="bi bi-instagram"></i></a-->
-      </div>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="project" class="about">
-
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>The Project</h2>
-        <p>Idea and Requirements</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/33364.jpg" class="img-fluid" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" >
-          <h3>Why an Ontology about Sampling?</h3>
-          <p class="fst-italic">
-          	Everything started with a few questions: 
-          	<ul>
-          	<li><i class="bi bi-chevron-right"></i> Can we use knowledge representation and extraction methods to describe the semantics of sampling within modern music production practices?</li>
-          	<li><i class="bi bi-chevron-right"></i> Can we effectively express which songs — or, indeed, parts of songs — have been used in order to create a new piece of music?</li> 
-          	<li><i class="bi bi-chevron-right"></i> Can we describe the kind of manipulation that the track elements underwent during the sampling process?</li>
-          	</ul>
-          	<strong>SamO - The Sampling Ontology</strong> was created to try and answer these questions.</p>
-        <h3>Extending the Music Ontology and reusing WhoSampled</h3>
-        <p>
-          The primary starting point for <strong>SamO</strong> was the <a href="https://www.whosampled.com/" title="Who Sampled" target="_blank">WhoSampled</a> website, which is the most popular online repository for sampling data today. WhoSampled used to have an open API, however it was deactivated sometime in the late 2010s and closed off to enable the company to <a href="https://www.whosampled.com/metadata/" target="_blank">use its data for commercial purposes</a>. Because of this we were unable to get a clear idea of how WhoSampled organizes their data, though we assume that there is some sort of ontological / semantic categorization at work. Furthermore, their commercialising approach is problematic in that the data on the website originates from public contributions, as evidenced on individual sample pages, and may also originate from earlier web1 efforts by fans to create free, public sampling directories. As Catherine D’Ignazio and Lauren Klein explain in chapter 7 of <em>Data Feminism</em>, "Data work is part of a larger ecology of knowledge, one that must be both sustainable and socially just. […] the network of people who contribute to data projects is vast and complex. Showing this work is an essential component of data feminism […]."1 With this in mind, we wanted to try and replicate some of the public facing semantics/logic of WhoSampled in an open ontology, so as to potentially free up this data once more. </p>
-          <p>
-        	For the development of the ontology itself, the main point of reference was the <a href="http://musicontology.com/" title="The Music Ontology" target="_blank">Music Ontology</a> (MO), created back in 2007 and to this day still the primary ontology for music-related events and concepts. By studying MO's documentation and literature (as well as that of the <a href="http://www.audiocommons.org/ac-ontology/aco.html" target="_blank">Audio Commons Ontology</a>), we decided that it would be best to take advantage of some of the already existing classes and predicates to essentially extend MO into our own sampling ontology. As we have seen in both the Knowledge Representation and Knowledge Extraction classes, extending and reusing existing ontologies whenever possible is also a best practice to ensure the overall interoperability of Linked Open Data and avoid the creation of redundant ontological elements across different, related ontologies.
-          </p>
-          <p>While MO does refer to concepts of sampling, it was clear upon closer study that their approach did not satisfy our requirements. As such, we decided to create classes and predicates needed specifically to deal with sampling while keeping the MO elements as a foundation, such as their own extension of FRBR's four levels of representation. <br/>
-        	Nonetheless, the creation of a specific module for dealing with <strong>sampling</strong> was suggested among the possible future improvements of the Music Ontology in the 2007 paper <a href="https://ismir2007.ismir.net/proceedings/ISMIR2007_p417_raimond.pdf" target="_blank">The Music Ontology</a>.
-          <p>1. Show Your Work. 2020. In Data Feminism. https://data-feminism.mitpress.mit.edu/pub/0vgzaln4.</p>
-            </p>
-        <h3>Development Approach and Competency Questions</h3>
-        <p>We decided to develop SamO using a bottom-up approach, that is beginning with data from WhoSampled to shape the structure of TBox, or terminology component of our ontology/knowledge base. We started by selecting 20 relationships (10 each) from WhoSampled that featured a jazz song being used as a sample in a hip-hop or electronic music song. The use of jazz was due to an early focus on the specific relationship between jazz and hip-hop, which we ultimately decided to keep as a theme rather than a limiting factor.</p>
-        <p>The next step was formulating a set of primary Competency Questions which would then be used to help us decide what SamO should be able to represent and what a user should be able to extract from it.</p>
-        <p>The final preliminary step in the development was to take a closer look at existing ontologies, in this case MO and Audio Commons, to understand what we may want to reuse as well as how the concepts had already been described. Audio Commons was chosen because it deals with concepts for describing audio contents within online libraries. Ultimately it proved to not be suited to our needs however by studying their approach we were able to get a better understanding of how to structure SamO.</p>
-        <p>Below are examples of some of the main generic competency questions we asked ourselves. Detailed examples of the same questions, as well as others, are given in the Competency Questions section.</p>
-          </div>
-
-            <!-- ======= Interests ======= -->
-    <div class="interests container">
-
-      <div class="section-title">
-        <h2>Competency Questions</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>How many samples are present in a song?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs are sampled in another song?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs of a specific genre are used as samples?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs published between specific dates have been used as a sample in other songs?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which songs by a specific artist have been used as a sample?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>Which song(s) use(s) samples that have been manipulated in a certain way?</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <div class="icon-box">
-            <i class="ri-disc-line" style="color: #ffa76e;"></i>
-            <h3>What are the different types of samples?</h3>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- End Interests -->
-
-    <div class="about-me container">
-    <div class="section-title">
-        <h2>The Project</h2>
-        <p>Fixing and Releasing</p>
-      </div>
-
-	<div class="row">
+    * Template Name: Personal - v4.7.0
+    * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+  
+  <body>
+    
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="container" id="samohome">
         
-        <div class="col-lg-8 pt-4 pt-lg-0 content">
-
-        <h3>An iterative process</h3>
-
-          <p>
-          Following the preliminary work detailed above, the development of SamO was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing.
-          </p>
-
-          <h3>Releasing and publishing</h3>
-          <p>
-          We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. As for licenses TK TK TK.</p> 
-          <p>Unlike MO, we decided to use <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to share <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
-          </p>
-          
-          <h3>Possible future developments</h3>
-          <p>
-          TK TK TK
-          </p>
-</div>
-<div class="col-lg-4" data-aos="fade-left">
-          <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
-        </div>
-</div>
-
-    </div>
-
-
-  </section><!-- End About Section -->
-
-  <!-- ======= Resume Section ======= -->
-  <section id="documentation" class="resume">
-    <div class="container">
-
-    	 <div class="about-me container">
-
-	  <div class="section-title">
-	    <h2>DOCUMENTATION</h2>
-	    <p>The Conceptual Map</p>
-	  </div>
-	  <p>We then started to draw our conceptual map as to better distinguish and understand which classes and predicates and datatype and object type properties we were needing. We met several times and discussed in deep how to model some key concepts and especially how to handle crucial events such as the sampling act or the composition act in which we can include the act of creating a new song by reusing somehow some features of a previously sampled track which could or could not have been manipulated, and that at the same time does have a type (whether is direct sample or an exempla of interpolation), and that comprehends some of the musical aspects of a track. We took into
-	  <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html" target="_blank">prova prova</a> consideration, as already stated, other existing ontologies. We studied them in deep and tried to understand if their semantics of some key musical terms was coherent or somehow alligned with ours, as to reuse but not misuse, let's say, other already existing ontologies, domain specific ones as well as general for the LOD LAM domain (e.g. FRBR core and LRMoo).</p>
-    </div>
-    <div class="row">
-    	<div class="member col-lg-6">
-              <div class="member-img"><a href="assets/img/graphs/sampling_conceptual_model_v1.png" target="_blank">
-                <img src="assets/img/graphs/sampling_conceptual_model_v1.png" class="img-fluid" alt=""/></a>
-              </div>
-          </div>
-          <div class="member col-lg-6">
-              <div class="member-img"><a href="assets/img/graphs/concept_NL_final.png" target="_blank">
-                <img src="assets/img/graphs/concept_NL_final.png" class="img-fluid" alt=""/></a>
-              </div>
-          </div>
-    </div>
-
-      <div class="about-me container">
-    <div class="section-title">
-        <h2>Documentation</h2>
-        <p>Building the Ontology</p>
-      </div>
-
-      <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing</p>
-
-      <div class="member-img"><a href="assets/img/protege/sampling4.png" target="_blank">
-                <img src="assets/img/protege/sampling4.png" class="img-fluid" alt="" style="width: 400pt" /></a>
-              </div>
-
-    <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
-
-      <div class="member-img"><a href="assets/img/protege/signal.png" target="_blank">
-                <img src="assets/img/protege/signal.png" class="img-fluid" alt="" style="width: 400pt"/></a>
-              </div>
-
-    <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
-
-
-      <div class="member-img"><a href="assets/img/protege/signal.png" target="_blank">
-                <img src="assets/img/protege/sample2.png" class="img-fluid" alt="" style="width: 400pt"/></a>
-              </div>
-
-      <p>
-       ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an to work on.
-      </p>
-
-    </div>
-    <!-- ======= Counts ======= -->
-    <div class="counts container">
-
-      <div class="row">
-
-        <div class="col-lg-3 col-md-6">
-          <div class="count-box">
-            <i class="bi bi-emoji-smile"></i>
-            <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Classes & subClasses</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-          <div class="count-box">
-            <i class="bi bi-journal-richtext"></i>
-            <span data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Object Properties</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-headset"></i>
-            <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Data Properties</p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-          <div class="count-box">
-            <i class="bi bi-award"></i>
-            <span data-purecounter-start="0" data-purecounter-end="175" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Individuals for the dataset</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div><!-- End Counts -->
-
-
-    <div class="about-me container">
-    <div class="section-title">
-        <h2>Documentation</h2>
-        <p>The Dataset</p>
-      </div>
-
-      <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an to work on.
-      </p>
-    </div>
-
-
-
-      <!--<div class="row">
-        <div class="col-lg-6">
-          <h3 class="resume-title">Sumary</h3>
-          <div class="resume-item pb-0">
-            <h4>Alice Barkley</h4>
-            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-            <p>
-            <ul>
-              <li>Portland par 127,Orlando, FL</li>
-              <li>(123) 456-7891</li>
-              <li>alice.barkley@example.com</li>
-            </ul>
-            </p>
-          </div>
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-          </div>
-          <div class="resume-item">
-            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-            <h5>2010 - 2014</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Senior graphic design specialist</h4>
-            <h5>2019 - Present</h5>
-            <p><em>Experion, New York, NY </em></p>
-            <p>
-            <ul>
-              <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-              <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-            </ul>
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4>Graphic design specialist</h4>
-            <h5>2017 - 2018</h5>
-            <p><em>Stepping Stone Advertising, New York, NY</em></p>
-            <p>
-            <ul>
-              <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-              <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-              <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-              <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>-->
-
-    </div>
-  </section><!-- End Resume Section -->
-
-  <!-- ======= Services Section ======= -->
-  <section id="cqs" class="services">
-    <div class="container">
-            <div class="about-me container">
-
-      <div class="section-title">
-        <h2>CQs and tests</h2>
-        <p>Competency Questions</p>
-      </div>
-      <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an.</p>
-    </div>
-
-
-	<div class="row">
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #1</h4>
-	            <p><span class='log_impl'>How many</span> <span class='log_class'>samples</span> <span class='log_event'>are</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT (COUNT(?sample) AS ?count)<br/> 
-					WHERE { :Electric_Relaxationsamo:has_sample ?sample }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #2</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>are sampled</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-	            <code>SELECT ?label<br/>
-WHERE { ?songsamo:is_sampled_in :Electric_Relaxation ;
-	rdfs:label ?label }
-				</code>
-				<code>
-					SELECT ?label<br/>
-WHERE { ?songsamo:has_elements ?elements ; <br/>
-	rdfs:label ?label . <br/>
-?elementssamo:looped_into ?sample . <br/>
-?samplesamo:used_in :Electric_Relaxation }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #3</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span> <span class='log_event'>are used</span> <span class='log_impl'>as</span> <span class='log_class'>samples</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/>
-			  
-	            <code>SELECT ?label<br/>
-WHERE { ?songsmo:genre :Jazz; <br/>
-	samo:is_sampled_in ?anything ; <br/>
-	rdfs:label ?label }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #4</h4>
-	            <p><span class='log_impl'>How many</span> <span class='log_class'>songs</span> <span class='log_event'>contain</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>of</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT (COUNT(?song) AS ?count) <br/>
-WHERE { ?songsamo:samples :It_Feels_So_Good }
-				</code>
-				<code>
-					SELECT (COUNT(DISTINCT ?song) AS ?count) <br/>
-{ :It_Feels_So_Good samo:has_elements ?element . <br/>
-?elementsamo:pitch_shifted_into ?sample . <br/>
-?samplesamo:used_in ?song }
-				</code>
-				<code>
-					SELECT DISTINCT ?song<br/>
-{ ?songsamo:has_sample ?sample . <br/>
-?samplesamo:pitch_shift_of ?element . <br/>
-?elementsamo:part_of :It_Feels_So_Good }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #5</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>have sampled</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/>
-			  
-	            <code>
-			    ///</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #6</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT DISTINCT ?song<br/>
-{ ?songsamo:release_year ?year ; <br/>
-samo:is_sampled_in ?something . <br/>
-FILTER(?year >= 1970) <br/>
-FILTER(?year <= 1972) }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #7</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_rel'>by</span> <span class='log_indiv'>Nina Simone</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/>
-			  
-	            <code>SELECT ?subject<br/>
-WHERE { ?subjectmo:compiler :Nina_Simone; <br/>
-samo:is_sampled_in ?anything }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #8</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>elements</span> <span class='log_rel'>from</span> <span class='log_indiv'>Mr. Bojangles</span> <span class='log_event'>are sampled in</span> <span class='log_indiv'>Jump Hi</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT ?element<br/>
-WHERE {:Jump_Hisamo:has_sample ?sample . <br/>
-?sample ?manipulation ?element . <br/>
-?elementsamo:part_of :Mr_Bojangles }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #9</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_event'>is sampled</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>times</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT ?subject (COUNT(DISTINCT ?song) as ?count) <br/>
-WHERE {?subjectmo:compiled ?song . <br/>
-?songsamo:is_sampled_in ?anything } <br/>
-GROUP BY ?subject<br/>
-ORDER BY desc(?count)
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #10</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_event'>contains</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>samples</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT ?song (COUNT(DISTINCT ?sample) as ?count) <br/>
-WHERE {?songsamo:has_sample ?sample }<br/>
-GROUP BY ?song<br/>
-ORDER BY desc(?count)
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #11</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>song(s)</span> <span class='log_event'>use(s)</span> <span class='log_rel'>looped</span> <span class='log_class'>samples</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/><br/>
-			  
-	            <code>SELECT DISTINCT ?song<br/>
-WHERE {?songsamo:has_sample ?sample . <br/>
-?samplesamo:loop_of ?element }
-				</code>
-				<code>
-					SELECT DISTINCT ?song<br/>
-WHERE {?elementsamo:looped_into ?sample . <br/>
-?samplesamo:used_in ?song }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #12</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>samples</span> <span class='log_rel'>in</span> <span class='log_indiv'>Rimshot (Intro Live)</span> <span class='log_event'>are</span> <span class='log_class'>interpolation</span>?</p><br/><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/>
-			  
-	            <code>SELECT ?sample<br/>
-WHERE {:Rimshot_Intro_Livesamo:has_sample ?sample . <br/>
-?samplerdf:typesamo:Interpolation }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #13</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_rel'>is a cover</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT ?song<br/>
-WHERE {?songsamo:is_cover_of ?anything }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #14</h4>
-	            <p><span class='log_impl'>How is</span> <span class='log_class'>the sample</span> <span class='log_rel'>from</span> <span class='log_indiv'>Shadows</span> <span class='log_rel'>manipulated in</span> <span class='log_indiv'>It's A Jazz Thing</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT DISTINCT ?sample ?manipulation<br/>
-WHERE {:Shadowssamo:has_elements ?elements . <br/>
-?elements ?manipulation ?sample . <br/>
-?samplesamo:used_in :Its_A_Jazz_Thing }
-				</code>
-				<code>
-					SELECT DISTINCT ?elements?manipulation ?sample<br/>
-WHERE {:Shadowssamo:has_elements ?elements . <br/>
-?elements ?manipulation ?sample . <br/>
-?samplesamo:used_in:Its_A_Jazz_Thing }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #15</h4>
-	            <p><span class='log_impl'>Who</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Cantaloupe Island</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/><br/>
-			  
-	            <code>SELECT ?artist<br/>
-WHERE {?artistmo:compiled ?song . <br/>
-?songsamo:samples :Cantaloupe_Island }
-				</code>
-				<code>
-					SELECT DISTINCT ?artist<br/>
-WHERE {?artistmo:compiled ?song . <br/>
-?songsamo:has_sample ?sample . <br/>
-?sample ?manipulation ?elements . <br/>
-?elementssamo:part_of :Cantaloupe_Island }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #16</h4>
-	            <p><span class='log_impl'>Who</span> <span class='log_event'>is sampled</span> <span class='log_rel'>in</span> <span class='log_indiv'>The words</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/>
-			  
-	            <code>SELECT ?artist<br/>
-WHERE {?artistmo:compiled ?song . <br/>
-?songsamo:is_sampled_in :The_Words }
-				</code>
-				<code>
-					SELECT DISTINCT ?artist<br/>
-WHERE {?artistmo:compiled ?song . <br/>
-?songsamo:has_elements ?elements . <br/>
-?elements ?manipulation ?sample . <br/>
-?samplesamo:used_in :The_Words }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #17</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>artists</span> <span class='log_rel'>have written</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span>?</p><br/><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT ?artist<br/>
-WHERE {?artistmo:compiled ?song . <br/>
-?songmo:genre :Jazz }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #18</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_rel'>producer</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Nina Simone</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/><br/>
-			  
-	            <code>SELECT DISTINCT ?producer<br/>
-WHERE {?samplesamo:producer ?producer ; <br/>
-?manipulation ?elements . <br/>
-?elementssamo:part_of ?anything . <br/>
-?anythingmo:compiler :Nina_Simone }
-				</code>
-				<code>
-					SELECT DISTINCT ?producer<br/>
-WHERE {?samplesamo:producer ?producer ; <br/>
-samo:used_in ?song . <br/>
-?songsamo:samples ?anything . <br/>
-?anythingmo:compiler :Nina_Simone }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #19</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>sampler</span> <span class='log_rel'>did</span> <span class='log_indiv'>DJ Premier</span> <span class='log_rel'>use in</span> <span class='log_indiv'>Manifest</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT DISTINCT ?sampler<br/>
-WHERE {?samplesamo:producer :DJ_Premier ; <br/>
-^samo:manipulated ?sampler }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-	          <div class="icon-box">
-	            <!--div class="icon"><i class="bx bxl-file"></i></div-->
-	            <h4>CQ #20</h4>
-	            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>in</span> <span class='log_impl'>a</span> <span class='log_indiv'>hip-hop</span> <span class='log_class'>song</span>?</p><br/>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
-  Run query
-</button><br/>
-			  
-	            <code>SELECT DISTINCT ?song<br/>
-{ ?songsamo:release_year ?year ; <br/>
-samo:is_sampled_in ?something . <br/>
-?somethingmo:genre :HipHop . <br/>
-FILTER(?year >= 1970) <br/>
-FILTER(?year <= 1972) }
-				</code>
-				<br/><br/>
-				<p>ANSWER</p>
-	          </div>
-	        </div>
-
-	      </div>
-     
-
-    </div>
-  </section><!-- End Services Section -->
-
-
-
-
-<!--############################################################-->
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
+        <h1><a href="index.html" style="text-shadow: 1pt 2pt #ff9900;">The Sampling Ontology (SamO)</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+        <h2>An extension of the Music Ontology for <span style="color: #ff9900;">sampling</span> phenomena in music</h2>
+        
+        <nav id="navbar" class="navbar">
+          <ul>
+            <!--li><a class="nav-link active" href="#header">Home</a></li-->
+            <li><a class="nav-link" href="#project">Project</a></li>
+            <li><a class="nav-link" href="#documentation">Documentation</a></li>
+            <li><a class="nav-link" href="#cqs">CQs</a></li>
+            <li><a class="nav-link" href="http://purl.org/ontology/samo/" target="_blank">Specification</a></li>
+            <li><a class="nav-link" href="#team">Team</a></li>
           </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+        
+        <div class="social-links">
+          <a href="https://github.com/IlaRoss/SamO" class="github" title="github" target="_blank"><i class="bi bi-github"></i></a>
+          <!--a href="https://www.instagram.com/unibo/?hl=it" class="instagram"><i class="bi bi-instagram"></i></a-->
         </div>
+        
       </div>
-
-      <div class="row portfolio-container">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+    </header><!-- End Header -->
+    
+    <!-- ======= About Section ======= -->
+    <section id="project" class="about">
+      
+      <!-- ======= About Me ======= -->
+      <div class="about-me container">
+        
+        <div class="section-title">
+          <h2>The Project</h2>
+          <p>Idea and Requirements</p>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+        
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/33364.jpg" class="img-fluid" alt="">
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- End Portfolio Section -->
-<!--############################################################-->
-
-
-
-
-
-  <!-- ======= Contact Section ======= -->
-  <section id="team" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>The team</h2>
-        <p style="text-transform: none;">The SamO Team</p>
-      </div>
-
-      <dir class="row">
-        <div class="member col-lg-6">
-              <div class="member-img" style="text-align: center;">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid" alt="" style="height: 240pt;">
-              </div>
-              <div class="member-info" style="text-align: center;">
-                <br/>
-                <h4 style="text-decoration: underline #ff9900;">Laurent Fintoni</h4>
-                <span style="text-decoration: underline #ff9900;">Digital Humanitst</span>
-                <p>Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque. Dolores eum non.</p>
-                <div class="social-links"  style="display: flex; justify-content: center;">
-        <a href="#" class="github"><i class="bi bi-github" target="_blank"></i></a>
-        <a href="#" class="envelope" target="_blank"><i class="bi bi-envelope"></i></a>
-        <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-      </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" >
+            <h3>Why an Ontology about Sampling?</h3>
+            <p class="fst-italic">
+              Everything started with a few questions: 
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> Can we use knowledge representation and extraction methods to describe the semantics of sampling within modern music production practices?</li>
+                <li><i class="bi bi-chevron-right"></i> Can we effectively express which songs — or, indeed, parts of songs — have been used in order to create a new piece of music?</li> 
+                <li><i class="bi bi-chevron-right"></i> Can we describe the kind of manipulation that the track elements underwent during the sampling process?</li>
+              </ul>
+              <strong>SamO - The Sampling Ontology</strong> was created to try and answer these questions.</p>
+              <h3>Extending the Music Ontology and reusing WhoSampled</h3>
+              <p>
+                The primary starting point for <strong>SamO</strong> was the <a href="https://www.whosampled.com/" title="Who Sampled" target="_blank">WhoSampled</a> website, which is the most popular online repository for sampling data today. WhoSampled used to have an open API, however it was deactivated sometime in the late 2010s and closed off to enable the company to <a href="https://www.whosampled.com/metadata/" target="_blank">use its data for commercial purposes</a>. Because of this we were unable to get a clear idea of how WhoSampled organizes their data, though we assume that there is some sort of ontological / semantic categorization at work. Furthermore, their commercialising approach is problematic in that the data on the website originates from public contributions, as evidenced on individual sample pages, and may also originate from earlier web1 efforts by fans to create free, public sampling directories. As Catherine D’Ignazio and Lauren Klein explain in chapter 7 of <em>Data Feminism</em>, "Data work is part of a larger ecology of knowledge, one that must be both sustainable and socially just. […] the network of people who contribute to data projects is vast and complex. Showing this work is an essential component of data feminism […]."1 With this in mind, we wanted to try and replicate some of the public facing semantics/logic of WhoSampled in an open ontology, so as to potentially free up this data once more. </p>
+                <p>
+                  For the development of the ontology itself, the main point of reference was the <a href="http://musicontology.com/" title="The Music Ontology" target="_blank">Music Ontology</a> (MO), created back in 2007 and to this day still the primary ontology for music-related events and concepts. By studying MO's documentation and literature (as well as that of the <a href="http://www.audiocommons.org/ac-ontology/aco.html" target="_blank">Audio Commons Ontology</a>), we decided that it would be best to take advantage of some of the already existing classes and predicates to essentially extend MO into our own sampling ontology. As we have seen in both the Knowledge Representation and Knowledge Extraction classes, extending and reusing existing ontologies whenever possible is also a best practice to ensure the overall interoperability of Linked Open Data and avoid the creation of redundant ontological elements across different, related ontologies.
+                </p>
+                <p>While MO does refer to concepts of sampling, it was clear upon closer study that their approach did not satisfy our requirements. As such, we decided to create classes and predicates needed specifically to deal with sampling while keeping the MO elements as a foundation, such as their own extension of FRBR's four levels of representation. <br/>
+                  Nonetheless, the creation of a specific module for dealing with <strong>sampling</strong> was suggested among the possible future improvements of the Music Ontology in the 2007 paper <a href="https://ismir2007.ismir.net/proceedings/ISMIR2007_p417_raimond.pdf" target="_blank">The Music Ontology</a>.
+                  <p>1. Show Your Work. 2020. In Data Feminism. https://data-feminism.mitpress.mit.edu/pub/0vgzaln4.</p>
+                </p>
+                <h3>Development Approach and Competency Questions</h3>
+                <p>We decided to develop SamO using a bottom-up approach, that is beginning with data from WhoSampled to shape the structure of TBox, or terminology component of our ontology/knowledge base. We started by selecting 20 relationships (10 each) from WhoSampled that featured a jazz song being used as a sample in a hip-hop or electronic music song. The use of jazz was due to an early focus on the specific relationship between jazz and hip-hop, which we ultimately decided to keep as a theme rather than a limiting factor.</p>
+                <p>The next step was formulating a set of primary Competency Questions which would then be used to help us decide what SamO should be able to represent and what a user should be able to extract from it.</p>
+                <p>The final preliminary step in the development was to take a closer look at existing ontologies, in this case MO and Audio Commons, to understand what we may want to reuse as well as how the concepts had already been described. Audio Commons was chosen because it deals with concepts for describing audio contents within online libraries. Ultimately it proved to not be suited to our needs however by studying their approach we were able to get a better understanding of how to structure SamO.</p>
+                <p>Below are examples of some of the main generic competency questions we asked ourselves. Detailed examples of the same questions, as well as others, are given in the Competency Questions section.</p>
               </div>
               
-            </div>
-
-        <div class="member col-lg-6">
-              <div class="member-img" style="text-align: center;">
-                <img src="assets/img/testimonials/ila.jpg" class="img-fluid" alt="" style="height: 240pt;">
-              </div>
-              <div class="member-info" style="text-align: center;">
-                <br/>
-                <h4 style="text-decoration: underline #ff9900;">Ilaria Rossi</h4>
-                <span style="text-decoration: underline #ff9900;">Digital Humanist</span>
-                <p>Holds a BA in Philosophy and a Music Degree in Saxophone. Currently exploring the DHDK realm at <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge#">Unibo</a>.
-				  <br/>Early music, philosophy of language and logic lover.</p>
-                <div class="social-links" style="display: flex; justify-content: center;">
-        <a href="https://github.com/IlaRoss" class="github"><i class="bi bi-github" target="_blank"></i></a>
-        <a href="mailto:ilaria.rossi25@studio.unibo.it" class="envelope" target="_blank"><i class="bi bi-envelope"></i></a>
-        <a href="https://it.linkedin.com/in/ilaria-rossi96" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-      </div>
-            </div>
-              </div>
+              <!-- ======= Interests ======= -->
+              <div class="interests container">
+                
+                <div class="section-title">
+                  <h2>Competency Questions</h2>
+                </div>
+                
+                <div class="row">
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>How many samples are present in a song?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>Which songs are sampled in another song?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>Which songs of a specific genre are used as samples?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>Which songs published between specific dates have been used as a sample in other songs?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>Which songs by a specific artist have been used as a sample?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>Which song(s) use(s) samples that have been manipulated in a certain way?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>What are the different types of samples?</h3>
+                    </div>
+                  </div>
+                </div>
+                
+              </div><!-- End Interests -->
               
-      </dir>
-
-
-
-  </section><!-- End Contact Section -->
-
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
-  </div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+              <div class="about-me container">
+                <div class="section-title">
+                  <h2>The Project</h2>
+                  <p>Fixing and Releasing</p>
+                </div>
+                
+                <div class="row">
+                  
+                  <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    
+                    <h3>An iterative process</h3>
+                    
+                    <p>
+                      Following the preliminary work detailed above, the development of SamO was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing.
+                    </p>
+                    
+                    <h3>Releasing and publishing</h3>
+                    <p>
+                      We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. As for licenses TK TK TK.</p> 
+                      <p>Unlike MO, we decided to use <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to share <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
+                      </p>
+                      
+                      <h3>Possible future developments</h3>
+                      <p>
+                        TK TK TK
+                      </p>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-left">
+                      <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                
+              </section><!-- End About Section -->
+              
+              <!-- ======= Resume Section ======= -->
+              <section id="documentation" class="resume">
+                <div class="container">
+                  
+                  <div class="about-me container">
+                    
+                    <div class="section-title">
+                      <h2>DOCUMENTATION</h2>
+                      <p>The Conceptual Map</p>
+                    </div>
+                    <p>We then started to draw our conceptual map as to better distinguish and understand which classes and predicates and datatype and object type properties we were needing. We met several times and discussed in deep how to model some key concepts and especially how to handle crucial events such as the sampling act or the composition act in which we can include the act of creating a new song by reusing somehow some features of a previously sampled track which could or could not have been manipulated, and that at the same time does have a type (whether is direct sample or an exempla of interpolation), and that comprehends some of the musical aspects of a track. We took into
+                      <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html" target="_blank">prova prova</a> consideration, as already stated, other existing ontologies. We studied them in deep and tried to understand if their semantics of some key musical terms was coherent or somehow alligned with ours, as to reuse but not misuse, let's say, other already existing ontologies, domain specific ones as well as general for the LOD LAM domain (e.g. FRBR core and LRMoo).</p>
+                    </div>
+                    <div class="row">
+                      <div class="member col-lg-6">
+                        <div class="member-img"><a href="assets/img/graphs/sampling_conceptual_model_v1.png" target="_blank">
+                          <img src="assets/img/graphs/sampling_conceptual_model_v1.png" class="img-fluid" alt=""/></a>
+                        </div>
+                      </div>
+                      <div class="member col-lg-6">
+                        <div class="member-img"><a href="assets/img/graphs/concept_NL_final.png" target="_blank">
+                          <img src="assets/img/graphs/concept_NL_final.png" class="img-fluid" alt=""/></a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="about-me container">
+                      <div class="section-title">
+                        <h2>Documentation</h2>
+                        <p>Building the Ontology</p>
+                      </div>
+                      
+                      <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing</p>
+                      
+                      <div class="member-img"><a href="assets/img/protege/sampling4.png" target="_blank">
+                        <img src="assets/img/protege/sampling4.png" class="img-fluid" alt="" style="width: 400pt" /></a>
+                      </div>
+                      
+                      <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+                        Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+                        
+                        <div class="member-img"><a href="assets/img/protege/signal.png" target="_blank">
+                          <img src="assets/img/protege/signal.png" class="img-fluid" alt="" style="width: 400pt"/></a>
+                        </div>
+                        
+                        <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+                          Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
+                          
+                          
+                          <div class="member-img"><a href="assets/img/protege/signal.png" target="_blank">
+                            <img src="assets/img/protege/sample2.png" class="img-fluid" alt="" style="width: 400pt"/></a>
+                          </div>
+                          
+                          <p>
+                            ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an to work on.
+                          </p>
+                          
+                        </div>
+                        <!-- ======= Counts ======= -->
+                        <div class="counts container">
+                          
+                          <div class="row">
+                            
+                            <div class="col-lg-3 col-md-6">
+                              <div class="count-box">
+                                <i class="bi bi-emoji-smile"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Classes & subClasses</p>
+                              </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                              <div class="count-box">
+                                <i class="bi bi-journal-richtext"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Object Properties</p>
+                              </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                              <div class="count-box">
+                                <i class="bi bi-headset"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Data Properties</p>
+                              </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                              <div class="count-box">
+                                <i class="bi bi-award"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="175" data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Individuals for the dataset</p>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          
+                        </div><!-- End Counts -->
+                        
+                        
+                        <div class="about-me container">
+                          <div class="section-title">
+                            <h2>Documentation</h2>
+                            <p>The Dataset</p>
+                          </div>
+                          
+                          <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an to work on.
+                          </p>
+                        </div>
+                        
+                        
+                        
+                        <!--<div class="row">
+                          <div class="col-lg-6">
+                            <h3 class="resume-title">Sumary</h3>
+                            <div class="resume-item pb-0">
+                              <h4>Alice Barkley</h4>
+                              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+                              <p>
+                                <ul>
+                                  <li>Portland par 127,Orlando, FL</li>
+                                  <li>(123) 456-7891</li>
+                                  <li>alice.barkley@example.com</li>
+                                </ul>
+                              </p>
+                            </div>
+                            
+                            <h3 class="resume-title">Education</h3>
+                            <div class="resume-item">
+                              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+                              <h5>2015 - 2016</h5>
+                              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                            </div>
+                            <div class="resume-item">
+                              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+                              <h5>2010 - 2014</h5>
+                              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+                              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <h3 class="resume-title">Professional Experience</h3>
+                            <div class="resume-item">
+                              <h4>Senior graphic design specialist</h4>
+                              <h5>2019 - Present</h5>
+                              <p><em>Experion, New York, NY </em></p>
+                              <p>
+                                <ul>
+                                  <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                                </ul>
+                              </p>
+                            </div>
+                            <div class="resume-item">
+                              <h4>Graphic design specialist</h4>
+                              <h5>2017 - 2018</h5>
+                              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+                              <p>
+                                <ul>
+                                  <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                                </ul>
+                              </p>
+                            </div>
+                          </div>
+                        </div>-->
+                        
+                      </div>
+                    </section><!-- End Resume Section -->
+                    
+                    <!-- ======= Services Section ======= -->
+                    <section id="cqs" class="services">
+                      <div class="container">
+                        <div class="about-me container">
+                          
+                          <div class="section-title">
+                            <h2>CQs and tests</h2>
+                            <p>Competency Questions</p>
+                          </div>
+                          <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an.</p>
+                        </div>
+                        
+                        
+                        <div class="row">
+                          <div class="col-lg-4 col-md-6">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #1</h4>
+                              <p><span class='log_impl'>How many</span> <span class='log_class'>samples</span> <span class='log_event'>are</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">QUESTION</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#><br/> 
+                                        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#><br/> 
+                                        PREFIX : <http://www.semanticweb.org/samo-dataset-abox#> <br/> 
+                                        PREFIX mo: <http://purl.org/ontology/mo/> <br/> 
+                                        PREFIX samo: <http://purl.org/ontology/samo/><br/> 
+                                        PREFIX foaf: <http://xmlns.com/foaf/0.1/><br/> 
+                                        <br/> 
+                                        SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }<br/> 
+                                        ANSWER 
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">REMOVE THIS</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #2</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>are sampled</span> <span class='log_rel'>in</span> <span class='log_impl'>the</span> <span class='log_class'>song</span> <span class='log_indiv'>Electric Relaxation</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #3</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span> <span class='log_event'>are used</span> <span class='log_impl'>as</span> <span class='log_class'>samples</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #4</h4>
+                              <p><span class='log_impl'>How many</span> <span class='log_class'>songs</span> <span class='log_event'>contain</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>of</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #5</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>have sampled</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #6</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #7</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_rel'>by</span> <span class='log_indiv'>Nina Simone</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #8</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>elements</span> <span class='log_rel'>from</span> <span class='log_indiv'>Mr. Bojangles</span> <span class='log_event'>are sampled in</span> <span class='log_indiv'>Jump Hi</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #9</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_event'>is sampled</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>times</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #10</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_event'>contains</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>samples</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #11</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>song(s)</span> <span class='log_event'>use(s)</span> <span class='log_rel'>looped</span> <span class='log_class'>samples</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #12</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>samples</span> <span class='log_rel'>in</span> <span class='log_indiv'>Rimshot (Intro Live)</span> <span class='log_event'>are</span> <span class='log_class'>interpolation</span>?</p><br/><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #13</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_rel'>is a cover</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #14</h4>
+                              <p><span class='log_impl'>How is</span> <span class='log_class'>the sample</span> <span class='log_rel'>from</span> <span class='log_indiv'>Shadows</span> <span class='log_rel'>manipulated in</span> <span class='log_indiv'>It's A Jazz Thing</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #15</h4>
+                              <p><span class='log_impl'>Who</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Cantaloupe Island</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #16</h4>
+                              <p><span class='log_impl'>Who</span> <span class='log_event'>is sampled</span> <span class='log_rel'>in</span> <span class='log_indiv'>The words</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #17</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>artists</span> <span class='log_rel'>have written</span> <span class='log_indiv'>jazz</span> <span class='log_class'>songs</span>?</p><br/><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #18</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_rel'>producer</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Nina Simone</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #19</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>sampler</span> <span class='log_rel'>did</span> <span class='log_indiv'>DJ Premier</span> <span class='log_rel'>use in</span> <span class='log_indiv'>Manifest</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                            <div class="icon-box">
+                              <!--div class="icon"><i class="bx bxl-file"></i></div-->
+                              <h4>CQ #20</h4>
+                              <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>released</span> <span class='log_rel'>between</span> <span class='log_indiv'>1970</span> <span class='log_impl'>and</span> <span class='log_indiv'>1972</span> <span class='log_event'>have been used as</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>in</span> <span class='log_impl'>a</span> <span class='log_indiv'>hip-hop</span> <span class='log_class'>song</span>?</p><br/>
+                              <!-- Button trigger modal -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Run Query
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <code>SELECT (COUNT(?sample) AS ?count)<br/> 
+                                        WHERE { :Electric_Relaxationsamo:has_sample ?sample }
+                                      </code>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        
+                        
+                      </div>
+                    </section><!-- End Services Section -->
+                    
+                    
+                    
+                    
+                    <!--############################################################-->
+                    <!-- ======= Portfolio Section ======= -->
+                    <section id="portfolio" class="portfolio">
+                      <div class="container">
+                        
+                        <div class="section-title">
+                          <h2>Portfolio</h2>
+                          <p>My Works</p>
+                        </div>
+                        
+                        <div class="row">
+                          <div class="col-lg-12 d-flex justify-content-center">
+                            <ul id="portfolio-flters">
+                              <li data-filter="*" class="filter-active">All</li>
+                              <li data-filter=".filter-app">App</li>
+                              <li data-filter=".filter-card">Card</li>
+                              <li data-filter=".filter-web">Web</li>
+                            </ul>
+                          </div>
+                        </div>
+                        
+                        <div class="row portfolio-container">
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Card 2</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Web 2</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>App 3</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Card 1</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Card 3</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                            <div class="portfolio-wrap">
+                              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                              <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        
+                      </div>
+                    </section><!-- End Portfolio Section -->
+                    <!--############################################################-->
+                    
+                    
+                    
+                    
+                    
+                    <!-- ======= Contact Section ======= -->
+                    <section id="team" class="contact">
+                      <div class="container">
+                        
+                        <div class="section-title">
+                          <h2>The team</h2>
+                          <p style="text-transform: none;">The SamO Team</p>
+                        </div>
+                        
+                        <dir class="row">
+                          <div class="member col-lg-6">
+                            <div class="member-img" style="text-align: center;">
+                              <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid" alt="" style="height: 240pt;">
+                            </div>
+                            <div class="member-info" style="text-align: center;">
+                              <br/>
+                              <h4 style="text-decoration: underline #ff9900;">Laurent Fintoni</h4>
+                              <span style="text-decoration: underline #ff9900;">Digital Humanitst</span>
+                              <p>Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque. Dolores eum non.</p>
+                              <div class="social-links"  style="display: flex; justify-content: center;">
+                                <a href="#" class="github"><i class="bi bi-github" target="_blank"></i></a>
+                                <a href="#" class="envelope" target="_blank"><i class="bi bi-envelope"></i></a>
+                                <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          
+                          <div class="member col-lg-6">
+                            <div class="member-img" style="text-align: center;">
+                              <img src="assets/img/testimonials/ila.jpg" class="img-fluid" alt="" style="height: 240pt;">
+                            </div>
+                            <div class="member-info" style="text-align: center;">
+                              <br/>
+                              <h4 style="text-decoration: underline #ff9900;">Ilaria Rossi</h4>
+                              <span style="text-decoration: underline #ff9900;">Digital Humanist</span>
+                              <p>Holds a BA in Philosophy and a Music Degree in Saxophone. Currently exploring the DHDK realm at <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge#">Unibo</a>.
+                                <br/>Early music, philosophy of language and logic lover.</p>
+                                <div class="social-links" style="display: flex; justify-content: center;">
+                                  <a href="https://github.com/IlaRoss" class="github"><i class="bi bi-github" target="_blank"></i></a>
+                                  <a href="mailto:ilaria.rossi25@studio.unibo.it" class="envelope" target="_blank"><i class="bi bi-envelope"></i></a>
+                                  <a href="https://it.linkedin.com/in/ilaria-rossi96" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </dir>
+                          
+                          
+                          
+                        </section><!-- End Contact Section -->
+                        
+                        <div class="credits">
+                          <!-- All the links in the footer should remain intact. -->
+                          <!-- You can delete the links only if you purchased the pro version. -->
+                          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+                          Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+                        </div>
+                        
+                        <!-- Vendor JS Files -->
+                        <script src="assets/vendor/purecounter/purecounter.js"></script>
+                        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+                        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+                        <script src="assets/vendor/php-email-form/validate.js"></script>
+                        
+                        <!-- Template Main JS File -->
+                        <script src="assets/js/main.js"></script>
+                        
+                      </body>
+                      
+                      </html>

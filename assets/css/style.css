@@ -5,6 +5,22 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
+/* tweaks */
+
+.modal-backdrop {
+  z-index: auto;
+}
+
+.modal-title {
+  color: #040404;
+}
+
+.modal-body {
+  text-align: left !important;
+  color: #040404;
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -59,9 +75,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   display: flex;
   align-items: center;
-  z-index: 997;
   overflow-y: auto;
 }
+
 #header * {
   transition: ease-in-out 0.3s;
 }
