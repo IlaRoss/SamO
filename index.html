@@ -212,8 +212,9 @@
                       <h2>DOCUMENTATION</h2>
                       <p>The Conceptual Map</p>
                     </div>
-                    <p>We then started to draw our conceptual map as to better distinguish and understand which classes and predicates and datatype and object type properties we were needing. We met several times and discussed in deep how to model some key concepts and especially how to handle crucial events such as the sampling act or the composition act in which we can include the act of creating a new song by reusing somehow some features of a previously sampled track which could or could not have been manipulated, and that at the same time does have a type (whether is direct sample or an exempla of interpolation), and that comprehends some of the musical aspects of a track. We took into
-                      <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html" target="_blank">prova prova</a> consideration, as already stated, other existing ontologies. We studied them in deep and tried to understand if their semantics of some key musical terms was coherent or somehow alligned with ours, as to reuse but not misuse, let's say, other already existing ontologies, domain specific ones as well as general for the LOD LAM domain (e.g. FRBR core and LRMoo).</p>
+                    <p>After the preliminary development steps we focused on creating a conceptual map to better distinguish and understand which classes, predicates, datatype, and object type properties we needed. Over the course of multiple conversations we discussed how deep the model should go and which key concepts were essential. At this stage we also made extensive references and analysis of the MO and Audio Commons models.</p>
+                    <p>The first thing to emerge from this process was a set of key conceptual elements that we knew were needed within our model and which formed a loop of sorts: the idea of a track, the idea of manifestation as defined by FRBR, the idea of a sample, and the interactions between sample and track. This can be seen in figure 1.</p>
+                    <p>Following this we refined the map, as seen in figure 2, by adding and linking concepts from MO, the Event Ontology, and foaf into our map. We also expanded on the ways in which sample and track interacted with each other by taking inspiration from how WhoSampled models sampling relationships using musical elements, which are part of a track, and the different types of sample (direct or interpolation). We then also decided to enhance the model by adding different types of manipulation, which impact the way the elements are transformed into a sample, as this felt like a key conceptual idea that is not represented in WhoSampled (at least in their public facing data) or in MO.</p>
                     </div>
                     <div class="row">
                       <div class="member col-lg-6">
@@ -233,8 +234,15 @@
                         <h2>Documentation</h2>
                         <p>Building the Ontology</p>
                       </div>
-                      
-                      <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing</p>
+                      <p>Eventually we got to a point where we felt that it would be best to begin building the ontology as a way to stress test the validity of our conceptual map/model. In doing this we realised that there was a potential issue in how we were reusing MO's classes and concepts as they related to the idea of sampling, which is at the heart of our ontology.</p> 
+                      <p>We debated whether the act of sampling should be considered as a sub-class of MO's composition, which clearly created some complications in how to link sampling to a track (as seen in fig 2). This setup would also force us to reuse more of MO's framework which was clearly not designed for what we wanted to do. In the end, we decided to make sampling an event similar to how MO treats composition and make it a sub-class of MO's performance event class which is defined as an event "that might produce a sound" with input from agents and instruments. This was an ideal fit.</p>
+                      <p> In turn, sampling was then linked to the Expression level via MO's existing properties for linking a performance to a signal, and then in turn we created two signal sub-classes (sample and elements) which formed the basis of what was needed for a sampling event. Lastly, these two sub-classes were linked to MO's track class, itself belonging to the Manifestation level. Therefore, we focused only on the Expression and Manifestation levels that MO borrows from FRBR and within those reused or created the necessary classes and properties to express the key conceptual elements we wanted.</p>
+                      <p>With this structure in place we also borrowed the idea of a shortcut property from MO to allow the user two paths for connecting a song with the song that samples it: a long path that goes from Manifestation (source track) to Expression (elements of the source track) and then back to Manifesation (from elements to sample, and from sample to new track); or a short path that links two tracks together using a simple property, samples/is_sampled_in. This was  modelled on MO's records/recorded_as property, which we also reused in SamO as it bypasses the various steps in MO to directly link a signal to a performance, which in SamO links the act of sampling to the signals it creates.</p>
+                      <p>After this we then debated whether or not the manipulation types should be considered as classes or properties. We tried both and ultimately properties proved best suited to the underlying conceptual idea that a manipulation allows the transformation of one class (elements) into another (sample) both of which belong to the parent class signal, which fits with MO's definition of a signal ("a master signal produced by a performance and a recording") and allowed to maintain the needed connection between signal (Expression) and track (Manifestation). In the end, we settled on 10 different types of manipulation (sub-properties) that reflect some of the best known and standard practices such as looping, tuning, and chopping. It should be noted that ultimately a granular definition of how a sample was manipulated will always be a bit of a guessing game without direct input from the producer responsible for creating the sample. It's fair to assume that this is why WhoSampled does not indicate how samples have been manipulated, however we felt it was a worthy conceptual nuance to add to the ontology and that it may be useful to scholars and musicians alike should they want to detail exactly how tracks are transformed into samples.</p>
+                      <p>As for the elements class, we originally imagined it to be a sub-class of a track however after defining the sampling event as detailed above we realised that it made most sense as a type of signal. The different elements sub-classes were borrowed from WhoSampled and we decided to keep "lyrics" and "voice" with the idea that the former can be used whenever there is an intelligible lyric being used in the sample while the latter works for any sonic element that clearly uses a voice as its source.</p> 
+                      <p>Lastly, we also discussed what happens when a sample becomes an element, which is the case for tracks that use samples, but decided that this should be left for future development as we found it difficult to create the necessary logical conditions in the ontology. In fact, we hit similar issues when trying to define restrictions for some of our classes. For example, we wanted to be able to express the idea that the sampling event requires at least one agent and at least one instrument; that the elements class could only be part of maximum 1 track; that the sample class was part of some track; that a direct sample required at least 1 manipulated element; and that a track needed at least 1 genre and 1 element. Ultimately we defined these restrictions/conditions as equivalences using Manchester syntax in Protégé but aren't sure that this is the correct way to do it. Perhaps, we should just accept that there are limits to what an ontology can express.</p> 
+                        
+
                       
                       <div class="member-img"><a href="assets/img/protege/sampling4.png" target="_blank">
                         <img src="assets/img/protege/sampling4.png" class="img-fluid" alt="" style="width: 400pt" /></a>
@@ -308,71 +316,15 @@
                             <p>The Dataset</p>
                           </div>
                           
-                          <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an to work on.
+                          <p>Once we had a working TBox we decided to create an ABox using the 20 sample relationships selected at the beginning of the project. 
+                            genres + need to create sample/elements individusals (drawbacks to model) 
+
                           </p>
                         </div>
                         
                         
                         
-                        <!--<div class="row">
-                          <div class="col-lg-6">
-                            <h3 class="resume-title">Sumary</h3>
-                            <div class="resume-item pb-0">
-                              <h4>Alice Barkley</h4>
-                              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-                              <p>
-                                <ul>
-                                  <li>Portland par 127,Orlando, FL</li>
-                                  <li>(123) 456-7891</li>
-                                  <li>alice.barkley@example.com</li>
-                                </ul>
-                              </p>
-                            </div>
-                            
-                            <h3 class="resume-title">Education</h3>
-                            <div class="resume-item">
-                              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                              <h5>2015 - 2016</h5>
-                              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-                            </div>
-                            <div class="resume-item">
-                              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                              <h5>2010 - 2014</h5>
-                              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-                            </div>
-                          </div>
-                          <div class="col-lg-6">
-                            <h3 class="resume-title">Professional Experience</h3>
-                            <div class="resume-item">
-                              <h4>Senior graphic design specialist</h4>
-                              <h5>2019 - Present</h5>
-                              <p><em>Experion, New York, NY </em></p>
-                              <p>
-                                <ul>
-                                  <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-                                </ul>
-                              </p>
-                            </div>
-                            <div class="resume-item">
-                              <h4>Graphic design specialist</h4>
-                              <h5>2017 - 2018</h5>
-                              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-                              <p>
-                                <ul>
-                                  <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                                </ul>
-                              </p>
-                            </div>
-                          </div>
-                        </div>-->
+                        
                         
                       </div>
                     </section><!-- End Resume Section -->
