@@ -212,21 +212,17 @@
                       <h2>DOCUMENTATION</h2>
                       <p>The Conceptual Map</p>
                     </div>
+                    <figure class="figure map">
+                      <a href="assets/img/graphs/sampling_conceptual_model_v1.png" target="_blank"><img src="assets/img/graphs/sampling_conceptual_model_v1.png" class="img-fluid" alt=""/></a>
+                      <figcaption class="figure-caption">Figure 1. The first iteration of the SamO conceptual map</figcaption>
+                      </figure> 
                     <p>After the preliminary development steps we focused on creating a conceptual map to better distinguish and understand which classes, predicates, datatype, and object type properties we needed. Over the course of multiple conversations we discussed how deep the model should go and which key concepts were essential. At this stage we also made extensive references and analysis of the MO and Audio Commons models.</p>
                     <p>The first thing to emerge from this process was a set of key conceptual elements that we knew were needed within our model and which formed a loop of sorts: the idea of a track, the idea of manifestation as defined by FRBR, the idea of a sample, and the interactions between sample and track. This can be seen in figure 1.</p>
+                    <figure class="figure map">
+                      <a href="assets/img/graphs/concept_NL_final.png" target="_blank"><img src="assets/img/graphs/concept_NL_final.png" class="img-fluid" alt=""/></a>
+                      <figcaption class="figure-caption">Figure 2. The second iteration of the SamO conceptual map</figcaption>
+                      </figure> 
                     <p>Following this we refined the map, as seen in figure 2, by adding and linking concepts from MO, the Event Ontology, and foaf into our map. We also expanded on the ways in which sample and track interacted with each other by taking inspiration from how WhoSampled models sampling relationships using musical elements, which are part of a track, and the different types of sample (direct or interpolation). We then also decided to enhance the model by adding different types of manipulation, which impact the way the elements are transformed into a sample, as this felt like a key conceptual idea that is not represented in WhoSampled (at least in their public facing data) or in MO.</p>
-                    </div>
-                    <div class="row">
-                      <div class="member col-lg-6">
-                        <div class="member-img"><a href="assets/img/graphs/sampling_conceptual_model_v1.png" target="_blank">
-                          <img src="assets/img/graphs/sampling_conceptual_model_v1.png" class="img-fluid" alt=""/></a>
-                        </div>
-                      </div>
-                      <div class="member col-lg-6">
-                        <div class="member-img"><a href="assets/img/graphs/concept_NL_final.png" target="_blank">
-                          <img src="assets/img/graphs/concept_NL_final.png" class="img-fluid" alt=""/></a>
-                        </div>
-                      </div>
                     </div>
                     
                     <div class="about-me container">
@@ -241,31 +237,6 @@
                       <p>After this we then debated whether or not the manipulation types should be considered as classes or properties. We tried both and ultimately properties proved best suited to the underlying conceptual idea that a manipulation allows the transformation of one class (elements) into another (sample) both of which belong to the parent class signal, which fits with MO's definition of a signal ("a master signal produced by a performance and a recording") and allowed to maintain the needed connection between signal (Expression) and track (Manifestation). In the end, we settled on 10 different types of manipulation (sub-properties) that reflect some of the best known and standard practices such as looping, tuning, and chopping. It should be noted that ultimately a granular definition of how a sample was manipulated will always be a bit of a guessing game without direct input from the producer responsible for creating the sample. It's fair to assume that this is why WhoSampled does not indicate how samples have been manipulated, however we felt it was a worthy conceptual nuance to add to the ontology and that it may be useful to scholars and musicians alike should they want to detail exactly how tracks are transformed into samples.</p>
                       <p>As for the elements class, we originally imagined it to be a sub-class of a track however after defining the sampling event as detailed above we realised that it made most sense as a type of signal. The different elements sub-classes were borrowed from WhoSampled and we decided to keep "lyrics" and "voice" with the idea that the former can be used whenever there is an intelligible lyric being used in the sample while the latter works for any sonic element that clearly uses a voice as its source.</p> 
                       <p>Lastly, we also discussed what happens when a sample becomes an element, which is the case for tracks that use samples, but decided that this should be left for future development as we found it difficult to create the necessary logical conditions in the ontology. In fact, we hit similar issues when trying to define restrictions for some of our classes. For example, we wanted to be able to express the idea that the sampling event requires at least one agent and at least one instrument; that the elements class could only be part of maximum 1 track; that the sample class was part of some track; that a direct sample required at least 1 manipulated element; and that a track needed at least 1 genre and 1 element. Ultimately we defined these restrictions/conditions as equivalences using Manchester syntax in Protégé but aren't sure that this is the correct way to do it. Perhaps, we should just accept that there are limits to what an ontology can express.</p> 
-                        
-
-                      
-                      <div class="member-img"><a href="assets/img/protege/sampling4.png" target="_blank">
-                        <img src="assets/img/protege/sampling4.png" class="img-fluid" alt="" style="width: 400pt" /></a>
-                      </div>
-                      
-                      <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                        Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
-                        
-                        <div class="member-img"><a href="assets/img/protege/signal.png" target="_blank">
-                          <img src="assets/img/protege/signal.png" class="img-fluid" alt="" style="width: 400pt"/></a>
-                        </div>
-                        
-                        <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                          Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.</p>
-                          
-                          
-                          <div class="member-img"><a href="assets/img/protege/signal.png" target="_blank">
-                            <img src="assets/img/protege/sample2.png" class="img-fluid" alt="" style="width: 400pt"/></a>
-                          </div>
-                          
-                          <p>
-                            ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an to work on.
-                          </p>
                           
                         </div>
                         <!-- ======= Counts ======= -->
