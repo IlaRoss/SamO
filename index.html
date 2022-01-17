@@ -26,6 +26,15 @@
   
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Magnific Popup core CSS file -->
+<link rel="stylesheet" href="assets/css/magnific-popup.css">
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="assets/js/jquery.magnific-popup.js"></script>
   
   
   
@@ -103,11 +112,11 @@
                 </p>
                 <p>While MO does refer to concepts of sampling, it was clear upon closer study that their approach did not satisfy our requirements (the creation of a specific module for dealing with sampling was suggested among the possible future improvements of the Music Ontology in its <a href="https://ismir2007.ismir.net/proceedings/ISMIR2007_p417_raimond.pdf" target="_blank">2007 paper</a>). As such, we decided to create classes and predicates needed specifically to deal with sampling while keeping the MO elements as a foundation, in particular their own extension of the four levels of representation as conceptualized by the IFLA's Functional Requirements for Bibliographic Records (FRBR). </p>
                 <p class="reference">1. Show Your Work. (2020). In <em>Data Feminism</em>. Retrieved from <a href="https://data-feminism.mitpress.mit.edu/pub/0vgzaln4" target="_blank">https://data-feminism.mitpress.mit.edu/pub/0vgzaln4</a></p>
-                <h3>Development Approach and Competency Questions</h3>
+                <h3>Preliminary Development and Competency Questions</h3>
                 <p>We decided to develop SamO using a bottom-up approach, that is beginning with data from WhoSampled to shape the structure of the terminology component of our ontology (TBox). We started by selecting 20 relationships (10 each) from WhoSampled that featured a jazz song being used as a sample in a hip-hop or electronic music song. The focus on jazz as a source genre was due to early conversations about focusing the ontology on the specific relationship between sampling jazz in hip-hop, however we ultimately decided to not limit the focus of our ontology though we kept the themed dataset.</p>
                 <p>The next step was formulating a set of primary Competency Questions. These would be natural language questions designed to help us understand what SamO should be able to represent and what a user should be able to extract from it.</p>
                 <p>The final preliminary step in our ontology development was to take a closer look at both the MO and Audio Commons ontologies to best understand how the concept of sampling had already been described. Audio Commons was chosen because it deals with describing audio contents within online libraries, including samples. Ultimately it proved to not be suited to our needs however by studying their approach we were able to get a better understanding of how to structure SamO.</p>
-                <p>Below are examples of some of the main generic competency questions we settled on. Detailed examples of the same questions, as well as others which were devised after the ontology was built, using SPARQL are given in the <a href="#cqs">Competency Questions section</a>.</p>
+                <p>Below are examples of some of the main generic competency questions we settled on. Detailed examples of the same questions, as well as others which were devised after the ontology was built, using SPARQL are given in the Competency Questions section.</p>
               </div>
               
               <!-- ======= Interests ======= -->
@@ -139,25 +148,37 @@
                   <div class="col-lg-3 col-md-4">
                     <div class="icon-box">
                       <i class="ri-disc-line" style="color: #ffa76e;"></i>
-                      <h3>Which songs published between specific dates have been used as a sample in other songs?</h3>
+                      <h3>What are the different types of samples?</h3>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-4">
+                  <div class="col-lg-3 col-md-4 mt-2">
                     <div class="icon-box">
                       <i class="ri-disc-line" style="color: #ffa76e;"></i>
                       <h3>Which songs by a specific artist have been used as a sample?</h3>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-4">
+                  <div class="col-lg-3 col-md-4 mt-2">
                     <div class="icon-box">
                       <i class="ri-disc-line" style="color: #ffa76e;"></i>
                       <h3>Which song(s) use(s) samples that have been manipulated in a certain way?</h3>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-4">
+                  <div class="col-lg-3 col-md-4 mt-2">
                     <div class="icon-box">
                       <i class="ri-disc-line" style="color: #ffa76e;"></i>
-                      <h3>What are the different types of samples?</h3>
+                      <h3>What are the different types of sampling manipulation?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>Which songs released within a timespan have been used as a sample?</h3>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 mt-2">
+                    <div class="icon-box">
+                      <i class="ri-disc-line" style="color: #ffa76e;"></i>
+                      <h3>What are the different types of elements within a song that can become a sample?</h3>
                     </div>
                   </div>
                 </div>
@@ -177,19 +198,20 @@
                     <h3>An iterative process</h3>
                     
                     <p>
-                      Following the preliminary work detailed above, the development of SamO was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing.
+                      Following the preliminary work detailed above, the development of SamO (as detailed in the Documentation section) was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing. Protégé was used as the primary software for the construction of both TBox and Abox and SPARQL testing.
                     </p>
                     
                     <h3>Releasing and publishing</h3>
                     <p>
-                      We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. As for licenses TK TK TK.</p> 
-                      <p>Unlike MO, we decided to use <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to share <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
+                      We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. However, we have opted to release SamO using a CC BY-SA 4.0 license to enable its spread, evolution, and reuse.</p> 
+                      <p>Unlike MO, we used <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to publish <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
                       </p>
                       
                       <h3>Possible future developments</h3>
                       <p>
-                        TK TK TK
-                      </p>
+                      One of the main points that arose during the last testing phases of the development of SamO was the difficulty in describing exactly what is happening sonically within the transformation process between song element and sample. While we tried our best to develop SamO to enable a user to describe this, we were also limited by our own knowledge of music production. As such we suggest that a possible point for future development is to involve musicians, producers, and engineers in a conversation about how best to describe this transformational process and use this to refine the manipulation properties.</p>
+                      <p>Another point for future development would be to stress test the ontology with larger datasets to see if anything is missing or can be improved upon. In creating our dataset for the ABox we did notice that in its current form, SamO requires the creation of additional data points (a source song's elements and a destination song's samples) which isn't ideal. One solution might be to use automation to create these. </p>
+                      <p>Lastly, as detailed in the Documenation section, we recommend that future development look at how to possibly differentiate between song element and sample when the latter becomes an element of a new song, which would in turn allow for a way to describe remixes as a specific type of song.</p>
                     </div>
                     <div class="col-lg-4" data-aos="fade-left">
                       <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
@@ -211,33 +233,87 @@
                       <h2>DOCUMENTATION</h2>
                       <p>The Conceptual Map</p>
                     </div>
-                    <figure class="figure map">
-                      <a href="assets/img/graphs/sampling_conceptual_model_v1.png" target="_blank"><img src="assets/img/graphs/sampling_conceptual_model_v1.png" class="img-fluid" alt=""/></a>
-                      <figcaption class="figure-caption">Figure 1. The first iteration of the SamO conceptual map</figcaption>
-                    </figure> 
-                    <p>After the preliminary development steps we focused on creating a conceptual map to better distinguish and understand which classes, predicates, datatype, and object type properties we needed. Over the course of multiple conversations we discussed how deep the model should go and which key concepts were essential. At this stage we also made extensive references and analysis of the MO and Audio Commons models.</p>
-                    <p>The first thing to emerge from this process was a set of key conceptual elements that we knew were needed within our model and which formed a loop of sorts: the idea of a track, the idea of manifestation as defined by FRBR, the idea of a sample, and the interactions between sample and track. This can be seen in figure 1.</p>
-                    <figure class="figure map">
-                      <a href="assets/img/graphs/concept_NL_final.png" target="_blank"><img src="assets/img/graphs/concept_NL_final.png" class="img-fluid" alt=""/></a>
-                      <figcaption class="figure-caption">Figure 2. The second iteration of the SamO conceptual map</figcaption>
-                    </figure> 
-                    <p>Following this we refined the map, as seen in figure 2, by adding and linking concepts from MO, the Event Ontology, and foaf into our map. We also expanded on the ways in which sample and track interacted with each other by taking inspiration from how WhoSampled models sampling relationships using musical elements, which are part of a track, and the different types of sample (direct or interpolation). We then also decided to enhance the model by adding different types of manipulation, which impact the way the elements are transformed into a sample, as this felt like a key conceptual idea that is not represented in WhoSampled (at least in their public facing data) or in MO.</p>
+                    <div class="row">
+                      <div class="col-8">
+                        <p>Following the preliminary development steps we focused on creating a conceptual map to better distinguish and understand which classes, predicates, data, and object type properties we needed. Over the course of multiple conversations we discussed how deep the model should go and which key concepts were essential. At this stage we also made extensive references to the MO and Audio Commons models.</p>
+                        <p>The first thing to emerge from this process was a set of key conceptual elements that we knew were needed within our model and which formed a loop of sorts: the idea of a track, the idea of manifestation as defined by FRBR (the publication/production of an Expression), the idea of a sample, and the interactions between sample and track. This can be seen in figure 1.</p>
+                        <p>Following this we refined the map, as seen in figure 2, by adding and linking concepts from MO, the Event Ontology, and foaf into our map. We also expanded on the ways in which sample and track interacted with each other by taking inspiration from how WhoSampled models sampling relationships using musical elements, which are part of a track, and the different types of sample (direct or interpolation). We then also decided to enhance the model by adding different types of manipulation, which impact the way the elements are transformed into a sample, as this felt like a key conceptual idea that is not represented in WhoSampled (at least in their public facing data) or in MO.</p>
+                      </div>
+                      <div class="col-4 popup-gallery">
+                        <figure>
+                          <a href="assets/img/graphs/sampling_conceptual_model_v1.png" class="popup" title="Figure 1. The first iteration of the SamO conceptual map"><img src="assets/img/graphs/sampling_conceptual_model_v1.png" class="img-fluid" alt=""/></a>
+                          <figcaption class="figure-caption">Figure 1. The first iteration of the SamO conceptual map</figcaption>
+                        </figure> 
+                        <figure>
+                          <a href="assets/img/graphs/concept_NL_final.png" class="popup" title="Figure 2. The second iteration of the SamO conceptual map"><img src="assets/img/graphs/concept_NL_final.png" class="img-fluid" alt=""/></a>
+                          <figcaption class="figure-caption">Figure 2. The second iteration of the SamO conceptual map</figcaption>
+                        </figure> 
+                      </div>
+                    </div>    
                   </div>
-                  
                   <div class="about-me container">
                     <div class="section-title">
                       <h2>Documentation</h2>
                       <p>Building the Ontology</p>
                     </div>
-                    <p>Eventually we got to a point where we felt that it would be best to begin building the ontology as a way to stress test the validity of our conceptual map/model. In doing this we realised that there was a potential issue in how we were reusing MO's classes and concepts as they related to the idea of sampling, which is at the heart of our ontology.</p> 
-                    <p>We debated whether the act of sampling should be considered as a sub-class of MO's composition, which clearly created some complications in how to link sampling to a track (as seen in fig 2). This setup would also force us to reuse more of MO's framework which was clearly not designed for what we wanted to do. In the end, we decided to make sampling an event similar to how MO treats composition and make it a sub-class of MO's performance event class which is defined as an event "that might produce a sound" with input from agents and instruments. This was an ideal fit.</p>
-                    <p> In turn, sampling was then linked to the Expression level via MO's existing properties for linking a performance to a signal, and then in turn we created two signal sub-classes (sample and elements) which formed the basis of what was needed for a sampling event. Lastly, these two sub-classes were linked to MO's track class, itself belonging to the Manifestation level. Therefore, we focused only on the Expression and Manifestation levels that MO borrows from FRBR and within those reused or created the necessary classes and properties to express the key conceptual elements we wanted.</p>
-                    <p>With this structure in place we also borrowed the idea of a shortcut property from MO to allow the user two paths for connecting a song with the song that samples it: a long path that goes from Manifestation (source track) to Expression (elements of the source track) and then back to Manifesation (from elements to sample, and from sample to new track); or a short path that links two tracks together using a simple property, samples/is_sampled_in. This was  modelled on MO's records/recorded_as property, which we also reused in SamO as it bypasses the various steps in MO to directly link a signal to a performance, which in SamO links the act of sampling to the signals it creates.</p>
-                    <p>After this we then debated whether or not the manipulation types should be considered as classes or properties. We tried both and ultimately properties proved best suited to the underlying conceptual idea that a manipulation allows the transformation of one class (elements) into another (sample) both of which belong to the parent class signal, which fits with MO's definition of a signal ("a master signal produced by a performance and a recording") and allowed to maintain the needed connection between signal (Expression) and track (Manifestation). In the end, we settled on 10 different types of manipulation (sub-properties) that reflect some of the best known and standard practices such as looping, tuning, and chopping. It should be noted that ultimately a granular definition of how a sample was manipulated will always be a bit of a guessing game without direct input from the producer responsible for creating the sample. It's fair to assume that this is why WhoSampled does not indicate how samples have been manipulated, however we felt it was a worthy conceptual nuance to add to the ontology and that it may be useful to scholars and musicians alike should they want to detail exactly how tracks are transformed into samples.</p>
-                    <p>As for the elements class, we originally imagined it to be a sub-class of a track however after defining the sampling event as detailed above we realised that it made most sense as a type of signal. The different elements sub-classes were borrowed from WhoSampled and we decided to keep "lyrics" and "voice" with the idea that the former can be used whenever there is an intelligible lyric being used in the sample while the latter works for any sonic element that clearly uses a voice as its source.</p> 
-                    <p>Lastly, we also discussed what happens when a sample becomes an element, which is the case for tracks that use samples, but decided that this should be left for future development as we found it difficult to create the necessary logical conditions in the ontology. In fact, we hit similar issues when trying to define restrictions for some of our classes. For example, we wanted to be able to express the idea that the sampling event requires at least one agent and at least one instrument; that the elements class could only be part of maximum 1 track; that the sample class was part of some track; that a direct sample required at least 1 manipulated element; and that a track needed at least 1 genre and 1 element. Ultimately we defined these restrictions/conditions as equivalences using Manchester syntax in Protégé but aren't sure that this is the correct way to do it. Perhaps, we should just accept that there are limits to what an ontology can express.</p> 
+                    <div class="row">
+                      <div class="col-8">
+                        <p>Eventually we got to a point where we felt that it would be best to begin building the ontology as a way to stress test the validity of our conceptual map/model. In doing this we realised that there was a potential issue in how we were reusing MO's classes and concepts as they related to the idea of sampling, which is at the heart of our ontology.</p> 
+                        <p>We debated whether the act of sampling should be considered as a sub-class of MO's composition, which clearly created some complications in how to link sampling to a track (as seen in figure 2). This setup would also force us to reuse more of MO's framework which was clearly not designed for what we wanted to do. In the end, we decided to make sampling an event similar to how MO treats composition (using the <a href="http://motools.sourceforge.net/event/event.html" target="_blank">Event Ontology</a>) and make it a sub-class of MO's performance event class which is defined as an event "that might produce a sound" with input from agents and instruments. This was an ideal fit (see figure 4).</p>
+                        <p> In turn, sampling was then linked to the Expression level via MO's existing properties for linking a performance to a signal, and then in turn we created two signal sub-classes (sample and elements) which formed the basis of what was needed for a sampling event (see figure 4). Lastly, these two sub-classes were linked to MO's track class, itself belonging to the Manifestation level. Therefore, we focused only on the Expression and Manifestation levels that MO borrows from FRBR and within those reused or created the necessary classes and properties to express the key conceptual elements we wanted (see figures 3 and 5).</p>
+                        <p>With this structure in place we also borrowed the idea of a shortcut property from MO to allow the user two paths for connecting a song with the song that samples it: a long path that goes from Manifestation (source track) to Expression (elements of the source track) and then back to Manifesation (from elements to sample, and from sample to new track); or a short path that links two tracks together using a simple property, samples/is_sampled_in. This was  modelled on MO's records/recorded_as property, which we also reused in SamO as it bypasses the various steps in MO to directly link a signal to a performance, which in SamO links the act of sampling to the signals it creates (see figure 6).</p>
+                        <p>After this we then debated whether or not the manipulation types should be considered as classes or properties. We tried both and ultimately properties proved best suited to the underlying conceptual idea that a manipulation allows the transformation of one class (elements) into another (sample), both of which belong to the parent class signal. This fits with MO's definition of a signal ("a master signal produced by a performance and a recording") and allowed us to maintain the needed connection between signal (Expression) and track (Manifestation). In the end, we settled on 10 different types of manipulation (sub-properties of manipulated_into/manipulation_of) that reflect some of the best known and standard practices such as looping, tuning, and chopping. It should be noted that ultimately a granular definition of how a sample was manipulated will always be a bit of a guessing game without direct input from the producer responsible for creating the sample. It's fair to assume that this is why WhoSampled does not indicate how samples have been manipulated, however we felt it was a worthy conceptual nuance to add to the ontology and that it may be useful to scholars and musicians alike should they want to detail exactly how tracks are transformed into samples.</p>
+                        <p>As for the elements class, we originally imagined it to be a sub-class of MO's track however after defining the sampling event as detailed above we realised that it made most sense as a type of signal. The different elements sub-classes were borrowed from WhoSampled and we decided to keep "lyrics" and "voice" with the idea that the former can be used whenever there is an intelligible lyric being used in the sample while the latter works for any sonic element that clearly uses a voice as its source (see figure 7).</p> 
+                        <p>Two last points. Firstly, we limited SamO in terms of data properties as these are not essential to the ontology. We ultimately carried over the duration property from MO to describe the lenght of tracks (and which could also be used to describe the length of samples if needed) and created a release_year property, for a song, for the needs of our Competency Questions (MO doesn't have an equivalent, or useful, property). Secondly, we also discussed what happens when a sample becomes an element, which is the case for tracks that use samples, but decided that this should be left for future development as we found it difficult to create the necessary logical conditions in the ontology. In fact we hit similar issues when trying to define restrictions for some of our classes. For example, we wanted to be able to express the idea that the sampling event requires at least one agent and at least one instrument; that the elements class could only be part of maximum 1 track; that the sample class was part of some track; that a direct sample required at least 1 manipulated element; and that a track needed at least 1 genre and 1 element. Ultimately we defined these restrictions/conditions as equivalences using Manchester syntax in Protégé but aren't sure that this is the correct way to do it. Perhaps, we should just accept that there are limits to what an ontology can express.</p> 
+                      </div>
+                      <div class="col-4 popup-gallery">
+                        <figure>
+                          <a href="assets/img/1.png" title="Figure 3. Ontological relationships within SamO pt.1"><img src="assets/img/1.png" class="img-fluid" alt="" /></a>
+                          <figcaption class="figure-caption">Figure 3. Ontological relationships within SamO pt.1</figcaption>
+                        </figure>
+                        <figure>
+                          <a href="assets/img/2.png" title="Figure 4. Ontological relationships within SamO pt.2"><img src="assets/img/2.png" class="img-fluid" alt="" /></a>
+                          <figcaption class="figure-caption">Figure 4. Ontological relationships within SamO pt.2</figcaption>
+                        </figure> 
+                        <figure>
+                          <a href="assets/img/3.png" title="Figure 5. Ontological relationships between elements and sample in SamO"><img src="assets/img/3.png" class="img-fluid" alt="" /></a>
+                          <figcaption class="figure-caption">Figure 5. Ontological relationships between elements and sample in SamO</figcaption>
+                        </figure> 
+                        <figure>
+                          <a href="assets/img/4.png" title="Figure 6. Ontological relationships between Expression and Manifestation in SamO"><img src="assets/img/4.png" class="img-fluid" alt=""/></a>
+                          <figcaption class="figure-caption">Figure 6. Ontological relationships between Expression and Manifestation in SamO</figcaption>
+                        </figure>
+                        <figure>
+                          <a href="assets/img/5.png" title="Figure 7. Ontological representation of song elements in SamO"><img src="assets/img/5.png" class="img-fluid" alt=""/></a>
+                          <figcaption class="figure-caption">Figure 7. Ontological representation of song elements in SamO</figcaption>
+                        </figure> 
+                      </div>
+                    </div>
+
+                    
                     
                   </div>
+                  <script type="text/javascript">
+                    $(document).ready(function() {
+
+                      $('.popup-gallery').magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        tLoading: 'Loading image #%curr%...',
+                        gallery: {
+                          enabled: true,
+                          navigateByImgClick: true,
+                          preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                        },
+                        image: {
+                          tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                          titleSrc: function(item) {
+                            return item.el.attr('title');
+                          }
+                        }
+                      });  
+                    });
+                  </script>
                   <!-- ======= Counts ======= -->
                   <div class="counts container">
                     
@@ -246,7 +322,7 @@
                       <div class="col-lg-3 col-md-6">
                         <div class="count-box">
                           <i class="bi bi-emoji-smile"></i>
-                          <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
+                          <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" class="purecounter"></span>
                           <p>Classes & subClasses</p>
                         </div>
                       </div>
@@ -254,7 +330,7 @@
                       <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
                         <div class="count-box">
                           <i class="bi bi-journal-richtext"></i>
-                          <span data-purecounter-start="0" data-purecounter-end="27" data-purecounter-duration="1" class="purecounter"></span>
+                          <span data-purecounter-start="0" data-purecounter-end="46" data-purecounter-duration="1" class="purecounter"></span>
                           <p>Object Properties</p>
                         </div>
                       </div>
@@ -262,7 +338,7 @@
                       <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                         <div class="count-box">
                           <i class="bi bi-headset"></i>
-                          <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
+                          <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
                           <p>Data Properties</p>
                         </div>
                       </div>
@@ -270,7 +346,7 @@
                       <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
                         <div class="count-box">
                           <i class="bi bi-award"></i>
-                          <span data-purecounter-start="0" data-purecounter-end="175" data-purecounter-duration="1" class="purecounter"></span>
+                          <span data-purecounter-start="0" data-purecounter-end="171" data-purecounter-duration="1" class="purecounter"></span>
                           <p>Individuals for the dataset</p>
                         </div>
                       </div>
@@ -285,11 +361,44 @@
                       <h2>Documentation</h2>
                       <p>The Dataset</p>
                     </div>
-                    
-                    <p>Once we had a working TBox we decided to create an ABox using the 20 sample relationships selected at the beginning of the project. 
-                      genres + need to create sample/elements individusals (drawbacks to model) 
-                      
-                    </p>
+                    <p>Once we had a working TBox we decided to create an ABox using the sample relationships selected at the beginning of the project (see full list below). We created a separate file using turtle syntax and described our 23 choices based on the publicly available information from WhoSampled as well as our own technical and historical knowledge to add details of sample manipulation (some of which has been simplified, see future development section for more on that) and some test individuals for the sampler class.</p>
+                    <p>Our selection of relationships allowed us to complete all our chosen Competency Questions, for example by giving us  artists such as Miles Davis and Nina Simano as people who have been sampled multiple times and by giving us a range of source genres and dates. Some of the credited collaborations between vocalists were ignored for the sake of avoiding creating additional individuals not directly related to the focus of the ontology. The dataset also includes one instance of a cover (Autumn Leaves) and a remix (Jazzy Sensation's Jazzy Mix). In our early conversations we had imagined using the ontology to also describe different types of songs related to sampling, such as covers and remixes, but ultimately decided to only describe the possibility of something being a cover.</p>
+                    <p>The sample relationships we chose only related to one specific sample that a destination song might use, but it is in fact quite common for hip-hop and electronic music songs to make use of multiple samples. While we did not want to spend the time recreating all the samples for every song in our dataset, we did choose one — Manifest, by Gangstarr — as a test case and included all the samples for it listed by WhoSampled. As mentioned in the future development section, one of the drawbacks of SamO — and as far as we can tell of any attempt at a detailed ontological breakdown of sampling — is that to describe sampling relationships requires the creation of new datapoints for every song element and resulting sample involved.</p>
+                    <p>Both the dataset and the ontology are available as .ttl and .owl files in the data folder of <a href="https://github.com/IlaRoss/SamO" target="_target">SamO's GitHub repository</a>.</p>
+                    <div class="row">
+                      <div class="col-6">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Bitches Brew -> Fattanza Blu (<a href="https://www.whosampled.com/sample/201306/Sangue-Misto-Fattanza-Blu-Miles-Davis-Bitches-Brew/" target="_blank">source</a>)</li>
+                          <li class="list-group-item">A Night In Tunisia -> Manifest (<a href="https://www.whosampled.com/sample/1342/Gang-Starr-Manifest-Charlie-Parker-Miles-Davis-A-Night-in-Tunisia/" target="_blank">source</a>)</li>
+                          <li class="list-group-item">Fly Me To The Moon -> Splattitorium (<a href="https://www.whosampled.com/sample/25802/The-Pharcyde-Splattitorium-Vince-Guaraldi-Trio-Fly-Me-to-the-Moon/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Autumn Leaves -> Autumn Leaves (cover) (<a href="https://www.whosampled.com/cover/49223/Coldcut-Autumn-Leaves-Jo-Stafford-Autumn-Leaves/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Caravan -> Jazzy Sensation (Jazzy Mix) (<a href="https://www.whosampled.com/cover/49223/Coldcut-Autumn-Leaves-Jo-Stafford-Autumn-Leaves/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Cantaloupe Island -> Cantaloop (flip fantasia) (<a href="https://www.whosampled.com/sample/172/Us3-Cantaloop-(Flip-Fantasia)-Herbie-Hancock-Cantaloupe-Island/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Skylark -> Survival of the Fittest (<a href="https://www.whosampled.com/sample/304600/Mobb-Deep-Survival-of-the-Fittest-Al-Cohn-The-Barry-Harris-Trio-Skylark/" target="_blank">source</a>)</li>
+                          <li class="list-group-item">Mystic Brew -> Electric Relaxation + Mystic Bounce (<a href="​​https://www.whosampled.com/sample/874/A-Tribe-Called-Quest-Electric-Relaxation-Ronnie-Foster-Mystic-Brew/" target="_blank">source</a>, <a href="​​https://www.whosampled.com/sample/34208/Madlib-Mystic-Bounce-Ronnie-Foster-Mystic-Brew/ 
+                            " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Shadows -> It's a Jazz Thing (<a href="https://www.whosampled.com/sample/30935/Roni-Size-It%27s-a-Jazz-Thing-Lonnie-Liston-Smith-Shadows/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">It Feels So Good -> Sticky Fingers (<a href="https://www.whosampled.com/sample/122364/Coolio-Sticky-Fingers-Grover-Washington,-Jr.-It-Feels-So-Good/ " target="_blank">source</a>)</li>
+                          
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Django -> The Words (<a href="https://www.whosampled.com/sample/132898/Emanon-(Aloe-Blacc-%26-Exile)-The-Words-Michel-Legrand-Miles-Davis-Django/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Just The Two of Us -> Just The Two of Us (<a href="https://www.whosampled.com/sample/13011/Eminem-Just-the-Two-of-Us-Grover-Washington,-Jr.-Bill-Withers-Just-the-Two-of-Us/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">So What -> Rimshot (intro) (Live) (<a href="https://www.whosampled.com/sample/36183/Erykah-Badu-Rimshot-(Intro)-(Live)-Miles-Davis-So-What/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Ain't Got No, I Got Life -> I've Got Life (<a href="https://www.whosampled.com/sample/361943/Lauryn-Hill-I%27ve-Got-Life-Nina-Simone-Ain%27t-Got-No,-I-Got-Life/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Mr. Bojangles -> Jump Hi (<a href="https://www.whosampled.com/sample/308031/Lion-Babe-Childish-Gambino-Jump-Hi-Nina-Simone-Mr.-Bojangles/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">I Want You -> Be Happy (<a href="https://www.whosampled.com/sample/113661/Mary-J.-Blige-Be-Happy-Marvin-Gaye-I-Want-You/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Jungle Boogie -> The Doo-Bop Song (<a href="https://www.whosampled.com/sample/9164/Miles-Davis-The-Doo-Bop-Song-Kool-%26-the-Gang-Jungle-Boogie/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">In A Silent Way -> Dopamina (<a href="https://www.whosampled.com/sample/57540/Neffa-Dopamina-Miles-Davis-In-a-Silent-WayIt%27s-About-That-Time/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Mister Magic -> Understanding (<a href="https://www.whosampled.com/sample/107365/Nas-AZ-Biz-Markie-Understanding-Grover-Washington,-Jr.-Mister-Magic/ " target="_blank">source</a>)</li>
+                          <li class="list-group-item">Aguas De Marco -> Girl From Alaska (<a href="https://www.whosampled.com/sample/555976/Slo-Mo-Girl-From-Alaska-Stan-Getz-Jo%C3%A3o-Gilberto-Aguas-De-Mar%C3%A7o-(Waters-of-March)/" target="_blank">source</a>)</li>
+                          <li class="list-group-item">Sinnerman -> Oh, Timbaland (<a href="https://www.whosampled.com/sample/465/Timbaland-Oh-Timbaland-Nina-Simone-Sinnerman/" target="_blank">source</a>)</l>
+                          <li class="list-group-item">Curtains -> Peng Black Girls (<a href="https://www.whosampled.com/sample/799122/ENNY-Amia-Brave-Peng-Black-Girls-The-Jeff-Lorber-Fusion-Curtains/ " target="_blank">source</a>)</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   
                   
@@ -308,7 +417,7 @@
                       <h2>CQs and tests</h2>
                       <p>Competency Questions</p>
                     </div>
-                    <p>The requirements and starting point for our ontology thinking were this and this and this and we decided to express x and in order to so we catched up and started to do some benchmarking and what we found out was the pre existing ontologies that we decided to take a look at and in some cases make use of and we did discuss about the meaning and to be more precises the meanings of 'sampling' in general and within the musical context as well, as to better focus and define our field of inquiry and to perfectly understand what we wanted to talk about an.</p>
+                    <p>Starting from the preliminary Competency Questions we had asked ourselves, and using what we learnt during development, we put together a list of 20 final CQs to test SamO with. Each of these CQ allowed us to ensure that all the key components of the ontology worked as intended. Each CQ was translated into a SPARQL and executed using Protégé and the dataset file.</p>
                   </div>
                   
                   
@@ -342,7 +451,7 @@
                                 SELECT (COUNT(?sample) AS ?count)<br/> 
                                 WHERE { :Electric_Relaxation samo:has_sample ?sample }<br/> 
                                 <br/>
-                                1
+                                RESULT: 1
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -384,7 +493,7 @@
                                 WHERE { ?song samo:is_sampled_in :Electric_Relaxation ;<br/>
                                   rdfs:label ?label }<br/>
                                   <br/>
-                                  Mystic Brew
+                                RESULT: Mystic Brew
                                 </div>
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -426,6 +535,7 @@
                                     samo:is_sampled_in ?anything ; <br/>
                                     rdfs:label ?label }<br/>
                                     <br/>
+                                    RESULTS:<br/>
                                     Cantaloupe Island<br/>	
                                     Bitches Brew<br/>	
                                     Django<br/>	
@@ -457,11 +567,11 @@
                           </div>
                         </div>
                         
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 mt-4">
                           <div class="icon-box">
                             <!--div class="icon"><i class="bx bxl-file"></i></div-->
                             <h4>CQ #4</h4>
-                            <p><span class='log_impl'>How many</span> <span class='log_class'>songs</span> <span class='log_event'>contain</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>of</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
+                            <p><span class='log_impl'>How many</span> <span class='log_class'>songs</span> <span class='log_event'>contain</span> <span class='log_impl'>a</span> <span class='log_class'>sample</span> <span class='log_rel'>of</span> <span class='log_indiv'>It Feels So Good</span>?</p><br/>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">
                               Run Query
@@ -472,7 +582,7 @@
                               <div class="modal-dialog">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">How many songs contain a sample of It feels so good?</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">How many songs contain a sample of It Feels So Good?</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
@@ -486,7 +596,7 @@
                                     SELECT (COUNT(?song) AS ?count)<br/>
                                     WHERE { ?song samo:samples :It_Feels_So_Good }<br/>
                                     <br/>
-                                    1	
+                                    RESULT: 1	
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -498,11 +608,11 @@
                         </div>
                         
                         
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 mt-4">
                           <div class="icon-box">
                             <!--div class="icon"><i class="bx bxl-file"></i></div-->
                             <h4>CQ #5</h4>
-                            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>have sampled</span> <span class='log_indiv'>It feels so good</span>?</p><br/>
+                            <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>have sampled</span> <span class='log_indiv'>It Feels So Good</span>?</p><br/>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5">
                               Run Query
@@ -513,7 +623,7 @@
                               <div class="modal-dialog">
                                 <div class="modal-content">
                                   <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Which songs have sampled It feels so good?</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Which songs have sampled It Feels So Good?</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
@@ -529,7 +639,7 @@
                                       ?sample samo:pitch_shift_of ?element .<br/>
                                       ?element samo:part_of :It_Feels_So_Good }<br/>
                                       <br/>
-                                      Sticky Fingers
+                                      RESULT: Sticky Fingers
                                       
                                     </div>
                                     <div class="modal-footer">
@@ -542,7 +652,7 @@
                           </div>
                           
                           
-                          <div class="col-lg-4 col-md-6">
+                          <div class="col-lg-4 col-md-6 mt-4">
                             <div class="icon-box">
                               <!--div class="icon"><i class="bx bxl-file"></i></div-->
                               <h4>CQ #6</h4>
@@ -574,6 +684,7 @@
                                         FILTER(?year >= 1970) <br/>
                                         FILTER(?year <= 1972) }<br/>
                                         <br/>
+                                        RESULTS: <br/>
                                         Mystic Brew<br/>
                                         Mr. Bojangles<br/>
                                         Bitches Brew<br/>
@@ -588,7 +699,7 @@
                               </div>
                             </div>
                             
-                            <div class="col-lg-4 col-md-6">
+                            <div class="col-lg-4 col-md-6 mt-4">
                               <div class="icon-box">
                                 <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                 <h4>CQ #7</h4>
@@ -618,6 +729,7 @@
                                         WHERE { ?subject mo:compiler :Nina_Simone; <br/>
                                           samo:is_sampled_in ?anything }<br/>
                                           <br/>
+                                          RESULTS:<br/>
                                           Mr. Bojangles<br/>
                                           Sinnerman<br/>
                                           Ain’t Got No I Got Life
@@ -632,7 +744,7 @@
                                 </div>
                               </div>
                               
-                              <div class="col-lg-4 col-md-6">
+                              <div class="col-lg-4 col-md-6 mt-4">
                                 <div class="icon-box">
                                   <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                   <h4>CQ #8</h4>
@@ -663,6 +775,7 @@
                                             ?sample ?manipulation ?element . <br/>
                                             ?element ^samo:has_elements  :Mr_Bojangles }<br/>
                                             <br/>
+                                            RESULTS:<br/>
                                             Mr_Bojangles_Riff<br/>
                                             Mr_Bojangles_Voice<br/>
                                             Mr_Bojangles_Lyrics<br/>
@@ -677,11 +790,11 @@
                                   </div>
                                 </div>
                                 
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-4 col-md-6 mt-4">
                                   <div class="icon-box">
                                     <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                     <h4>CQ #9</h4>
-                                    <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_event'>is sampled</span> <span class='log_impl'>the highest</span> <span class='log_class'>number</span> <span class='log_rel'>of</span> <span class='log_class'>times</span>?</p><br/>
+                                    <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_rel'>is</span> <span class='log_impl'>the most</span> <span class='log_event'>sampled</span> ?</p><br/>
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal9">
                                       Run Query
@@ -692,7 +805,7 @@
                                       <div class="modal-dialog">
                                         <div class="modal-content">
                                           <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Which artist is sampled the highest number of times?</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Which artist is the most sampled?</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
                                           <div class="modal-body">
@@ -709,7 +822,7 @@
                                               GROUP BY ?subject<br/>
                                               ORDER BY desc(?count) <br/>
                                               <br/>
-                                              Miles Davis
+                                              RESULT: Miles Davis
                                               
                                             </div>
                                             <div class="modal-footer">
@@ -721,7 +834,7 @@
                                     </div>
                                   </div>
                                   
-                                  <div class="col-lg-4 col-md-6">
+                                  <div class="col-lg-4 col-md-6 mt-4">
                                     <div class="icon-box">
                                       <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                       <h4>CQ #10</h4>
@@ -752,7 +865,7 @@
                                               GROUP BY ?song<br/>
                                               ORDER BY desc(?count) <br/>
                                               <br/>
-                                              Manifest
+                                              RESULT: Manifest
                                               
                                             </div>
                                             <div class="modal-footer">
@@ -764,7 +877,7 @@
                                     </div>
                                   </div>
                                   
-                                  <div class="col-lg-4 col-md-6">
+                                  <div class="col-lg-4 col-md-6 mt-4">
                                     <div class="icon-box">
                                       <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                       <h4>CQ #11</h4>
@@ -793,7 +906,7 @@
                                               SELECT DISTINCT ?song<br/>
                                               WHERE {?song samo:has_sample ?sample . <br/>
                                                 ?sample samo:loop_of ?element }<br/>
-                                                <br/>
+                                                RESULTS: <br/>
                                                 Manifest<br/>
                                                 Electric Relaxation<br/>
                                                 It’s A Jazz Thing<br/>
@@ -815,11 +928,11 @@
                                       </div>
                                     </div>
                                     
-                                    <div class="col-lg-4 col-md-6">
+                                    <div class="col-lg-4 col-md-6 mt-4">
                                       <div class="icon-box">
                                         <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                         <h4>CQ #12</h4>
-                                        <p><span class='log_impl'>Which</span> <span class='log_class'>samples</span> <span class='log_rel'>in</span> <span class='log_indiv'>Rimshot (Intro Live)</span> <span class='log_event'>are</span> <span class='log_class'>interpolation</span>?</p><br/><br/>
+                                        <p><span class='log_impl'>Which</span> <span class='log_class'>samples</span> <span class='log_rel'>in</span> <span class='log_indiv'>Rimshot (Intro Live)</span> <span class='log_event'>are</span> <span class='log_class'>interpolations</span>?</p><br/><br/>
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal12">
                                           Run Query
@@ -830,7 +943,7 @@
                                           <div class="modal-dialog">
                                             <div class="modal-content">
                                               <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Which samples in Rimshot (Intro Live) are interpolation?</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Which samples in Rimshot (Intro Live) are interpolations?</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                               </div>
                                               <div class="modal-body">
@@ -845,7 +958,7 @@
                                                 WHERE {:Rimshot_Intro_Live samo:has_sample ?sample . <br/>
                                                   ?sample rdf:type samo:Interpolation }<br/>
                                                   <br/>
-                                                  So_What_Sample
+                                                  RESULT: So_What_Sample
                                                   
                                                 </div>
                                                 <div class="modal-footer">
@@ -858,11 +971,11 @@
                                       </div>
                                       
                                       
-                                      <div class="col-lg-4 col-md-6">
+                                      <div class="col-lg-4 col-md-6 mt-4">
                                         <div class="icon-box">
                                           <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                           <h4>CQ #13</h4>
-                                          <p><span class='log_impl'>Which</span> <span class='log_class'>song</span> <span class='log_rel'>is a cover</span>?</p><br/>
+                                          <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_rel'>are covers</span>?</p><br/>
                                           <!-- Button trigger modal -->
                                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal13">
                                             Run Query
@@ -873,7 +986,7 @@
                                             <div class="modal-dialog">
                                               <div class="modal-content">
                                                 <div class="modal-header">
-                                                  <h5 class="modal-title" id="exampleModalLabel">Which song is a cover?</h5>
+                                                  <h5 class="modal-title" id="exampleModalLabel">Which songs are covers?</h5>
                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -887,7 +1000,7 @@
                                                   SELECT ?song<br/>
                                                   WHERE {?song samo:is_cover_of ?anything }<br/>
                                                   <br/>
-                                                  Autumn_Leaves_Cover
+                                                  RESULT: Autumn_Leaves_Cover
                                                   
                                                 </div>
                                                 <div class="modal-footer">
@@ -899,11 +1012,11 @@
                                         </div>
                                       </div>
                                       
-                                      <div class="col-lg-4 col-md-6">
+                                      <div class="col-lg-4 col-md-6 mt-4">
                                         <div class="icon-box">
                                           <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                           <h4>CQ #14</h4>
-                                          <p><span class='log_impl'>How is</span> <span class='log_class'>the sample</span> <span class='log_rel'>from</span> <span class='log_indiv'>Shadows</span> <span class='log_rel'>manipulated in</span> <span class='log_indiv'>It's A Jazz Thing</span>?</p><br/>
+                                          <p><span class='log_impl'>How is</span> <span class='log_class'>the sample</span> <span class='log_rel'>from</span> <span class='log_indiv'>Shadows</span> <span class='log_rel'>manipulated in</span> <span class='log_indiv'>It's a Jazz Thing</span>?</p><br/>
                                           <!-- Button trigger modal -->
                                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal14">
                                             Run Query
@@ -914,7 +1027,7 @@
                                             <div class="modal-dialog">
                                               <div class="modal-content">
                                                 <div class="modal-header">
-                                                  <h5 class="modal-title" id="exampleModalLabel">How is the sample from Shadows manipulated in It’s A Jazz Thing?</h5>
+                                                  <h5 class="modal-title" id="exampleModalLabel">How is the sample from Shadows manipulated in It’s a Jazz Thing?</h5>
                                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -930,7 +1043,9 @@
                                                     ?elements ?manipulation ?sample . <br/>
                                                     ?sample samo:used_in :Its_A_Jazz_Thing }<br/>
                                                     <br/>
-                                                    looped and time-stretched
+                                                    RESULT:<br/>
+                                                    Looped<br/>
+                                                    Time-stretched
                                                     
                                                   </div>
                                                   <div class="modal-footer">
@@ -942,11 +1057,11 @@
                                           </div>
                                         </div>
                                         
-                                        <div class="col-lg-4 col-md-6">
+                                        <div class="col-lg-4 col-md-6 mt-4">
                                           <div class="icon-box">
                                             <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                             <h4>CQ #15</h4>
-                                            <p><span class='log_impl'>Who</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Cantaloupe Island</span>?</p><br/>
+                                            <p><span class='log_impl'>Which</span> <span class='log_class'>artist</span> <span class='log_event'>sampled</span> <span class='log_indiv'>Cantaloupe Island</span>?</p><br/>
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal15">
                                               Run Query
@@ -957,7 +1072,7 @@
                                               <div class="modal-dialog">
                                                 <div class="modal-content">
                                                   <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Who sampled Cantaloupe Island?</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Which artist sampled Cantaloupe Island?</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                   </div>
                                                   <div class="modal-body">
@@ -972,7 +1087,7 @@
                                                     WHERE {?artist mo:compiled ?song . <br/>
                                                       ?song samo:samples :Cantaloupe_Island }<br/>
                                                       <br/>
-                                                      Us3
+                                                      RESULT: Us3
                                                       
                                                     </div>
                                                     <div class="modal-footer">
@@ -984,7 +1099,7 @@
                                             </div>
                                           </div>
                                           
-                                          <div class="col-lg-4 col-md-6">
+                                          <div class="col-lg-4 col-md-6 mt-4">
                                             <div class="icon-box">
                                               <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                               <h4>CQ #16</h4>
@@ -1014,6 +1129,7 @@
                                                       WHERE {?artist mo:compiled ?song . <br/>
                                                         ?song samo:is_sampled_in :The_Words }<br/>
                                                         <br/>
+                                                        RESULTS:<br/>
                                                         Michel Legrand<br/>
                                                         Miles Davis
                                                         
@@ -1027,7 +1143,7 @@
                                               </div>
                                             </div>
                                             
-                                            <div class="col-lg-4 col-md-6">
+                                            <div class="col-lg-4 col-md-6 mt-4">
                                               <div class="icon-box">
                                                 <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                                 <h4>CQ #17</h4>
@@ -1057,6 +1173,7 @@
                                                         WHERE {?artist mo:compiled ?song . <br/>
                                                           ?song mo:genre :Jazz }<br/>
                                                           <br/>
+                                                          RESULTS:<br/>
                                                           Herbie Hancock<br/>
                                                           Miles Davis<br/>
                                                           Michel Legrand<br/>
@@ -1085,7 +1202,7 @@
                                               </div>
                                               
                                               
-                                              <div class="col-lg-4 col-md-6">
+                                              <div class="col-lg-4 col-md-6 mt-4">
                                                 <div class="icon-box">
                                                   <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                                   <h4>CQ #18</h4>
@@ -1117,6 +1234,7 @@
                                                             ?elements samo:part_of ?anything . <br/>
                                                             ?anything mo:compiler :Nina_Simone }<br/>
                                                             <br/>
+                                                            RESULTS:<br/>
                                                             Lucas Goodman<br/>
                                                             Timbaland<br/>
                                                             Lauryn Hill
@@ -1131,11 +1249,11 @@
                                                   </div>
                                                 </div>
                                                 
-                                                <div class="col-lg-4 col-md-6">
+                                                <div class="col-lg-4 col-md-6 mt-4">
                                                   <div class="icon-box">
                                                     <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                                     <h4>CQ #19</h4>
-                                                    <p><span class='log_impl'>Which</span> <span class='log_class'>sampler</span> <span class='log_rel'>did</span> <span class='log_indiv'>DJ Premier</span> <span class='log_rel'>use in</span> <span class='log_indiv'>Manifest</span>?</p><br/>
+                                                    <p><span class='log_impl'>Which</span> <span class='log_class'>sampler</span> <span class='log_rel'>did</span> <span class='log_indiv'>DJ Premier</span> <span class='log_rel'>use on</span> <span class='log_indiv'>Manifest</span>?</p><br/>
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal19">
                                                       Run Query
@@ -1146,7 +1264,7 @@
                                                       <div class="modal-dialog">
                                                         <div class="modal-content">
                                                           <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Which sampler did DJ Premier use in Manifest? </h5>
+                                                            <h5 class="modal-title" id="exampleModalLabel">Which sampler did DJ Premier use on Manifest? </h5>
                                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                           </div>
                                                           <div class="modal-body">
@@ -1161,7 +1279,7 @@
                                                             WHERE {?sample samo:producer :DJ_Premier ; <br/>
                                                               ^samo:manipulated ?sampler }<br/>
                                                               <br/>
-                                                              SP_1200
+                                                              RESULT: SP_1200
                                                               
                                                             </div>
                                                             <div class="modal-footer">
@@ -1173,7 +1291,7 @@
                                                     </div>
                                                   </div>
                                                   
-                                                  <div class="col-lg-4 col-md-6">
+                                                  <div class="col-lg-4 col-md-6 mt-4">
                                                     <div class="icon-box">
                                                       <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                                       <h4>CQ #20</h4>
@@ -1205,6 +1323,7 @@
                                                                 FILTER(?year >= 1970) <br/>
                                                                 FILTER(?year <= 1972) }<br/>
                                                                 <br/>
+                                                                RESULTS: <br/>
                                                                 Mystic Brew<br/>
                                                                 Mr. Bojangles<br/>
                                                                 Bitches Brew
@@ -1399,17 +1518,15 @@
                                                   <dir class="row">
                                                     <div class="member col-lg-6">
                                                       <div class="member-img" style="text-align: center;">
-                                                        <img src="assets/img/testimonials/testimonials-2.jpg" class="img-fluid" alt="" style="height: 240pt;">
+                                                        <img src="https://avatars.githubusercontent.com/u/72798408?v=4" class="img-fluid" alt="" style="height: 240pt;">
                                                       </div>
                                                       <div class="member-info" style="text-align: center;">
                                                         <br/>
                                                         <h4 style="text-decoration: underline #ff9900;">Laurent Fintoni</h4>
-                                                        <span style="text-decoration: underline #ff9900;">Digital Humanitst</span>
-                                                        <p>Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque. Dolores eum non.</p>
+                                                        <p>"French, but exiled abroad for so long he now writes in English." Alleged author. Would be archivist. We care more than they hate.</p>
                                                         <div class="social-links"  style="display: flex; justify-content: center;">
-                                                          <a href="#" class="github"><i class="bi bi-github" target="_blank"></i></a>
-                                                          <a href="#" class="envelope" target="_blank"><i class="bi bi-envelope"></i></a>
-                                                          <a href="#" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                                          <a href="https://github.com/laurentfintoni" class="github"><i class="bi bi-github" target="_blank"></i></a>
+                                                          <a href="https://www.linkedin.com/in/laurentfintoni/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
                                                         </div>
                                                       </div>
                                                       
@@ -1422,9 +1539,7 @@
                                                       <div class="member-info" style="text-align: center;">
                                                         <br/>
                                                         <h4 style="text-decoration: underline #ff9900;">Ilaria Rossi</h4>
-                                                        <span style="text-decoration: underline #ff9900;">Digital Humanist</span>
-                                                        <p>Holds a BA in Philosophy and a Music Degree in Saxophone. Currently exploring the DHDK realm at <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge#">Unibo</a>.
-                                                          <br/>Early music, philosophy of language and logic lover.</p>
+                                                        <p>Holds a BA in Philosophy and a Music Degree in Saxophone. Currently exploring the DHDK realm at <a href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge#">Unibo</a>. Early music, philosophy of language and logic lover.</p>
                                                           <div class="social-links" style="display: flex; justify-content: center;">
                                                             <a href="https://github.com/IlaRoss" class="github"><i class="bi bi-github" target="_blank"></i></a>
                                                             <a href="mailto:ilaria.rossi25@studio.unibo.it" class="envelope" target="_blank"><i class="bi bi-envelope"></i></a>
@@ -1439,13 +1554,6 @@
                                                     
                                                   </section><!-- End Contact Section -->
                                                   
-                                                  <div class="credits">
-                                                    <!-- All the links in the footer should remain intact. -->
-                                                    <!-- You can delete the links only if you purchased the pro version. -->
-                                                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                                                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-                                                    Designed by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
-                                                  </div>
                                                   
                                                   <!-- Vendor JS Files -->
                                                   <script src="assets/vendor/purecounter/purecounter.js"></script>
