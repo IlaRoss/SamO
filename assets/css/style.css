@@ -1116,10 +1116,9 @@ section .container {
   left: 0;
   bottom: 0;
   padding: 15px;
-  text-align: right;
+  text-align: center;
   font-size: 13px;
   color: #fff;
-  z-index: 999999;
 }
 @media (max-width: 992px) {
   .credits {
