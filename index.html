@@ -63,9 +63,9 @@
             <!--li><a class="nav-link active" href="#header">Home</a></li-->
             <li><a class="nav-link" href="#project">Project</a></li>
             <li><a class="nav-link" href="#documentation">Documentation</a></li>
-            <li><a class="nav-link" href="#cqs">CQs</a></li>
+            <li><a class="nav-link" href="#release">Release</a></li>
             <li><a class="nav-link" href="http://purl.org/ontology/samo/" target="_blank">Specification</a></li>
-            <li><a class="nav-link" href="#team">About</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
             <li><a href="https://github.com/IlaRoss/SamO" class="nav-link" title="github" target="_blank">GitHub</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -180,43 +180,7 @@
                 </div>
                 
               </div><!-- End Interests -->
-              
-              <div class="about-me container">
-                <div class="section-title">
-                  <h2>The Project</h2>
-                  <p>Fixing and Releasing</p>
-                </div>
-                
-                <div class="row">
-                  
-                  <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    
-                    <h3>An iterative process</h3>
-                    
-                    <p>
-                      Following the preliminary work detailed above, the development of SamO (as detailed in the Documentation section) was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing. Protégé was used as the primary software for the construction of both TBox and Abox and SPARQL testing.
-                    </p>
-                    
-                    <h3>Releasing and publishing</h3>
-                    <p>
-                      We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. However, we have opted to release SamO using a CC BY-SA 4.0 license to enable its spread, evolution, and reuse.</p> 
-                      <p>Unlike MO, we used <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to publish <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
-                      </p>
-                      
-                      <h3>Possible future developments</h3>
-                      <p>
-                        <ol>
-                          <li>One of the main points that arose during the last testing phases of the development was the difficulty in describing exactly what is happening sonically during the transformation process between song element and sample. While we tried our best to develop SamO to enable a user to describe this, we were also limited by our own knowledge of music production. As such we suggest that a possible point for future development is to involve musicians, producers, and engineers in a conversation about how best to describe this transformational process and use this to refine the manipulation properties and make any needed adjustments to the ontology.</li>
-                          <li>Another point for future development would be to stress test the ontology with larger datasets to see if anything is missing or can be improved upon. In creating our dataset we did notice that in its current form, SamO requires the creation of additional data points (a source song's elements and a destination song's samples) which isn't ideal. One solution might be to use automation to create these. </li>
-                          <li>As detailed in the Documenation section, we recommend that future development look at how to possibly differentiate between song element and sample when the latter becomes an element of a new song, which would in turn allow for a way to describe remixes as a specific type of song.</li>
-                        </ol>
-                      </div>
-                      <div class="col-lg-4" data-aos="fade-left">
-                        <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
-                      </div>
-                    </div>
-                    
-                  </div>
+            
                   
                   
                 </section><!-- End About Section -->
@@ -407,13 +371,13 @@
                     </section><!-- End Resume Section -->
                     
                     <!-- ======= Services Section ======= -->
-                    <section id="cqs" class="services">
+                    <section id="release" class="services">
                       <div class="container">
                         <div class="about-me container">
                           
                           <div class="section-title">
-                            <h2>Final CQs and testing</h2>
-                            <p>Competency Questions</p>
+                            <h2>Release</h2>
+                            <p>Final Competency Questions and Testing</p>
                           </div>
                           <p>Starting from the initial Competency Questions we had asked ourselves, and using what we learnt during development, we put together a list of 20 final CQs to test SamO with. Each of these CQ allowed us to ensure that all the key components of the ontology worked as intended. Each CQ was translated into a SPARQL and executed using Protégé and the dataset file.</p>
                           <p>Hover any CQ to see the logical components based on the following legend:<br/>
@@ -1346,7 +1310,42 @@
                                                           </div>
                                                           
                                                         </div>
-                                                        
+                                                        <div class="about-me container">
+                                                          <div class="section-title">
+                                                            <h2>Release</h2>
+                                                            <p>Fixing and Releasing</p>
+                                                          </div>
+                                                          
+                                                          <div class="row">
+                                                            
+                                                            <div class="col-lg-8 pt-4 pt-lg-0 content">
+                                                              
+                                                              <h3>An iterative process</h3>
+                                                              
+                                                              <p>
+                                                                Following the preliminary work detailed above, the development of SamO (as detailed in the Documentation section) was an iterative process with multiple passes on both the terminology (TBox) and assertion (ABox) components to adjust and refine concepts as well as errors and redundancies that arose through testing. Protégé was used as the primary software for the construction of both TBox and Abox and SPARQL testing.
+                                                              </p>
+                                                              
+                                                              <h3>Releasing and publishing</h3>
+                                                              <p>
+                                                                We decided to release and publish SamO by following the examples of MO. As such we are using a persistent URL structure similar to MO (/ontology/samo/) and we have detailed the SamO classes and properties in a similar fashion as MO. However, we have opted to release SamO using a CC BY-SA 4.0 license to enable its spread, evolution, and reuse.</p> 
+                                                                <p>Unlike MO, we used <a href="https://github.com/dgarijo/Widoco" target="_blank">WIDOCO</a> to publish <a href="https://ilaross.github.io/SamO/myDocumentation/doc/index-en.html#" target="_blank">SamO's specification</a>, which enables both textual and visual representations of the ontology in a W3C style.
+                                                                </p>
+                                                                
+                                                                <h3>Possible future development</h3>
+                                                                <p>
+                                                                  <ol>
+                                                                    <li>One of the main points that arose during the last testing phases of the development was the difficulty in describing exactly what is happening sonically during the transformation process between song element and sample. While we tried our best to develop SamO to enable a user to describe this, we were also limited by our own knowledge of music production. As such we suggest that a possible point for future development is to involve musicians, producers, and engineers in a conversation about how best to describe this transformational process and use this to refine the manipulation properties and make any needed adjustments to the ontology.</li>
+                                                                    <li>Another point for future development would be to stress test the ontology with larger datasets to see if anything is missing or can be improved upon. In creating our dataset we did notice that in its current form, SamO requires the creation of additional data points (a source song's elements and a destination song's samples) which isn't ideal. One solution might be to use automation to create these. </li>
+                                                                    <li>As detailed in the Documenation section, we recommend that future development look at how to possibly differentiate between song element and sample when the latter becomes an element of a new song, which would in turn allow for a way to describe remixes as a specific type of song.</li>
+                                                                  </ol>
+                                                                </div>
+                                                                <div class="col-lg-4" data-aos="fade-left">
+                                                                  <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
+                                                                </div>
+                                                              </div>
+                                                              
+                                                            </div>
                                                         
                                                       </div>
                                                     </section><!-- End Services Section -->
@@ -1355,166 +1354,14 @@
                                                     
                                                     
                                                     <!--############################################################-->
-                                                    <!-- ======= Portfolio Section ======= -->
-                                                    <section id="portfolio" class="portfolio">
-                                                      <div class="container">
-                                                        
-                                                        <div class="section-title">
-                                                          <h2>Portfolio</h2>
-                                                          <p>My Works</p>
-                                                        </div>
-                                                        
-                                                        <div class="row">
-                                                          <div class="col-lg-12 d-flex justify-content-center">
-                                                            <ul id="portfolio-flters">
-                                                              <li data-filter="*" class="filter-active">All</li>
-                                                              <li data-filter=".filter-app">App</li>
-                                                              <li data-filter=".filter-card">Card</li>
-                                                              <li data-filter=".filter-web">Web</li>
-                                                            </ul>
-                                                          </div>
-                                                        </div>
-                                                        
-                                                        <div class="row portfolio-container">
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>App 1</h4>
-                                                                <p>App</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>Web 3</h4>
-                                                                <p>Web</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>App 2</h4>
-                                                                <p>App</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>Card 2</h4>
-                                                                <p>Card</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>Web 2</h4>
-                                                                <p>Web</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>App 3</h4>
-                                                                <p>App</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>Card 1</h4>
-                                                                <p>Card</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>Card 3</h4>
-                                                                <p>Card</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                                                            <div class="portfolio-wrap">
-                                                              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                                                              <div class="portfolio-info">
-                                                                <h4>Web 3</h4>
-                                                                <p>Web</p>
-                                                                <div class="portfolio-links">
-                                                                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                                                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          
-                                                        </div>
-                                                        
-                                                      </div>
-                                                    </section><!-- End Portfolio Section -->
-                                                    <!--############################################################-->
-                                                    
+                                                   
+                                               
                                                     
                                                     
                                                     
                                                     
                                                     <!-- ======= Contact Section ======= -->
-                                                    <section id="team" class="contact">
+                                                    <section id="about" class="contact">
                                                       <div class="container">
                                                         <div class="row">
                                                           <div class="col-4">
