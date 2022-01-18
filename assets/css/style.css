@@ -80,6 +80,22 @@
   background-color: #ff4dc4;
 }
 
+.bi-emoji-smile::before {
+  content: "📢" ;
+}
+
+.bi-journal-richtext::before {
+  content: "🎵";
+}
+
+.bi-headset::before {
+  content: "💾";
+}
+
+.bi-award::before {
+  content: "💿";
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -93,7 +109,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/1502779.jpg") top right no-repeat;
+  background: #040404 url("../img/191496680_97cdc5351b_b.jpeg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -214,7 +230,6 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
 }
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
