@@ -53,10 +53,10 @@
     <header id="header">
       <div class="container" id="samohome">
         
-        <h1><a href="index.html" style="text-shadow: 1pt 2pt #ff9900;">The Sampling Ontology (SamO)</a></h1>
+        <h1>The Sampling Ontology (SamO)</h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-        <h2>An extension of the Music Ontology for <span style="color: #ff9900;">sampling</span> phenomena in music</h2>
+        <h2>An extension of the Music Ontology for <span style="color: #ff9900;">sampling</span> phenomena in music. Final project for the Knowledge Representation and Extraction course, University of Bologna, a/y 2020-2021</h2>
         
         <nav id="navbar" class="navbar">
           <ul>
@@ -66,14 +66,10 @@
             <li><a class="nav-link" href="#cqs">CQs</a></li>
             <li><a class="nav-link" href="http://purl.org/ontology/samo/" target="_blank">Specification</a></li>
             <li><a class="nav-link" href="#team">Team</a></li>
+            <li><a href="https://github.com/IlaRoss/SamO" class="nav-link" title="github" target="_blank">GitHub</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
-        
-        <div class="social-links">
-          <a href="https://github.com/IlaRoss/SamO" class="github" title="github" target="_blank"><i class="bi bi-github"></i></a>
-          <!--a href="https://www.instagram.com/unibo/?hl=it" class="instagram"><i class="bi bi-instagram"></i></a-->
-        </div>
         
       </div>
     </header><!-- End Header -->
@@ -123,7 +119,7 @@
               <div class="interests container">
                 
                 <div class="section-title">
-                  <h2>Competency Questions</h2>
+                  <h2>Initial Competency Questions</h2>
                 </div>
                 
                 <div class="row">
@@ -209,9 +205,11 @@
                       
                       <h3>Possible future developments</h3>
                       <p>
-                      One of the main points that arose during the last testing phases of the development of SamO was the difficulty in describing exactly what is happening sonically within the transformation process between song element and sample. While we tried our best to develop SamO to enable a user to describe this, we were also limited by our own knowledge of music production. As such we suggest that a possible point for future development is to involve musicians, producers, and engineers in a conversation about how best to describe this transformational process and use this to refine the manipulation properties.</p>
-                      <p>Another point for future development would be to stress test the ontology with larger datasets to see if anything is missing or can be improved upon. In creating our dataset for the ABox we did notice that in its current form, SamO requires the creation of additional data points (a source song's elements and a destination song's samples) which isn't ideal. One solution might be to use automation to create these. </p>
-                      <p>Lastly, as detailed in the Documenation section, we recommend that future development look at how to possibly differentiate between song element and sample when the latter becomes an element of a new song, which would in turn allow for a way to describe remixes as a specific type of song.</p>
+                      <ol>
+                        <li>One of the main points that arose during the last testing phases of the development was the difficulty in describing exactly what is happening sonically during the transformation process between song element and sample. While we tried our best to develop SamO to enable a user to describe this, we were also limited by our own knowledge of music production. As such we suggest that a possible point for future development is to involve musicians, producers, and engineers in a conversation about how best to describe this transformational process and use this to refine the manipulation properties and make any needed adjustments to the ontology.</li>
+                        <li>Another point for future development would be to stress test the ontology with larger datasets to see if anything is missing or can be improved upon. In creating our dataset we did notice that in its current form, SamO requires the creation of additional data points (a source song's elements and a destination song's samples) which isn't ideal. One solution might be to use automation to create these. </li>
+                        <li>As detailed in the Documenation section, we recommend that future development look at how to possibly differentiate between song element and sample when the latter becomes an element of a new song, which would in turn allow for a way to describe remixes as a specific type of song.</li>
+                      </ol>
                     </div>
                     <div class="col-lg-4" data-aos="fade-left">
                       <img src="assets/img/1221227283_oldradioblackandwhite.jpg" class="img-fluid" alt="">
@@ -361,10 +359,10 @@
                       <h2>Documentation</h2>
                       <p>The Dataset</p>
                     </div>
-                    <p>Once we had a working TBox we decided to create an ABox using the sample relationships selected at the beginning of the project (see full list below). We created a separate file using turtle syntax and described our 23 choices based on the publicly available information from WhoSampled as well as our own technical and historical knowledge to add details of sample manipulation (some of which has been simplified, see future development section for more on that) and some test individuals for the sampler class.</p>
-                    <p>Our selection of relationships allowed us to complete all our chosen Competency Questions, for example by giving us  artists such as Miles Davis and Nina Simano as people who have been sampled multiple times and by giving us a range of source genres and dates. Some of the credited collaborations between vocalists were ignored for the sake of avoiding creating additional individuals not directly related to the focus of the ontology. The dataset also includes one instance of a cover (Autumn Leaves) and a remix (Jazzy Sensation's Jazzy Mix). In our early conversations we had imagined using the ontology to also describe different types of songs related to sampling, such as covers and remixes, but ultimately decided to only describe the possibility of something being a cover.</p>
-                    <p>The sample relationships we chose only related to one specific sample that a destination song might use, but it is in fact quite common for hip-hop and electronic music songs to make use of multiple samples. While we did not want to spend the time recreating all the samples for every song in our dataset, we did choose one — Manifest, by Gangstarr — as a test case and included all the samples for it listed by WhoSampled. As mentioned in the future development section, one of the drawbacks of SamO — and as far as we can tell of any attempt at a detailed ontological breakdown of sampling — is that to describe sampling relationships requires the creation of new datapoints for every song element and resulting sample involved.</p>
-                    <p>Both the dataset and the ontology are available as .ttl and .owl files in the data folder of <a href="https://github.com/IlaRoss/SamO" target="_target">SamO's GitHub repository</a>.</p>
+                        <p>Once we had a working TBox we decided to create an ABox using the sample relationships selected at the beginning of the project (see full list below). We created a separate file using turtle syntax and described our 23 choices based on the publicly available information from WhoSampled as well as our own technical and historical knowledge to add details of sample manipulation (some of which has been simplified, see future development section for more on that) and some test individuals for the sampler class.</p>
+                        <p>Our selection of relationships allowed us to complete all our chosen Competency Questions, for example by giving us  artists such as Miles Davis and Nina Simano as people who have been sampled multiple times and by giving us a range of source genres and dates. Some of the credited collaborations between vocalists were ignored for the sake of avoiding creating additional individuals not directly related to the focus of the ontology. The dataset also includes one instance of a cover (Autumn Leaves) and a remix (Jazzy Sensation's Jazzy Mix). In our early conversations we had imagined using the ontology to also describe different types of songs related to sampling, such as covers and remixes, but ultimately decided to only describe the possibility of something being a cover.</p>
+                        <p>The sample relationships we chose only related to one specific sample that a destination song might use, but it is in fact quite common for hip-hop and electronic music songs to make use of multiple samples. While we did not want to spend the time recreating all the samples for every song in our dataset, we did choose one — Manifest, by Gangstarr — as a test case and included all the samples for it listed by WhoSampled. As mentioned in the future development section, one of the drawbacks of SamO — and as far as we can tell of any attempt at a detailed ontological breakdown of sampling — is that to describe sampling relationships requires the creation of new datapoints for every song element and resulting sample involved.</p>
+                        <p>Both the dataset and the ontology are available as .ttl and .owl files in the data folder of <a href="https://github.com/IlaRoss/SamO" target="_target">SamO's GitHub repository</a>.</p>
                     <div class="row">
                       <div class="col-6">
                         <ul class="list-group list-group-flush">
@@ -414,10 +412,19 @@
                   <div class="about-me container">
                     
                     <div class="section-title">
-                      <h2>CQs and tests</h2>
+                      <h2>Final CQs and testing</h2>
                       <p>Competency Questions</p>
                     </div>
-                    <p>Starting from the preliminary Competency Questions we had asked ourselves, and using what we learnt during development, we put together a list of 20 final CQs to test SamO with. Each of these CQ allowed us to ensure that all the key components of the ontology worked as intended. Each CQ was translated into a SPARQL and executed using Protégé and the dataset file.</p>
+                    <p>Starting from the initial Competency Questions we had asked ourselves, and using what we learnt during development, we put together a list of 20 final CQs to test SamO with. Each of these CQ allowed us to ensure that all the key components of the ontology worked as intended. Each CQ was translated into a SPARQL and executed using Protégé and the dataset file.</p>
+                    <p>Hover any CQ to see the logical components based on the following legend:<br/>
+                      <ul>
+                        <li><span class='log_impl_legend'>Logical implication</span></li>
+                        <li><span class='log_class_legend'>Class</span></li>
+                        <li><span class='log_event_legend'>Event</span></li>
+                        <li><span class='log_rel_legend'>Relationship</span></li>
+                        <li><span class='log_indiv_legend'>Individual</span></li>
+                      </ul>
+                    </p>
                   </div>
                   
                   
@@ -732,7 +739,7 @@
                                           RESULTS:<br/>
                                           Mr. Bojangles<br/>
                                           Sinnerman<br/>
-                                          Ain’t Got No I Got Life
+                                          Ain’t Got No, I Got Life
                                           
                                         </div>
                                         <div class="modal-footer">
@@ -881,7 +888,7 @@
                                     <div class="icon-box">
                                       <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                       <h4>CQ #11</h4>
-                                      <p><span class='log_impl'>Which</span> <span class='log_class'>song(s)</span> <span class='log_event'>use(s)</span> <span class='log_rel'>looped</span> <span class='log_class'>samples</span>?</p><br/>
+                                      <p><span class='log_impl'>Which</span> <span class='log_class'>songs</span> <span class='log_event'>use</span> <span class='log_rel'>looped</span> <span class='log_class'>samples</span>?</p><br/>
                                       <!-- Button trigger modal -->
                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal11">
                                         Run Query
@@ -892,7 +899,7 @@
                                         <div class="modal-dialog">
                                           <div class="modal-content">
                                             <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Which song(s) use(s) looped samples? </h5>
+                                              <h5 class="modal-title" id="exampleModalLabel">Which songs use looped samples? </h5>
                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
@@ -1103,7 +1110,7 @@
                                             <div class="icon-box">
                                               <!--div class="icon"><i class="bx bxl-file"></i></div-->
                                               <h4>CQ #16</h4>
-                                              <p><span class='log_impl'>Who</span> <span class='log_event'>is sampled</span> <span class='log_rel'>in</span> <span class='log_indiv'>The words</span>?</p><br/>
+                                              <p><span class='log_impl'>Who</span> <span class='log_event'>is sampled</span> <span class='log_rel'>in</span> <span class='log_indiv'>The Words</span>?</p><br/>
                                               <!-- Button trigger modal -->
                                               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal16">
                                                 Run Query
