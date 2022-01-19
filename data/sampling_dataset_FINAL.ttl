@@ -198,8 +198,8 @@ samo:Drums rdf:type owl:Class .
 samo:Interpolation rdf:type owl:Class .
 
 
-###  http://purl.org/ontology/samo/Lyrics
-samo:Lyrics rdf:type owl:Class .
+###  http://purl.org/ontology/samo/Lyric
+samo:Lyric rdf:type owl:Class .
 
 
 ###  http://purl.org/ontology/samo/Riff
@@ -210,8 +210,8 @@ samo:Riff rdf:type owl:Class .
 samo:Sample rdf:type owl:Class .
 
 
-###  http://purl.org/ontology/samo/Sound_Effects
-samo:Sound_Effects rdf:type owl:Class .
+###  http://purl.org/ontology/samo/Sound_Effect
+samo:Sound_Effect rdf:type owl:Class .
 
 
 ###  http://purl.org/ontology/samo/Voice
@@ -298,7 +298,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aguas_De_Marco_Lyrics
 :Aguas_De_Marco_Lyrics rdf:type owl:NamedIndividual ,
-                                samo:Lyrics ;
+                                samo:Lyric ;
                        samo:clipped_into :Aguas_De_Marco_Girl_From_Alaska_Sample .
 
 
@@ -328,7 +328,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Aint_Got_No_I_Got_Life_Lyrics
 :Aint_Got_No_I_Got_Life_Lyrics rdf:type owl:NamedIndividual ,
-                                        samo:Lyrics ;
+                                        samo:Lyric ;
                                samo:clipped_into :Aint_Got_No_I_Got_Life_Sample .
 
 
@@ -641,7 +641,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Django_Sound_Effects
 :Django_Sound_Effects rdf:type owl:NamedIndividual ,
-                               samo:Sound_Effects ;
+                               samo:Sound_Effect ;
                       samo:chopped_into :Django_Sample .
 
 
@@ -1021,7 +1021,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Just_The_Two_of_Us_1981_Sound_Effects
 :Just_The_Two_of_Us_1981_Sound_Effects rdf:type owl:NamedIndividual ,
-                                                samo:Sound_Effects ;
+                                                samo:Sound_Effect ;
                                        samo:filtered_into :Just_The_Two_of_Us_1981_Sample .
 
 
@@ -1194,7 +1194,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Mr_Bojangles_Lyrics
 :Mr_Bojangles_Lyrics rdf:type owl:NamedIndividual ,
-                              samo:Lyrics ;
+                              samo:Lyric ;
                      samo:clipped_into :Mr_Bojangles_Sample .
 
 
@@ -1442,7 +1442,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Shadows_Sound_Effects
 :Shadows_Sound_Effects rdf:type owl:NamedIndividual ,
-                                samo:Sound_Effects ;
+                                samo:Sound_Effect ;
                        samo:looped_into :Shadows_Sample ;
                        samo:timestretched_into :Shadows_Sample .
 
@@ -1472,7 +1472,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Sinnerman_Lyrics
 :Sinnerman_Lyrics rdf:type owl:NamedIndividual ,
-                           samo:Lyrics ;
+                           samo:Lyric ;
                   samo:clipped_into :Sinnerman_Sample .
 
 
@@ -1710,7 +1710,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Lyrics
 :Word_To_The_Mother_Land_Lyrics rdf:type owl:NamedIndividual ,
-                                         samo:Lyrics ;
+                                         samo:Lyric ;
                                 samo:clipped_into :Manifest .
 
 
@@ -1726,7 +1726,7 @@ samo:Voice rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/samo-dataset-abox#Word_To_The_Mother_Land_Voice
 :Word_To_The_Mother_Land_Voice rdf:type owl:NamedIndividual ,
-                                        samo:Lyrics ;
+                                        samo:Lyric ;
                                samo:pitch_shifted_into :Word_To_The_Mother_Land_Sample ;
                                samo:scratched_into :Word_To_The_Mother_Land_Sample .
 
