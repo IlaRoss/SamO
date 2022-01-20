@@ -139,7 +139,7 @@ xsd:gYear rdf:type rdfs:Datatype .
       rdfs:subPropertyOf :manipulation_of ;
       owl:inverseOf :EQed_into ;
       rdfs:domain :Sample ;
-      rdfs:range :Elements ;
+      rdfs:range :Element ;
       rdfs:comment "Indicates a process of manipulation using the EQing technique." ;
       rdfs:label "EQed" .
 
@@ -147,7 +147,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/EQed_into
 :EQed_into rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :manipulated_into ;
-           rdfs:domain :Elements ;
+           rdfs:domain :Element ;
            rdfs:range :Sample ;
            rdfs:comment "Indicates a process of manipulation using the EQing technique." ;
            rdfs:label "EQed_into" .
@@ -158,7 +158,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:subPropertyOf :manipulation_of ;
          owl:inverseOf :chopped_into ;
          rdfs:domain :Sample ;
-         rdfs:range :Elements ;
+         rdfs:range :Element ;
          owl:propertyDisjointWith :loop_of ;
          rdfs:comment "Indicates a process of manipulation using the chopping technique." ;
          rdfs:label "chop_of" .
@@ -167,7 +167,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/chopped_into
 :chopped_into rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :manipulated_into ;
-              rdfs:domain :Elements ;
+              rdfs:domain :Element ;
               rdfs:range :Sample ;
               owl:propertyDisjointWith :looped_into ;
               rdfs:comment "Indicates a process of manipulation using the chopping technique." ;
@@ -179,7 +179,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:subPropertyOf :manipulation_of ;
          owl:inverseOf :clipped_into ;
          rdfs:domain :Sample ;
-         rdfs:range :Elements ;
+         rdfs:range :Element ;
          rdfs:comment "Indicates a process of manipulation using the clipping technique." ;
          rdfs:label "clip_of" .
 
@@ -187,7 +187,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/clipped_into
 :clipped_into rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :manipulated_into ;
-              rdfs:domain :Elements ;
+              rdfs:domain :Element ;
               rdfs:range :Sample ;
               rdfs:comment "Indicates a process of manipulation using the clipping technique." ;
               rdfs:label "clipped_into" .
@@ -198,7 +198,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:subPropertyOf :manipulation_of ;
          owl:inverseOf :detuned_into ;
          rdfs:domain :Sample ;
-         rdfs:range :Elements ;
+         rdfs:range :Element ;
          owl:propertyDisjointWith :tuned ;
          rdfs:comment "Indicates a process of manipulation using the detuning technique." ;
          rdfs:label "detuned" .
@@ -207,7 +207,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/detuned_into
 :detuned_into rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :manipulated_into ;
-              rdfs:domain :Elements ;
+              rdfs:domain :Element ;
               rdfs:range :Sample ;
               owl:propertyDisjointWith :tuned_into ;
               rdfs:comment "Indicates a process of manipulation using the detuning technique." ;
@@ -219,7 +219,7 @@ xsd:gYear rdf:type rdfs:Datatype .
           rdfs:subPropertyOf :manipulation_of ;
           owl:inverseOf :filtered_into ;
           rdfs:domain :Sample ;
-          rdfs:range :Elements ;
+          rdfs:range :Element ;
           rdfs:comment "Indicates a process of manipulation using the filtering technique." ;
           rdfs:label "filtered" .
 
@@ -227,17 +227,16 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/filtered_into
 :filtered_into rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :manipulated_into ;
-               rdfs:domain :Elements ;
+               rdfs:domain :Element ;
                rdfs:range :Sample ;
                rdfs:comment "Indicates a process of manipulation using the filtering technique." ;
                rdfs:label "filtered_into" .
 
 
 ###  http://purl.org/ontology/samo/has_elements
-:has_elements rdf:type owl:ObjectProperty ,
-                       owl:TransitiveProperty ;
+:has_elements rdf:type owl:ObjectProperty ;
               rdfs:domain <http://purl.org/ontology/mo/Track> ;
-              rdfs:range :Elements ;
+              rdfs:range :Element ;
               rdfs:comment "Relates a Track to any number of Elements, with a minimum of 1." ;
               rdfs:label "has_elements" .
 
@@ -245,7 +244,6 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/has_sample
 :has_sample rdf:type owl:ObjectProperty ;
             owl:inverseOf :used_in ;
-            rdf:type owl:TransitiveProperty ;
             rdfs:domain <http://purl.org/ontology/mo/Track> ;
             rdfs:range :Sample ;
             rdfs:comment "Relates a Track to an instance of a Sample." ;
@@ -264,8 +262,13 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/is_sampled_in
 :is_sampled_in rdf:type owl:ObjectProperty ;
                owl:inverseOf :samples ;
+               rdf:type owl:TransitiveProperty ;
                rdfs:domain <http://purl.org/ontology/mo/Track> ;
                rdfs:range <http://purl.org/ontology/mo/Track> ;
+               owl:propertyChainAxiom ( :has_elements
+                                        :manipulated_into
+                                        :used_in
+                                      ) ;
                rdfs:comment "Shortcut property to relate a Track with the track that samples it." ;
                rdfs:label "is_sampled_in" .
 
@@ -275,7 +278,7 @@ xsd:gYear rdf:type rdfs:Datatype .
          rdfs:subPropertyOf :manipulation_of ;
          owl:inverseOf :looped_into ;
          rdfs:domain :Sample ;
-         rdfs:range :Elements ;
+         rdfs:range :Element ;
          rdfs:comment "Indicates a process of manipulation using the looping technique." ;
          rdfs:label "loop_of" .
 
@@ -283,7 +286,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/looped_into
 :looped_into rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :manipulated_into ;
-             rdfs:domain :Elements ;
+             rdfs:domain :Element ;
              rdfs:range :Sample ;
              rdfs:comment "Indicates a process of manipulation using the looping technique." ;
              rdfs:label "looped_into" .
@@ -302,7 +305,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 :manipulated_into rdf:type owl:ObjectProperty ;
                   owl:inverseOf :manipulation_of ;
                   rdf:type owl:TransitiveProperty ;
-                  rdfs:domain :Elements ;
+                  rdfs:domain :Element ;
                   rdfs:range :Sample ;
                   rdfs:comment "Relates an Element to a Sample, indicating a process of transformation from one class to the other through manipulation." ;
                   rdfs:label "manipulated_into" .
@@ -319,7 +322,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 :manipulation_of rdf:type owl:ObjectProperty ,
                           owl:TransitiveProperty ;
                  rdfs:domain :Sample ;
-                 rdfs:range :Elements ;
+                 rdfs:range :Element ;
                  rdfs:comment "Relates a Sample to an Element, indicating a process of transformation from one class to the other through manipulation." ;
                  rdfs:label "manipulation_of" .
 
@@ -336,7 +339,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                 rdfs:subPropertyOf :manipulation_of ;
                 owl:inverseOf :pitch_shifted_into ;
                 rdfs:domain :Sample ;
-                rdfs:range :Elements ;
+                rdfs:range :Element ;
                 rdfs:comment "Indicates a process of manipulation using the pitch shifting technique." ;
                 rdfs:label "pitch_shift_of" .
 
@@ -344,7 +347,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/pitch_shifted_into
 :pitch_shifted_into rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :manipulated_into ;
-                    rdfs:domain :Elements ;
+                    rdfs:domain :Element ;
                     rdfs:range :Sample ;
                     rdfs:comment "Indicates a process of manipulation using the pitch shifting technique." ;
                     rdfs:label "pitch_shifted_into" .
@@ -373,9 +376,14 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 
 ###  http://purl.org/ontology/samo/samples
-:samples rdf:type owl:ObjectProperty ;
+:samples rdf:type owl:ObjectProperty ,
+                  owl:TransitiveProperty ;
          rdfs:domain <http://purl.org/ontology/mo/Track> ;
          rdfs:range <http://purl.org/ontology/mo/Track> ;
+         owl:propertyChainAxiom ( :has_sample
+                                  :manipulation_of
+                                  :part_of
+                                ) ;
          rdfs:comment "Shortcut property to relate a Track with the track that it samples. For example." ;
          rdfs:label "samples" .
 
@@ -385,7 +393,7 @@ xsd:gYear rdf:type rdfs:Datatype .
             rdfs:subPropertyOf :manipulation_of ;
             owl:inverseOf :scratched_into ;
             rdfs:domain :Sample ;
-            rdfs:range :Elements ;
+            rdfs:range :Element ;
             rdfs:comment "Indicates a process of manipulation using the scratching technique." ;
             rdfs:label "scratch_of" .
 
@@ -393,7 +401,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/scratched_into
 :scratched_into rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :manipulated_into ;
-                rdfs:domain :Elements ;
+                rdfs:domain :Element ;
                 rdfs:range :Sample ;
                 rdfs:comment "Indicates a process of manipulation using the scratching technique." ;
                 rdfs:label "scratched_into" .
@@ -404,7 +412,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                rdfs:subPropertyOf :manipulation_of ;
                owl:inverseOf :timestretched_into ;
                rdfs:domain :Sample ;
-               rdfs:range :Elements ;
+               rdfs:range :Element ;
                rdfs:comment "Indicates a process of manipulation using the timestretching technique." ;
                rdfs:label "timestretched" .
 
@@ -412,7 +420,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/timestretched_into
 :timestretched_into rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :manipulated_into ;
-                    rdfs:domain :Elements ;
+                    rdfs:domain :Element ;
                     rdfs:range :Sample ;
                     rdfs:comment "Indicates a process of manipulation using the timestretching technique." ;
                     rdfs:label "timestretched_into" .
@@ -423,7 +431,7 @@ xsd:gYear rdf:type rdfs:Datatype .
        rdfs:subPropertyOf :manipulation_of ;
        owl:inverseOf :tuned_into ;
        rdfs:domain :Sample ;
-       rdfs:range :Elements ;
+       rdfs:range :Element ;
        rdfs:comment "Indicates a process of manipulation using the tuning technique." ;
        rdfs:label "tuned" .
 
@@ -431,15 +439,14 @@ xsd:gYear rdf:type rdfs:Datatype .
 ###  http://purl.org/ontology/samo/tuned_into
 :tuned_into rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :manipulated_into ;
-            rdfs:domain :Elements ;
+            rdfs:domain :Element ;
             rdfs:range :Sample ;
             rdfs:comment "Indicates a process of manipulation using the tuning technique." ;
             rdfs:label "tuned_into" .
 
 
 ###  http://purl.org/ontology/samo/used_in
-:used_in rdf:type owl:ObjectProperty ,
-                  owl:TransitiveProperty ;
+:used_in rdf:type owl:ObjectProperty ;
          rdfs:domain :Sample ;
          rdfs:range <http://purl.org/ontology/mo/Track> ;
          rdfs:comment "Relates an instance of a Sample to a Track." ;
@@ -509,8 +516,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://purl.org/ontology/mo/Track
 <http://purl.org/ontology/mo/Track> rdf:type owl:Class ;
-                                    owl:equivalentClass [ owl:intersectionOf ( <http://purl.org/ontology/mo/Track>
-                                                                               [ rdf:type owl:Restriction ;
+                                    owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.org/ontology/mo/genre> ;
                                                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                                  owl:onClass <http://purl.org/ontology/mo/Genre>
@@ -518,7 +524,7 @@ xsd:gYear rdf:type rdfs:Datatype .
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty :has_elements ;
                                                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                 owl:onClass :Elements
+                                                                                 owl:onClass :Element
                                                                                ]
                                                                              ) ;
                                                           rdf:type owl:Class
@@ -536,7 +542,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://purl.org/ontology/samo/Bass
 :Bass rdf:type owl:Class ;
-      rdfs:subClassOf :Elements ;
+      rdfs:subClassOf :Element ;
       rdfs:comment "Constitutive element of a track relating to bass." ;
       rdfs:label "Bass" .
 
@@ -552,8 +558,7 @@ xsd:gYear rdf:type rdfs:Datatype .
 :Direct_Sample rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Restriction ;
                                      owl:onProperty :manipulation_of ;
-                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass :Elements
+                                     owl:someValuesFrom :Element
                                    ] ;
                rdfs:subClassOf :Sample ;
                owl:disjointWith :Interpolation ;
@@ -563,21 +568,21 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://purl.org/ontology/samo/Drums
 :Drums rdf:type owl:Class ;
-       rdfs:subClassOf :Elements ;
+       rdfs:subClassOf :Element ;
        rdfs:comment "Constitutive element of a track relating to drums and other rhythmic elements." ;
        rdfs:label "Drums" .
 
 
-###  http://purl.org/ontology/samo/Elements
-:Elements rdf:type owl:Class ;
-          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty :part_of ;
-                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                owl:onClass <http://purl.org/ontology/mo/Track>
-                              ] ;
-          rdfs:subClassOf <http://purl.org/ontology/mo/Signal> ;
-          rdfs:comment "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." ;
-          rdfs:label "Elements" .
+###  http://purl.org/ontology/samo/Element
+:Element rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Restriction ;
+                               owl:onProperty :part_of ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass <http://purl.org/ontology/mo/Track>
+                             ] ;
+         rdfs:subClassOf <http://purl.org/ontology/mo/Signal> ;
+         rdfs:comment "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com." ;
+         rdfs:label "Elements" .
 
 
 ###  http://purl.org/ontology/samo/Interpolation
@@ -587,16 +592,16 @@ xsd:gYear rdf:type rdfs:Datatype .
                rdfs:label "Interpolation" .
 
 
-###  http://purl.org/ontology/samo/Lyrics
-:Lyrics rdf:type owl:Class ;
-        rdfs:subClassOf :Elements ;
-        rdfs:comment "Constitutive element of a track relating to lyrics, or words. Different from the voice element in that a voice can be an element of a track but not be used to relate lyrics." ;
-        rdfs:label "Lyrics" .
+###  http://purl.org/ontology/samo/Lyric
+:Lyric rdf:type owl:Class ;
+       rdfs:subClassOf :Element ;
+       rdfs:comment "Constitutive element of a track relating to lyrics, or words. Different from the voice element in that a voice can be an element of a track but not be used to relate lyrics." ;
+       rdfs:label "Lyrics" .
 
 
 ###  http://purl.org/ontology/samo/Riff
 :Riff rdf:type owl:Class ;
-      rdfs:subClassOf :Elements ;
+      rdfs:subClassOf :Element ;
       rdfs:comment "Constitutive element of a track relating to melodic elements such as motifs, lines, etc..." ;
       rdfs:label "Riff" .
 
@@ -621,35 +626,25 @@ xsd:gYear rdf:type rdfs:Datatype .
 
 ###  http://purl.org/ontology/samo/Sampling
 :Sampling rdf:type owl:Class ;
-          owl:equivalentClass [ owl:intersectionOf ( :Sampling
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :requires ;
-                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass <http://purl.org/ontology/mo/MusicArtist>
-                                                     ]
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :requires ;
-                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass :Sampler
-                                                     ]
-                                                   ) ;
-                                rdf:type owl:Class
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty :manipulated_with ;
+                                owl:someValuesFrom :Sampler
                               ] ;
           rdfs:subClassOf <http://purl.org/ontology/mo/Performance> ;
           rdfs:comment "The act of sampling as a performance event (as defined by the Music Ontology), which includes as agents a performer and produces a signal that is a Musical Expression." ;
           rdfs:label "Sampling" .
 
 
-###  http://purl.org/ontology/samo/Sound_Effects
-:Sound_Effects rdf:type owl:Class ;
-               rdfs:subClassOf :Elements ;
-               rdfs:comment "Constitutive element of a track relating to sound effects." ;
-               rdfs:label "Sound Effects" .
+###  http://purl.org/ontology/samo/Sound_Effect
+:Sound_Effect rdf:type owl:Class ;
+              rdfs:subClassOf :Element ;
+              rdfs:comment "Constitutive element of a track relating to sound effects." ;
+              rdfs:label "Sound Effects" .
 
 
 ###  http://purl.org/ontology/samo/Voice
 :Voice rdf:type owl:Class ;
-       rdfs:subClassOf :Elements ;
+       rdfs:subClassOf :Element ;
        rdfs:comment "Constitutive element of a track relating to the use of voices." ;
        rdfs:label "Voice" .
 
@@ -665,9 +660,9 @@ xsd:gYear rdf:type rdfs:Datatype .
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Bass
                 :Drums
-                :Lyrics
+                :Lyric
                 :Riff
-                :Sound_Effects
+                :Sound_Effect
                 :Voice
               )
 ] .

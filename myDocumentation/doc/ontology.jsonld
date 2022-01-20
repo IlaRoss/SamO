@@ -11,32 +11,40 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid11",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "http://purl.org/ontology/mo/Signal"
+    }, {
       "@id" : "http://purl.org/ontology/mo/Track"
-    }, {
-      "@id" : "_:genid15"
-    }, {
-      "@id" : "_:genid13"
     } ]
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid21"
+    }, {
+      "@id" : "_:genid19"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/ontology/samo/has_elements"
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -49,20 +57,16 @@
     "@id" : "http://purl.org/ontology/mo/genre"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -75,7 +79,7 @@
     "@id" : "http://purl.org/ontology/samo/part_of"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/ontology/samo/part_of"
@@ -84,42 +88,13 @@
     "@id" : "http://purl.org/ontology/mo/Track"
   } ]
 }, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.org/ontology/samo/Sampling"
-    }, {
-      "@id" : "_:genid24"
-    }, {
-      "@id" : "_:genid22"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/ontology/samo/manipulated_with"
   } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://purl.org/ontology/samo/Sampler"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/ontology/samo/requires"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/ontology/mo/MusicArtist"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/ontology/samo/requires"
   } ]
 }, {
   "@id" : "_:genid26",
@@ -130,23 +105,13 @@
     }, {
       "@id" : "http://purl.org/ontology/samo/Drums"
     }, {
-      "@id" : "http://purl.org/ontology/samo/Lyrics"
+      "@id" : "http://purl.org/ontology/samo/Lyric"
     }, {
       "@id" : "http://purl.org/ontology/samo/Riff"
     }, {
-      "@id" : "http://purl.org/ontology/samo/Sound_Effects"
+      "@id" : "http://purl.org/ontology/samo/Sound_Effect"
     }, {
       "@id" : "http://purl.org/ontology/samo/Voice"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.org/ontology/mo/Instrument"
-    }, {
-      "@id" : "http://xmlns.com/foaf/0.1/Agent"
     } ]
   } ]
 }, {
@@ -154,9 +119,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/ontology/mo/Signal"
+      "@id" : "http://purl.org/ontology/mo/Instrument"
     }, {
-      "@id" : "http://purl.org/ontology/mo/Track"
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
     } ]
   } ]
 }, {
@@ -214,7 +179,7 @@
     "@id" : "http://purl.org/ontology/mo/MusicalManifestation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid11"
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/mo/collaborated_with",
@@ -259,7 +224,7 @@
   "@id" : "http://purl.org/ontology/mo/duration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid8"
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -382,7 +347,7 @@
     "@value" : "Bass"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Digital_Sampler",
@@ -412,7 +377,7 @@
     "@id" : "http://purl.org/ontology/samo/Interpolation"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Drums",
@@ -424,7 +389,7 @@
     "@value" : "Drums"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/EQed",
@@ -439,7 +404,7 @@
     "@value" : "EQed"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -454,7 +419,7 @@
     "@value" : "Indicates a process of manipulation using the EQing technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "EQed_into"
@@ -466,7 +431,7 @@
     "@id" : "http://purl.org/ontology/samo/manipulated_into"
   } ]
 }, {
-  "@id" : "http://purl.org/ontology/samo/Elements",
+  "@id" : "http://purl.org/ontology/samo/Element",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Musical elements that constitute a track and are used in the act of sampling, based on the structural logic implied by descriptions of samples on whosampled.com."
@@ -478,7 +443,7 @@
     "@id" : "http://purl.org/ontology/mo/Signal"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Interpolation",
@@ -493,7 +458,7 @@
     "@id" : "http://purl.org/ontology/samo/Sample"
   } ]
 }, {
-  "@id" : "http://purl.org/ontology/samo/Lyrics",
+  "@id" : "http://purl.org/ontology/samo/Lyric",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Constitutive element of a track relating to lyrics, or words. Different from the voice element in that a voice can be an element of a track but not be used to relate lyrics."
@@ -502,7 +467,7 @@
     "@value" : "Lyrics"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Riff",
@@ -514,7 +479,7 @@
     "@value" : "Riff"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Sample",
@@ -529,7 +494,7 @@
     "@id" : "http://purl.org/ontology/mo/Signal"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid19"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Sampler",
@@ -556,10 +521,10 @@
     "@id" : "http://purl.org/ontology/mo/Performance"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid20"
+    "@id" : "_:genid25"
   } ]
 }, {
-  "@id" : "http://purl.org/ontology/samo/Sound_Effects",
+  "@id" : "http://purl.org/ontology/samo/Sound_Effect",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Constitutive element of a track relating to sound effects."
@@ -568,7 +533,7 @@
     "@value" : "Sound Effects"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/Voice",
@@ -580,7 +545,7 @@
     "@value" : "Voice"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/chop_of",
@@ -595,7 +560,7 @@
     "@value" : "chop_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -613,7 +578,7 @@
     "@value" : "Indicates a process of manipulation using the chopping technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "chopped_into"
@@ -640,7 +605,7 @@
     "@value" : "clip_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -655,7 +620,7 @@
     "@value" : "Indicates a process of manipulation using the clipping technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "clipped_into"
@@ -679,7 +644,7 @@
     "@value" : "detuned"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -697,7 +662,7 @@
     "@value" : "Indicates a process of manipulation using the detuning technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "detuned_into"
@@ -724,7 +689,7 @@
     "@value" : "filtered"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -739,7 +704,7 @@
     "@value" : "Indicates a process of manipulation using the filtering technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "filtered_into"
@@ -752,7 +717,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/has_elements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relates a Track to any number of Elements, with a minimum of 1."
   } ],
@@ -763,11 +728,11 @@
     "@value" : "has_elements"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/has_sample",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relates a Track to an instance of a Sample."
   } ],
@@ -800,7 +765,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/is_sampled_in",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Shortcut property to relate a Track with the track that samples it."
   } ],
@@ -815,6 +780,15 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://purl.org/ontology/samo/samples"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/ontology/samo/has_elements"
+    }, {
+      "@id" : "http://purl.org/ontology/samo/manipulated_into"
+    }, {
+      "@id" : "http://purl.org/ontology/samo/used_in"
+    } ]
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/loop_of",
@@ -829,7 +803,7 @@
     "@value" : "loop_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -844,7 +818,7 @@
     "@value" : "Indicates a process of manipulation using the looping technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "looped_into"
@@ -880,7 +854,7 @@
     "@value" : "Relates an Element to a Sample, indicating a process of transformation from one class to the other through manipulation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "manipulated_into"
@@ -916,7 +890,7 @@
     "@value" : "manipulation_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/part_of",
@@ -940,7 +914,7 @@
     "@value" : "pitch_shift_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -955,7 +929,7 @@
     "@value" : "Indicates a process of manipulation using the pitch shifting technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "pitch_shifted_into"
@@ -1012,11 +986,11 @@
     "@value" : "requires"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid8"
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/samples",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Shortcut property to relate a Track with the track that it samples. For example."
   } ],
@@ -1028,6 +1002,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/ontology/mo/Track"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/ontology/samo/has_sample"
+    }, {
+      "@id" : "http://purl.org/ontology/samo/manipulation_of"
+    }, {
+      "@id" : "http://purl.org/ontology/samo/part_of"
+    } ]
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/scratch_of",
@@ -1042,7 +1025,7 @@
     "@value" : "scratch_of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -1057,7 +1040,7 @@
     "@value" : "Indicates a process of manipulation using the scratching technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "scratched_into"
@@ -1081,7 +1064,7 @@
     "@value" : "timestretched"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -1096,7 +1079,7 @@
     "@value" : "Indicates a process of manipulation using the timestretching technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "timestretched_into"
@@ -1120,7 +1103,7 @@
     "@value" : "tuned"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/ontology/samo/manipulation_of"
@@ -1135,7 +1118,7 @@
     "@value" : "Indicates a process of manipulation using the tuning technique."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/ontology/samo/Elements"
+    "@id" : "http://purl.org/ontology/samo/Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "tuned_into"
@@ -1148,7 +1131,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/ontology/samo/used_in",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relates an instance of a Sample to a Track."
   } ],
